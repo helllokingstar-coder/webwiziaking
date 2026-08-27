@@ -29,6 +29,7 @@ import { testimonialsData } from '../data/testimonialsData';
 import { blogPosts } from '../data/blogData';
 import { SeoHead } from '../components/SeoHead';
 import { PortfolioItem } from '../types';
+import heroWomanImg from '../assets/images/hero_woman_laptop_1787864217779.jpg';
 
 interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -100,7 +101,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
         <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               {/* Badge */}
@@ -159,56 +160,21 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               </div>
             </div>
 
-            {/* Right Hero Graphic Showcase */}
-            <div className="lg:col-span-5 relative flex justify-center">
-              <div className="relative w-full max-w-lg">
-                {/* Main Visual Image Card */}
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-blue-500/20 bg-slate-800/60 backdrop-blur-md p-3 group">
+            {/* Right Side: Professional Consultant with Laptop */}
+            <div className="lg:col-span-5 relative flex justify-center items-center">
+              <div className="relative w-full max-w-md lg:max-w-lg group flex justify-center">
+                {/* Ambient Soft Glow Behind Image */}
+                <div className="absolute inset-0 bg-blue-500/20 rounded-3xl filter blur-3xl transform -translate-y-2 scale-95 pointer-events-none" />
+
+                {/* Woman with Laptop with High-Quality Rounded Border Frame */}
+                <div className="relative z-10 p-1.5 sm:p-2 rounded-3xl border-2 border-blue-400/40 bg-gradient-to-b from-blue-500/20 to-slate-800/40 backdrop-blur-sm shadow-2xl shadow-blue-950/60 transition-transform duration-500 hover:scale-102">
                   <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-                    alt="Digital marketing and web development analytics dashboard"
-                    className="w-full h-80 sm:h-96 object-cover rounded-2xl group-hover:scale-102 transition-transform duration-500"
+                    src={heroWomanImg}
+                    alt="Webwizia digital marketing and web development specialist working on laptop"
+                    className="w-full h-auto max-h-[460px] sm:max-h-[500px] object-cover rounded-2xl border border-white/10"
+                    referrerPolicy="no-referrer"
                     loading="eager"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent rounded-2xl" />
-                  
-                  <div className="absolute bottom-6 left-6 right-6 text-left">
-                    <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full uppercase tracking-wider">
-                      Live Growth Matrix
-                    </span>
-                    <h3 className="text-lg font-bold text-white mt-2">
-                      Modern Digital Architecture
-                    </h3>
-                    <p className="text-xs text-slate-300 mt-0.5">
-                      Tailored web engineering and targeted local search dominance.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Floating Micro Badge 1: SEO Rank Spikes */}
-                <div className="absolute -top-4 -left-4 sm:-left-6 bg-white text-slate-900 p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-3 animate-bounce duration-1000 hidden sm:flex">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
-                    <TrendingUp className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-slate-500 uppercase">Google Rankings</div>
-                    <div className="text-sm font-extrabold text-blue-600">#1 in Lahore SEO</div>
-                  </div>
-                </div>
-
-                {/* Floating Micro Badge 2: Satisfaction Rate */}
-                <div className="absolute -bottom-6 -right-4 sm:-right-6 bg-white text-slate-900 p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-3 hidden sm:flex">
-                  <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center font-bold">
-                    <Star className="w-5 h-5 fill-current" />
-                  </div>
-                  <div>
-                    <div className="flex items-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 fill-amber-400 text-amber-400" />
-                      ))}
-                    </div>
-                    <div className="text-xs font-bold text-slate-800 mt-0.5">95% Client Satisfaction</div>
-                  </div>
                 </div>
               </div>
             </div>
