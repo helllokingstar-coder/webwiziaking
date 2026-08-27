@@ -1,0 +1,758 @@
+import React, { useState } from 'react';
+import { 
+  ArrowRight, 
+  CheckCircle2, 
+  Sparkles, 
+  Star, 
+  TrendingUp, 
+  Layout, 
+  Code, 
+  ShoppingBag, 
+  ShieldCheck, 
+  Layers, 
+  Search, 
+  Target, 
+  Smartphone, 
+  Headphones, 
+  Zap, 
+  ExternalLink,
+  ChevronRight,
+  BarChart3,
+  Globe2,
+  Users,
+  Award
+} from 'lucide-react';
+import { siteConfig } from '../data/siteConfig';
+import { servicesData } from '../data/servicesData';
+import { portfolioData } from '../data/portfolioData';
+import { testimonialsData } from '../data/testimonialsData';
+import { blogPosts } from '../data/blogData';
+import { SeoHead } from '../components/SeoHead';
+import { PortfolioItem } from '../types';
+
+interface HomePageProps {
+  onNavigate: (path: string) => void;
+  onOpenQuote: (service?: string) => void;
+}
+
+export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) => {
+  const [selectedPortfolioCategory, setSelectedPortfolioCategory] = useState<string>('All');
+  const [activePortfolioModal, setActivePortfolioModal] = useState<PortfolioItem | null>(null);
+
+  const filteredPortfolio = selectedPortfolioCategory === 'All'
+    ? portfolioData
+    : portfolioData.filter(item => item.category === selectedPortfolioCategory);
+
+  const getServiceIcon = (iconName: string) => {
+    switch (iconName) {
+      case '01':
+        return <Layout className="w-8 h-8 text-blue-600 transition-colors" />;
+      case '02':
+        return <TrendingUp className="w-8 h-8 text-blue-600 transition-colors" />;
+      case '03':
+        return <Code className="w-8 h-8 text-blue-600 transition-colors" />;
+      case '04':
+        return <ShoppingBag className="w-8 h-8 text-blue-600 transition-colors" />;
+      default:
+        return <Sparkles className="w-8 h-8 text-blue-600" />;
+    }
+  };
+
+  const getFeatureIcon = (icon: string) => {
+    switch (icon) {
+      case 'Sparkles':
+        return <Sparkles className="w-6 h-6 text-blue-600" />;
+      case 'Target':
+        return <Target className="w-6 h-6 text-blue-600" />;
+      case 'Smartphone':
+        return <Smartphone className="w-6 h-6 text-blue-600" />;
+      case 'Headphones':
+        return <Headphones className="w-6 h-6 text-blue-600" />;
+      default:
+        return <Zap className="w-6 h-6 text-blue-600" />;
+    }
+  };
+
+  return (
+    <>
+      <SeoHead
+        title="Webwizia | Digital Marketing & Web Design Agency in Lahore"
+        description="Build. Grow. Succeed. Webwizia is a premier digital marketing agency in Lahore specializing in Web Designing, SEO Services, Custom Website Development, and E-Commerce."
+        keywords={[
+          'Web Design Company in Lahore',
+          'Website Development Company in Lahore',
+          'SEO Services in Lahore',
+          'E-Commerce Website Development in Lahore',
+          'Digital Marketing Agency in Lahore',
+          'Web Design Services in Pakistan',
+          'SEO Company in Lahore'
+        ]}
+        canonicalPath="/"
+      />
+
+      {/* ========================================================
+          HERO SECTION
+          ======================================================== */}
+      <section className="hero-gradient text-white pt-16 pb-24 lg:pt-20 lg:pb-32 relative overflow-hidden">
+        {/* Decorative Grid & Glow Elements */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:32px_32px] opacity-40 pointer-events-none" />
+        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+              {/* Badge */}
+              <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md">
+                <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
+                <span>Premier Digital Marketing & Web Agency in Lahore</span>
+              </div>
+
+              {/* Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+                Build. Grow. Succeed. <br />
+                <span className="bg-gradient-to-r from-blue-400 via-sky-300 to-white bg-clip-text text-transparent">
+                  With Webwizia
+                </span>
+              </h1>
+
+              {/* Supporting Text */}
+              <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                We create high-performing websites, powerful SEO strategies and digital solutions that help businesses grow online. Engineered for speed, high conversions, and measurable ROI.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <button
+                  id="hero-get-started-btn"
+                  onClick={() => onOpenQuote()}
+                  className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-bold rounded-xl shadow-xl shadow-blue-600/30 hover:shadow-blue-500/50 transition-all duration-200 flex items-center justify-center space-x-2.5 text-base group"
+                >
+                  <span>GET STARTED</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+
+                <button
+                  id="hero-view-services-btn"
+                  onClick={() => onNavigate('/services')}
+                  className="w-full sm:w-auto px-8 py-4 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/80 text-white font-bold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 text-base backdrop-blur-sm"
+                >
+                  <span>VIEW OUR SERVICES</span>
+                </button>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-300">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span>100% Custom Code & Design</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span>Lahore Local SEO Specialists</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span>Proven Track Record</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Hero Graphic Showcase */}
+            <div className="lg:col-span-5 relative flex justify-center">
+              <div className="relative w-full max-w-lg">
+                {/* Main Visual Image Card */}
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-blue-500/20 bg-slate-800/60 backdrop-blur-md p-3 group">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                    alt="Digital marketing and web development analytics dashboard"
+                    className="w-full h-80 sm:h-96 object-cover rounded-2xl group-hover:scale-102 transition-transform duration-500"
+                    loading="eager"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent rounded-2xl" />
+                  
+                  <div className="absolute bottom-6 left-6 right-6 text-left">
+                    <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full uppercase tracking-wider">
+                      Live Growth Matrix
+                    </span>
+                    <h3 className="text-lg font-bold text-white mt-2">
+                      Modern Digital Architecture
+                    </h3>
+                    <p className="text-xs text-slate-300 mt-0.5">
+                      Tailored web engineering and targeted local search dominance.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Floating Micro Badge 1: SEO Rank Spikes */}
+                <div className="absolute -top-4 -left-4 sm:-left-6 bg-white text-slate-900 p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-3 animate-bounce duration-1000 hidden sm:flex">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                    <TrendingUp className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-500 uppercase">Google Rankings</div>
+                    <div className="text-sm font-extrabold text-blue-600">#1 in Lahore SEO</div>
+                  </div>
+                </div>
+
+                {/* Floating Micro Badge 2: Satisfaction Rate */}
+                <div className="absolute -bottom-6 -right-4 sm:-right-6 bg-white text-slate-900 p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-3 hidden sm:flex">
+                  <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center font-bold">
+                    <Star className="w-5 h-5 fill-current" />
+                  </div>
+                  <div>
+                    <div className="flex items-center space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3 h-3 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <div className="text-xs font-bold text-slate-800 mt-0.5">95% Client Satisfaction</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
+          TRUST & STATISTICS COUNTER SECTION
+          ======================================================== */}
+      <section className="bg-white py-12 -mt-8 relative z-20 max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-100 p-6 sm:p-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+            {siteConfig.stats.map((stat, idx) => (
+              <div key={idx} className={`text-center ${idx > 0 ? 'pt-4 md:pt-0' : ''}`}>
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-blue-600 tracking-tight">
+                  {stat.value}
+                </div>
+                <div className="text-sm sm:text-base font-bold text-slate-900 mt-1">
+                  {stat.label}
+                </div>
+                <div className="text-xs text-slate-500 mt-0.5 hidden sm:block">
+                  {stat.description}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
+          ABOUT US SECTION (HOME PAGE PREVIEW)
+          ======================================================== */}
+      <section className="py-20 lg:py-28 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Image & Stats Card */}
+            <div className="lg:col-span-6 relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                  alt="Webwizia digital marketing team collaborating on client projects in Lahore"
+                  className="w-full h-80 sm:h-[450px] object-cover"
+                />
+              </div>
+
+              {/* Floating Experience Badge */}
+              <div className="absolute -bottom-6 -right-2 sm:right-6 bg-blue-600 text-white p-6 rounded-2xl shadow-xl max-w-xs">
+                <div className="flex items-center space-x-3">
+                  <div className="text-3xl font-black">8+</div>
+                  <div className="text-xs font-semibold leading-tight text-blue-100">
+                    Years of Engineering & Digital Marketing Excellence
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Text Content */}
+            <div className="lg:col-span-6 space-y-6 text-left">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 text-blue-700 text-xs font-bold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>About Webwizia</span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 leading-tight">
+                We Turn Digital Ideas Into <span className="text-blue-600">Real Growth</span>
+              </h2>
+
+              <p className="text-slate-600 text-base leading-relaxed">
+                Webwizia is a dedicated digital agency based in Lahore, Pakistan. We help startups, small businesses, and growing enterprises establish a formidable online presence. Our team blends creative design aesthetics with technical excellence to build websites that rank, engage, and convert.
+              </p>
+
+              {/* Bullet Points with Checkmarks */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                {[
+                  'Conversion-Optimized Web Design',
+                  'High-Impact SEO Services in Lahore',
+                  'Custom Scalable Web Development',
+                  'Secure E-Commerce Solutions',
+                  'Dedicated 24/7 Technical Support',
+                  'Data-Driven Growth Strategies'
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-start space-x-2.5">
+                    <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                    <span className="text-sm font-semibold text-slate-800">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-4">
+                <button
+                  id="about-more-btn"
+                  onClick={() => onNavigate('/about')}
+                  className="px-7 py-3.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold text-sm rounded-xl shadow-lg shadow-blue-600/20 transition-all flex items-center space-x-2 group"
+                >
+                  <span>MORE ABOUT US</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
+          OUR SERVICES SECTION (2x2 GRID AS REQUESTED)
+          ======================================================== */}
+      <section className="py-20 lg:py-28 bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-2xl mx-auto space-y-3 mb-16">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
+              <span>What We Do</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              Our Services
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg">
+              Digital Solutions Designed To Grow Your Business
+            </p>
+          </div>
+
+          {/* Exactly 2 cards on first row, 2 cards on second row on desktop */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
+            {servicesData.map((service) => (
+              <div
+                key={service.id}
+                id={`service-card-${service.slug}`}
+                className="group relative bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-500/80 transition-all duration-300 card-hover-effect flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-blue-50 group-hover:bg-blue-600 group-hover:text-white text-blue-600 flex items-center justify-center transition-all duration-300 shadow-sm">
+                      {getServiceIcon(service.number)}
+                    </div>
+                    <span className="text-3xl font-black text-slate-300 group-hover:text-blue-200 transition-colors">
+                      {service.number}
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-3">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    {service.shortDescription}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <button
+                    onClick={() => onNavigate(`/services/${service.slug}`)}
+                    className="inline-flex items-center space-x-2 text-sm font-bold text-blue-600 group-hover:text-blue-700 transition-colors"
+                  >
+                    <span>LEARN MORE</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+
+                  <button
+                    onClick={() => onOpenQuote(service.title)}
+                    className="text-xs font-semibold text-slate-400 hover:text-blue-600 transition-colors"
+                  >
+                    Get Quote →
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-14">
+            <button
+              id="view-all-services-btn"
+              onClick={() => onNavigate('/services')}
+              className="px-8 py-4 bg-slate-900 hover:bg-blue-600 text-white font-bold text-sm rounded-xl shadow-lg transition-all duration-200 inline-flex items-center space-x-2"
+            >
+              <span>VIEW ALL SERVICES</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
+          PORTFOLIO SECTION
+          ======================================================== */}
+      <section className="py-20 lg:py-28 bg-slate-50 border-t border-slate-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-2xl mx-auto space-y-3 mb-12">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+              <span>Showcase</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              Our Recent Work
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg">
+              Creative Digital Solutions Built For Growing Businesses
+            </p>
+          </div>
+
+          {/* Filter Categories */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+            {['All', 'Web Design', 'Website Development', 'E-Commerce', 'SEO'].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedPortfolioCategory(cat)}
+                className={`px-5 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all ${
+                  selectedPortfolioCategory === cat
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                    : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* Portfolio Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            {filteredPortfolio.map((item) => (
+              <div
+                key={item.id}
+                className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
+              >
+                <div className="relative overflow-hidden aspect-[16/10] bg-slate-100">
+                  <img
+                    src={item.image}
+                    alt={item.altText}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-bold tracking-wider uppercase">
+                      {item.category}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-black text-blue-600 shadow-sm">
+                    {item.impactMetric} {item.impactLabel}
+                  </div>
+                </div>
+
+                <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                      {item.shortDescription}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span className="text-xs font-semibold text-slate-400">
+                      Client: {item.client}
+                    </span>
+                    <button
+                      onClick={() => setActivePortfolioModal(item)}
+                      className="text-xs font-bold text-blue-600 hover:text-blue-700 inline-flex items-center space-x-1"
+                    >
+                      <span>View Details</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
+          WHY CHOOSE WEBWIZIA
+          ======================================================== */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-2xl mx-auto space-y-3 mb-16">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
+              <span>Why Webwizia</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              Why Businesses Choose Webwizia
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg">
+              We combine technical craftsmanship with result-driven digital strategies to elevate your brand.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+            {siteConfig.whyChooseUs.map((feature, idx) => (
+              <div
+                key={idx}
+                className="bg-slate-50 hover:bg-blue-50/60 p-8 rounded-3xl border border-slate-200/80 hover:border-blue-300 transition-all duration-300 space-y-4 group"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-white text-blue-600 shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+                  {getFeatureIcon(feature.icon)}
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
+          TESTIMONIAL SECTION
+          ======================================================== */}
+      <section className="py-20 lg:py-28 bg-slate-50 border-t border-slate-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-2xl mx-auto space-y-3 mb-16">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+              <span>Client Feedback</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              What Our Clients Say
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg">
+              Real feedback from business leaders and founders who grew their companies with Webwizia.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+            {testimonialsData.map((item) => (
+              <div
+                key={item.id}
+                className="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-6"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-1 text-amber-400">
+                    {[...Array(item.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-slate-700 text-sm leading-relaxed italic">
+                    "{item.content}"
+                  </p>
+                </div>
+
+                <div className="flex items-center space-x-3 pt-4 border-t border-slate-100">
+                  <img
+                    src={item.avatar}
+                    alt={item.name}
+                    className="w-11 h-11 rounded-full object-cover border-2 border-blue-500"
+                  />
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900">
+                      {item.name}
+                    </h4>
+                    <span className="block text-xs text-slate-500">
+                      {item.role}, {item.company}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
+          BLOG SECTION ON HOME PAGE
+          ======================================================== */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-2xl mx-auto space-y-3 mb-16">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
+              <span>Articles & Insights</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              Latest Blog & Insights
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg">
+              Explore our latest guides on web design, SEO rankings, and digital business strategies.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            {blogPosts.slice(0, 3).map((post) => (
+              <article
+                key={post.id}
+                className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                    <img
+                      src={post.featuredImage}
+                      alt={post.altText}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wider">
+                        {post.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-6 sm:p-7">
+                    <div className="flex items-center space-x-3 text-xs text-slate-400 mb-3">
+                      <span>{post.publishedDate}</span>
+                      <span>•</span>
+                      <span>{post.readTime}</span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2 mb-3">
+                      {post.title}
+                    </h3>
+
+                    <p className="text-slate-600 text-sm line-clamp-2 leading-relaxed">
+                      {post.excerpt}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-6 sm:p-7 pt-0">
+                  <button
+                    onClick={() => onNavigate(`/blog/${post.slug}`)}
+                    className="w-full py-2.5 px-4 bg-slate-50 hover:bg-blue-600 text-slate-700 hover:text-white font-bold text-xs rounded-xl transition-all flex items-center justify-center space-x-2"
+                  >
+                    <span>READ MORE</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-14">
+            <button
+              id="view-all-blog-posts-btn"
+              onClick={() => onNavigate('/blog')}
+              className="px-8 py-4 bg-slate-900 hover:bg-blue-600 text-white font-bold text-sm rounded-xl shadow-lg transition-all inline-flex items-center space-x-2"
+            >
+              <span>VIEW ALL BLOG POSTS</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
+          HIGH IMPACT CTA SECTION
+          ======================================================== */}
+      <section className="py-20 bg-gradient-to-r from-blue-700 via-blue-600 to-sky-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px]" />
+        
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            Start Your Digital Transformation
+          </span>
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+            Ready To Grow Your Business Online?
+          </h2>
+
+          <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            Let's build a powerful digital presence that helps your business stand out, attract customers and grow. Talk to our Lahore team today.
+          </p>
+
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              id="cta-get-quote-btn"
+              onClick={() => onOpenQuote()}
+              className="w-full sm:w-auto px-9 py-4 bg-white text-blue-700 hover:bg-blue-50 active:scale-95 font-extrabold rounded-xl shadow-xl transition-all text-sm uppercase tracking-wider"
+            >
+              GET A QUOTE
+            </button>
+
+            <button
+              id="cta-contact-us-btn"
+              onClick={() => onNavigate('/contact')}
+              className="w-full sm:w-auto px-9 py-4 bg-blue-900/60 hover:bg-blue-900/80 border border-white/30 text-white font-bold rounded-xl transition-all text-sm uppercase tracking-wider backdrop-blur-md"
+            >
+              CONTACT US
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Item Detail Modal */}
+      {activePortfolioModal && (
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl overflow-hidden border border-slate-100">
+            <div className="relative aspect-video">
+              <img
+                src={activePortfolioModal.image}
+                alt={activePortfolioModal.altText}
+                className="w-full h-full object-cover"
+              />
+              <button
+                onClick={() => setActivePortfolioModal(null)}
+                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-900/80 text-white flex items-center justify-center hover:bg-slate-900"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="p-6 sm:p-8 space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                  {activePortfolioModal.category}
+                </span>
+                <span className="text-xs text-slate-500 font-semibold">
+                  Location: {activePortfolioModal.location}
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900">
+                {activePortfolioModal.title}
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                {activePortfolioModal.fullDescription}
+              </p>
+              <div>
+                <h4 className="text-xs font-bold uppercase text-slate-400 mb-2">
+                  Key Deliverables
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {activePortfolioModal.deliverables.map((del, i) => (
+                    <span key={i} className="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg">
+                      {del}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <div className="text-xs">
+                  <span className="font-bold text-slate-900">{activePortfolioModal.impactMetric}</span> {activePortfolioModal.impactLabel}
+                </div>
+                <button
+                  onClick={() => {
+                    setActivePortfolioModal(null);
+                    onOpenQuote(activePortfolioModal.category);
+                  }}
+                  className="px-5 py-2 bg-blue-600 text-white text-xs font-bold rounded-xl"
+                >
+                  Start Similar Project
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
