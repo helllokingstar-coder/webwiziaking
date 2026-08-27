@@ -47,15 +47,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
   const getServiceIcon = (iconName: string) => {
     switch (iconName) {
       case '01':
-        return <Layout className="w-8 h-8 text-blue-600 transition-colors" />;
+        return <Layout className="w-8 h-8 transition-colors" />;
       case '02':
-        return <TrendingUp className="w-8 h-8 text-blue-600 transition-colors" />;
+        return <Search className="w-8 h-8 transition-colors" />;
       case '03':
-        return <Code className="w-8 h-8 text-blue-600 transition-colors" />;
+        return <Code className="w-8 h-8 transition-colors" />;
       case '04':
-        return <ShoppingBag className="w-8 h-8 text-blue-600 transition-colors" />;
+        return <ShoppingBag className="w-8 h-8 transition-colors" />;
       default:
-        return <Sparkles className="w-8 h-8 text-blue-600" />;
+        return <Sparkles className="w-8 h-8 transition-colors" />;
     }
   };
 
@@ -281,12 +281,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       </section>
 
       {/* ========================================================
-          OUR SERVICES SECTION (2x2 GRID AS REQUESTED)
+          OUR SERVICES SECTION (2x2 GRID - REFERENCE MATCH)
           ======================================================== */}
-      <section className="py-20 lg:py-28 bg-white relative">
+      <section className="py-20 lg:py-28 bg-[#f5f8fc] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
               <span>What We Do</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
@@ -303,41 +303,36 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               <div
                 key={service.id}
                 id={`service-card-${service.slug}`}
-                className="group relative bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-500/80 transition-all duration-300 card-hover-effect flex flex-col justify-between"
+                onClick={() => onNavigate(`/services/${service.slug}`)}
+                className="group relative bg-white hover:bg-[#0a4dad] rounded-2xl sm:rounded-3xl p-8 sm:p-10 shadow-md shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-600/30 border border-slate-100 hover:border-transparent transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-16 h-16 rounded-2xl bg-blue-50 group-hover:bg-blue-600 group-hover:text-white text-blue-600 flex items-center justify-center transition-all duration-300 shadow-sm">
-                      {getServiceIcon(service.number)}
-                    </div>
-                    <span className="text-3xl font-black text-slate-300 group-hover:text-blue-200 transition-colors">
-                      {service.number}
-                    </span>
+                  {/* Top-left Rounded Icon Badge */}
+                  <div className="w-16 h-16 rounded-full bg-[#e8f1fd] text-[#0d6efd] group-hover:bg-white group-hover:text-[#0a4dad] flex items-center justify-center transition-all duration-300 shadow-sm mb-6">
+                    {getServiceIcon(service.number)}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-3">
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold text-slate-900 group-hover:text-white transition-colors duration-300 mb-3">
                     {service.title}
                   </h3>
 
-                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                  {/* Description */}
+                  <p className="text-slate-600 group-hover:text-blue-50 text-sm sm:text-base leading-relaxed mb-8 transition-colors duration-300">
                     {service.shortDescription}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                {/* Bottom Action Button */}
+                <div className="pt-2">
                   <button
-                    onClick={() => onNavigate(`/services/${service.slug}`)}
-                    className="inline-flex items-center space-x-2 text-sm font-bold text-blue-600 group-hover:text-blue-700 transition-colors"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onNavigate(`/services/${service.slug}`);
+                    }}
+                    className="px-7 py-3 bg-[#0a3871] group-hover:bg-white text-white group-hover:text-[#0a3871] font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 inline-flex items-center space-x-2"
                   >
-                    <span>LEARN MORE</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
-
-                  <button
-                    onClick={() => onOpenQuote(service.title)}
-                    className="text-xs font-semibold text-slate-400 hover:text-blue-600 transition-colors"
-                  >
-                    Get Quote →
+                    <span>READ MORE</span>
                   </button>
                 </div>
               </div>
