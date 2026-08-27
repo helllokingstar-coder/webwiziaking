@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { 
   ArrowRight, 
   CheckCircle2, 
+  Check,
   Sparkles, 
   Star, 
   TrendingUp, 
@@ -30,6 +31,8 @@ import { blogPosts } from '../data/blogData';
 import { SeoHead } from '../components/SeoHead';
 import { PortfolioItem } from '../types';
 import heroWomanImg from '../assets/images/hero_woman_laptop_1787864217779.jpg';
+import aboutWomanDeskImg from '../assets/images/about_woman_desk_1787866890918.jpg';
+import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
 
 interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -183,102 +186,137 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       </section>
 
       {/* ========================================================
-          TRUST & STATISTICS COUNTER SECTION
+          ABOUT US SECTION (MATCHING REFERENCE DESIGN)
           ======================================================== */}
-      <section className="bg-white py-12 -mt-8 relative z-20 max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-100 p-6 sm:p-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
-            {siteConfig.stats.map((stat, idx) => (
-              <div key={idx} className={`text-center ${idx > 0 ? 'pt-4 md:pt-0' : ''}`}>
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-blue-600 tracking-tight">
-                  {stat.value}
-                </div>
-                <div className="text-sm sm:text-base font-bold text-slate-900 mt-1">
-                  {stat.label}
-                </div>
-                <div className="text-xs text-slate-500 mt-0.5 hidden sm:block">
-                  {stat.description}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================
-          ABOUT US SECTION (HOME PAGE PREVIEW)
-          ======================================================== */}
-      <section className="py-20 lg:py-28 bg-slate-50 relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Image & Stats Card */}
-            <div className="lg:col-span-6 relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200">
-                <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                  alt="Webwizia digital marketing team collaborating on client projects in Lahore"
-                  className="w-full h-80 sm:h-[450px] object-cover"
-                />
-              </div>
-
-              {/* Floating Experience Badge */}
-              <div className="absolute -bottom-6 -right-2 sm:right-6 bg-blue-600 text-white p-6 rounded-2xl shadow-xl max-w-xs">
-                <div className="flex items-center space-x-3">
-                  <div className="text-3xl font-black">8+</div>
-                  <div className="text-xs font-semibold leading-tight text-blue-100">
-                    Years of Engineering & Digital Marketing Excellence
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Text Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+            
+            {/* Left Content Column */}
             <div className="lg:col-span-6 space-y-6 text-left">
-              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 text-blue-700 text-xs font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>About Webwizia</span>
-              </div>
-
-              <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 leading-tight">
-                We Turn Digital Ideas Into <span className="text-blue-600">Real Growth</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.15] tracking-tight">
+                Web Designing <br />
+                Company in <span className="text-[#e63946]">Pakistan</span>
               </h2>
 
-              <p className="text-slate-600 text-base leading-relaxed">
-                Webwizia is a dedicated digital agency based in Lahore, Pakistan. We help startups, small businesses, and growing enterprises establish a formidable online presence. Our team blends creative design aesthetics with technical excellence to build websites that rank, engage, and convert.
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
+                Webzify is providing custom, professional and affordable website designing &amp; development services for your business in Pakistan. We specialize in helping small businesses to establish their digital brand and dominate the competition with modern and smart web design.
               </p>
 
-              {/* Bullet Points with Checkmarks */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
-                {[
-                  'Conversion-Optimized Web Design',
-                  'High-Impact SEO Services in Lahore',
-                  'Custom Scalable Web Development',
-                  'Secure E-Commerce Solutions',
-                  'Dedicated 24/7 Technical Support',
-                  'Data-Driven Growth Strategies'
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start space-x-2.5">
-                    <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span className="text-sm font-semibold text-slate-800">{item}</span>
+              {/* 4 Feature Items with Colored Icon Badges */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 pt-2 max-w-xl">
+                <div className="flex items-center space-x-3">
+                  <div className="w-7 h-7 rounded-full bg-[#1e1b4b] text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <Check className="w-4 h-4 stroke-[3]" />
                   </div>
-                ))}
+                  <span className="text-sm sm:text-base font-bold text-slate-800">Custom Website Design</span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-7 h-7 rounded-full bg-[#6366f1] text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <Check className="w-4 h-4 stroke-[3]" />
+                  </div>
+                  <span className="text-sm sm:text-base font-bold text-slate-800">SEO-Friendly Websites</span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-7 h-7 rounded-full bg-[#f43f5e] text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <Check className="w-4 h-4 stroke-[3]" />
+                  </div>
+                  <span className="text-sm sm:text-base font-bold text-slate-800">Responsive Web Design</span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-7 h-7 rounded-full bg-[#1e293b] text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <Check className="w-4 h-4 stroke-[3]" />
+                  </div>
+                  <span className="text-sm sm:text-base font-bold text-slate-800">Digital Marketing</span>
+                </div>
               </div>
 
-              {/* CTA Button */}
-              <div className="pt-4">
+              {/* Bottom Row: Read More Button + Director Profile */}
+              <div className="pt-6 flex flex-wrap items-center gap-8">
                 <button
-                  id="about-more-btn"
+                  id="about-read-more-btn"
                   onClick={() => onNavigate('/about')}
-                  className="px-7 py-3.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold text-sm rounded-xl shadow-lg shadow-blue-600/20 transition-all flex items-center space-x-2 group"
+                  className="px-8 py-3.5 bg-[#5b3df5] hover:bg-[#4b2fe0] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-lg shadow-indigo-500/25 transition-all"
                 >
-                  <span>MORE ABOUT US</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  READ MORE
                 </button>
+
+                <div className="flex items-center space-x-3.5">
+                  <img
+                    src={aboutDirectorImg}
+                    alt="Meggie Wilson"
+                    className="w-12 h-12 rounded-full object-cover border-2 border-slate-100 shadow-sm"
+                  />
+                  <div>
+                    <h4 className="text-base font-black text-slate-900 leading-tight">Meggie Wilson</h4>
+                    <p className="text-[11px] font-bold text-slate-400 tracking-wider uppercase">CEO, HEAD DIRECTOR</p>
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Right Visual Column with Curved Frame & Floating Stats Badges */}
+            <div className="lg:col-span-6 relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+              <div className="relative w-full max-w-lg">
+                {/* Main Curved Image Container */}
+                <div className="relative z-10 rounded-2xl lg:rounded-l-3xl lg:rounded-tr-[100px] lg:rounded-br-[100px] overflow-hidden shadow-2xl shadow-slate-200 border-4 border-white bg-slate-100">
+                  <img
+                    src={aboutWomanDeskImg}
+                    alt="Professional web designer working on laptop at modern workspace"
+                    className="w-full h-80 sm:h-[420px] object-cover"
+                  />
+                </div>
+
+                {/* Floating Badge 1: 120% Engagement */}
+                <div className="absolute -top-5 sm:-top-7 -left-3 sm:-left-8 z-20 bg-white/95 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-xl shadow-slate-300/60 border border-slate-100 flex items-center space-x-3.5">
+                  <div className="w-11 h-11 rounded-xl bg-[#ff4d6d] text-white flex items-center justify-center shadow-md shadow-rose-500/30">
+                    <BarChart3 className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-xl font-black text-slate-900 leading-none">120%</div>
+                    <div className="text-[10px] font-extrabold text-slate-400 tracking-wider uppercase mt-1">ENGAGEMENT</div>
+                  </div>
+                </div>
+
+                {/* Floating Badge 2: Increase Sales Chart */}
+                <div className="absolute -bottom-5 sm:-bottom-7 -left-3 sm:-left-6 z-20 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl shadow-slate-300/60 border border-slate-100 w-44 sm:w-52">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-xs font-bold text-slate-700">Increase Sales</span>
+                    <span className="text-[11px] font-black text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">+65,4%</span>
+                  </div>
+                  {/* Smooth Green SVG Line Chart */}
+                  <svg viewBox="0 0 100 35" className="w-full h-10 overflow-visible">
+                    <defs>
+                      <linearGradient id="salesGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#10b981" stopOpacity="0.25" />
+                        <stop offset="100%" stopColor="#10b981" stopOpacity="0.0" />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M0,28 Q15,10 30,22 T60,12 T85,20 T100,5 L100,35 L0,35 Z"
+                      fill="url(#salesGrad)"
+                    />
+                    <path
+                      d="M0,28 Q15,10 30,22 T60,12 T85,20 T100,5"
+                      fill="none"
+                      stroke="#10b981"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                    <circle cx="100" cy="5" r="3" fill="#10b981" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
+
+
 
       {/* ========================================================
           OUR SERVICES SECTION (2x2 GRID - REFERENCE MATCH)
