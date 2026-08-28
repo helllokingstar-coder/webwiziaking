@@ -1,4 +1,5 @@
 import { ServiceDetail } from '../types';
+import ecommerceHeroImg from '../assets/images/ecommerce_store_showcase_1787945031714.jpg';
 
 export const servicesData: ServiceDetail[] = [
   {
@@ -405,7 +406,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: 'Create professional online stores designed to provide a smooth shopping experience and increase sales.',
     fullTitle: 'Professional E-Commerce Website Development in Lahore & Global Markets',
     tagline: 'High-Converting Online Stores Built To Scale Product Sales & Streamline Operations',
-    heroImage: 'https://images.unsplash.com/photo-1556742049-0a67c57750c9?auto=format&fit=crop&w=1200&q=80',
+    heroImage: ecommerceHeroImg,
     metaTitle: 'E-Commerce Website Development Company in Lahore | Webwizia',
     metaDescription: 'Launch your online store with Webwizia. Custom e-commerce web development, secure payment gateways, inventory management, mobile shopping carts, and SEO.',
     keywords: ['E-Commerce Website Development in Lahore', 'Shopify Developers Pakistan', 'WooCommerce Experts Lahore', 'Online Store Development', 'Payment Gateway Integration Pakistan'],

@@ -31,7 +31,7 @@ import { blogPosts } from '../data/blogData';
 import { SeoHead } from '../components/SeoHead';
 import { PortfolioItem } from '../types';
 import heroWomanImg from '../assets/images/hero_woman_laptop_1787864217779.jpg';
-import aboutWomanDeskImg from '../assets/images/about_woman_desk_1787866890918.jpg';
+import aboutWomanDeskImg from '../assets/images/agency_about_workspace_1787944762954.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
 
 interface HomePageProps {
