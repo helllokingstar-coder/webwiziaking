@@ -194,16 +194,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             
             {/* Left Content Column */}
             <div className="lg:col-span-6 space-y-6 text-left">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.15] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1e1b4b] leading-[1.15] tracking-tight">
                 Web Designing <br />
-                Company in <span className="text-[#e63946]">Pakistan</span>
+                Company in <span className="text-[#f43f5e]">Pakistan</span>
               </h2>
 
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
+              <p className="text-slate-500 text-sm sm:text-base leading-relaxed max-w-xl">
                 Webzify is providing custom, professional and affordable website designing &amp; development services for your business in Pakistan. We specialize in helping small businesses to establish their digital brand and dominate the competition with modern and smart web design.
               </p>
 
-              {/* 4 Feature Items with Colored Icon Badges */}
+              {/* 4 Feature Items with Colored Check Icon Badges */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 pt-2 max-w-xl">
                 <div className="flex items-center space-x-3">
                   <div className="w-7 h-7 rounded-full bg-[#1e1b4b] text-white flex items-center justify-center shrink-0 shadow-sm">
@@ -239,7 +239,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <button
                   id="about-read-more-btn"
                   onClick={() => onNavigate('/about')}
-                  className="px-8 py-3.5 bg-[#5b3df5] hover:bg-[#4b2fe0] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-lg shadow-indigo-500/25 transition-all"
+                  className="px-8 py-3.5 bg-[#5e35b1] hover:bg-[#512da8] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-lg shadow-purple-600/25 transition-all"
                 >
                   READ MORE
                 </button>
@@ -262,7 +262,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             <div className="lg:col-span-6 relative flex justify-center lg:justify-end mt-8 lg:mt-0">
               <div className="relative w-full max-w-lg">
                 {/* Main Curved Image Container */}
-                <div className="relative z-10 rounded-2xl lg:rounded-l-3xl lg:rounded-tr-[100px] lg:rounded-br-[100px] overflow-hidden shadow-2xl shadow-slate-200 border-4 border-white bg-slate-100">
+                <div className="relative z-10 rounded-2xl lg:rounded-l-3xl lg:rounded-tr-[110px] lg:rounded-br-[110px] overflow-hidden shadow-2xl shadow-slate-200 border-4 border-white bg-slate-100">
                   <img
                     src={aboutWomanDeskImg}
                     alt="Professional web designer working on laptop at modern workspace"
@@ -272,7 +272,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
 
                 {/* Floating Badge 1: 120% Engagement */}
                 <div className="absolute -top-5 sm:-top-7 -left-3 sm:-left-8 z-20 bg-white/95 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-xl shadow-slate-300/60 border border-slate-100 flex items-center space-x-3.5">
-                  <div className="w-11 h-11 rounded-xl bg-[#ff4d6d] text-white flex items-center justify-center shadow-md shadow-rose-500/30">
+                  <div className="w-11 h-11 rounded-xl bg-[#f43f5e] text-white flex items-center justify-center shadow-md shadow-rose-500/30">
                     <BarChart3 className="w-5 h-5" />
                   </div>
                   <div>
@@ -315,12 +315,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
           </div>
         </div>
       </section>
-
-
-
-      {/* ========================================================
-          OUR SERVICES SECTION (2x2 GRID - REFERENCE MATCH)
-          ======================================================== */}
       <section className="py-20 lg:py-28 bg-[#f5f8fc] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
