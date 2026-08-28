@@ -239,7 +239,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <button
                   id="about-read-more-btn"
                   onClick={() => onNavigate('/about')}
-                  className="px-8 py-3.5 bg-[#5e35b1] hover:bg-[#512da8] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-lg shadow-purple-600/25 transition-all"
+                  className="px-8 py-3.5 bg-blue-600 hover:bg-blue-400 active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-lg shadow-blue-600/25 transition-all"
                 >
                   READ MORE
                 </button>
