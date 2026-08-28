@@ -15,6 +15,7 @@ import {
 import { Breadcrumb } from '../components/Breadcrumb';
 import { SeoHead } from '../components/SeoHead';
 import { siteConfig } from '../data/siteConfig';
+import aboutWomanDeskImg from '../assets/images/about_woman_desk_1787866890918.jpg';
 
 interface AboutPageProps {
   onNavigate: (path: string) => void;
@@ -64,8 +65,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
             <div className="lg:col-span-6 relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-50">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                  alt="Webwizia digital strategy team at Lahore office"
+                  src={aboutWomanDeskImg}
+                  alt="Webwizia digital strategy and web design specialists at work"
                   className="w-full h-80 sm:h-[460px] object-cover"
                 />
               </div>
