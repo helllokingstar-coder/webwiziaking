@@ -236,13 +236,13 @@ export const Header: React.FC<HeaderProps> = ({
               <Search className="w-5 h-5" />
             </button>
 
-            {/* "GET A QUOTE" Primary CTA Button */}
+            {/* "CONTACT US" Primary CTA Button */}
             <button
-              id="header-get-quote-btn"
-              onClick={onOpenQuote}
+              id="header-contact-btn"
+              onClick={() => onNavigate('/contact')}
               className="relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-blue-600 rounded-xl hover:bg-blue-700 active:scale-95 transition-all shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
-              <span>GET A QUOTE</span>
+              <span>CONTACT US</span>
               <ArrowRight className="w-4 h-4 ml-2" />
             </button>
           </div>
@@ -328,14 +328,14 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Mobile Bottom Actions */}
             <div className="pt-6 mt-6 border-t border-slate-100 space-y-4">
               <button
-                id="mobile-drawer-get-quote-btn"
+                id="mobile-drawer-contact-btn"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
-                  onOpenQuote();
+                  onNavigate('/contact');
                 }}
                 className="w-full py-3.5 bg-blue-600 text-white font-bold rounded-xl shadow-lg shadow-blue-600/30 flex items-center justify-center space-x-2"
               >
-                <span>GET A QUOTE</span>
+                <span>CONTACT US</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 

@@ -130,7 +130,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <button
                   id="hero-get-started-btn"
-                  onClick={() => onOpenQuote()}
+                  onClick={() => onNavigate('/contact')}
                   className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-bold rounded-xl shadow-xl shadow-blue-600/30 hover:shadow-blue-500/50 transition-all duration-200 flex items-center justify-center space-x-2.5 text-base group"
                 >
                   <span>GET STARTED</span>
@@ -702,11 +702,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <button
                   onClick={() => {
                     setActivePortfolioModal(null);
-                    onOpenQuote(activePortfolioModal.category);
+                    onNavigate('/contact');
                   }}
-                  className="px-5 py-2 bg-blue-600 text-white text-xs font-bold rounded-xl"
+                  className="px-5 py-2 bg-blue-600 text-white text-xs font-bold rounded-xl hover:bg-blue-700 transition-colors"
                 >
-                  Start Similar Project
+                  Contact Us
                 </button>
               </div>
             </div>

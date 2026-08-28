@@ -131,11 +131,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      onOpenQuote(service.title);
+                      onNavigate('/contact');
                     }}
                     className="px-4 py-2 bg-blue-50 group-hover:bg-white/20 text-blue-600 group-hover:text-white text-xs font-bold rounded-lg transition-colors"
                   >
-                    Get Quote →
+                    Contact Us →
                   </button>
                 </div>
               </div>
@@ -203,10 +203,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
           </p>
           <div className="pt-2">
             <button
-              onClick={() => onOpenQuote()}
+              onClick={() => onNavigate('/contact')}
               className="px-9 py-4 bg-white text-blue-700 hover:bg-blue-50 active:scale-95 font-extrabold rounded-xl shadow-xl transition-all text-sm uppercase tracking-wider"
             >
-              GET A QUOTE
+              CONTACT US
             </button>
           </div>
         </div>

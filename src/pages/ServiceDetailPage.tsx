@@ -164,10 +164,10 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
 
               <div className="pt-2">
                 <button
-                  onClick={() => onOpenQuote(service.title)}
+                  onClick={() => onNavigate('/contact')}
                   className="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 transition-all inline-flex items-center space-x-2"
                 >
-                  <span>REQUEST A QUOTE FOR {service.title.toUpperCase()}</span>
+                  <span>CONTACT US FOR {service.title.toUpperCase()}</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -368,16 +368,16 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
           </p>
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <button
-              onClick={() => onOpenQuote(service.title)}
+              onClick={() => onNavigate('/contact')}
               className="px-8 py-3.5 bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-xl shadow-lg transition-all text-sm uppercase tracking-wider"
             >
-              GET A QUOTE
+              CONTACT US
             </button>
             <button
-              onClick={() => onNavigate('/contact')}
+              onClick={() => onNavigate('/services')}
               className="px-8 py-3.5 bg-blue-900/70 hover:bg-blue-900 border border-white/30 text-white font-bold rounded-xl transition-all text-sm uppercase tracking-wider"
             >
-              CONTACT US
+              EXPLORE ALL SERVICES
             </button>
           </div>
         </div>

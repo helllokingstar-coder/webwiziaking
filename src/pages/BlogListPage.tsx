@@ -281,10 +281,10 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
                   Get a free technical audit and strategy roadmap for your business website.
                 </p>
                 <button
-                  onClick={onOpenQuote}
+                  onClick={() => onNavigate('/contact')}
                   className="w-full py-3 bg-white text-blue-700 hover:bg-blue-50 font-bold text-xs rounded-xl shadow-md transition-all uppercase tracking-wider"
                 >
-                  GET A FREE QUOTE
+                  CONTACT US
                 </button>
               </div>
             </div>

@@ -314,10 +314,10 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
             </p>
             <div className="pt-2">
               <button
-                onClick={onOpenQuote}
+                onClick={() => onNavigate('/contact')}
                 className="px-8 py-3 bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-xl text-xs uppercase tracking-wider shadow-md"
               >
-                GET A FREE CONSULTATION
+                CONTACT US
               </button>
             </div>
           </div>

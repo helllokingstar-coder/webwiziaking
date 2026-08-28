@@ -235,16 +235,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <button
-              onClick={onOpenQuote}
+              onClick={() => onNavigate('/contact')}
               className="px-8 py-3.5 bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-xl shadow-lg transition-all text-sm uppercase tracking-wider"
             >
-              GET A QUOTE
+              CONTACT US
             </button>
             <button
-              onClick={() => onNavigate('/contact')}
+              onClick={() => onNavigate('/services')}
               className="px-8 py-3.5 bg-blue-800 hover:bg-blue-900 border border-blue-400 text-white font-bold rounded-xl transition-all text-sm uppercase tracking-wider"
             >
-              CONTACT US
+              OUR SERVICES
             </button>
           </div>
         </div>
