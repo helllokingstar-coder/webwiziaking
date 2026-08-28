@@ -199,9 +199,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 Company in <span className="text-[#f43f5e]">Pakistan</span>
               </h2>
 
-              <p className="text-slate-500 text-sm sm:text-base leading-relaxed max-w-xl">
-                Webzify is providing custom, professional and affordable website designing &amp; development services for your business in Pakistan. We specialize in helping small businesses to establish their digital brand and dominate the competition with modern and smart web design.
-              </p>
+              <div className="space-y-4 text-slate-500 text-sm sm:text-base leading-relaxed max-w-xl">
+                <p>
+                  Webwizia was founded with a singular purpose: to bridge the gap between creative visual artistry and measurable digital business outcomes. Based in Hall Road, Lahore, we have evolved into a full-scale digital agency serving retail brands, healthcare specialists, logistics firms, real estate giants, and fast-growing tech startups.
+                </p>
+                <p>
+                  We believe that a website should never be an idle digital brochure. It must be an active 24/7 revenue engine that drives customer inquiries, dominates local search rankings, and reinforces customer trust.
+                </p>
+              </div>
 
               {/* 4 Feature Items with Colored Check Icon Badges */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 pt-2 max-w-xl">
