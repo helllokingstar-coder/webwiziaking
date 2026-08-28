@@ -651,44 +651,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
         </div>
       </section>
 
-      {/* ========================================================
-          HIGH IMPACT CTA SECTION
-          ======================================================== */}
-      <section className="py-20 bg-gradient-to-r from-blue-700 via-blue-600 to-sky-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px]" />
-        
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            Start Your Digital Transformation
-          </span>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Ready To Grow Your Business Online?
-          </h2>
-
-          <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Let's build a powerful digital presence that helps your business stand out, attract customers and grow. Talk to our Lahore team today.
-          </p>
-
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              id="cta-get-quote-btn"
-              onClick={() => onOpenQuote()}
-              className="w-full sm:w-auto px-9 py-4 bg-white text-blue-700 hover:bg-blue-50 active:scale-95 font-extrabold rounded-xl shadow-xl transition-all text-sm uppercase tracking-wider"
-            >
-              GET A QUOTE
-            </button>
-
-            <button
-              id="cta-contact-us-btn"
-              onClick={() => onNavigate('/contact')}
-              className="w-full sm:w-auto px-9 py-4 bg-blue-900/60 hover:bg-blue-900/80 border border-white/30 text-white font-bold rounded-xl transition-all text-sm uppercase tracking-wider backdrop-blur-md"
-            >
-              CONTACT US
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* Portfolio Item Detail Modal */}
       {activePortfolioModal && (
