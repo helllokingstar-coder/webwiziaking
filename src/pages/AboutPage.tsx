@@ -37,20 +37,20 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
         canonicalPath="/about"
       />
 
-      {/* Page Header Banner */}
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-sky-800 text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px]" />
+      {/* Page Header Banner (Royal Blue Grid Matching Template) */}
+      <section className="bg-gradient-to-r from-[#0b51da] via-[#155DFC] to-[#0d47a1] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff14_1px,transparent_1px),linear-gradient(to_bottom,#ffffff14_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 text-center sm:text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
           <Breadcrumb
             items={[{ label: 'About Us' }]}
             onNavigate={onNavigate}
             lightMode={true}
           />
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
             About Us
           </h1>
-          <p className="text-blue-100 text-base sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
             Empowering businesses in Lahore and across the globe with transformative web designs, robust technical development, and high-impact SEO growth.
           </p>
         </div>

@@ -121,11 +121,11 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
         ogImage={service.heroImage}
       />
 
-      {/* Top Banner */}
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-sky-800 text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px]" />
+      {/* Top Banner (Royal Blue Grid Matching Template) */}
+      <section className="bg-gradient-to-r from-[#0b51da] via-[#155DFC] to-[#0d47a1] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff14_1px,transparent_1px),linear-gradient(to_bottom,#ffffff14_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 text-center sm:text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
           <Breadcrumb
             items={[
               { label: 'Our Services', href: '/services' },
@@ -134,13 +134,13 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             onNavigate={onNavigate}
             lightMode={true}
           />
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-200 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/15 text-blue-100 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
             <span>Service {service.number}</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
             {service.fullTitle}
           </h1>
-          <p className="text-blue-100 text-base sm:text-lg max-w-3xl leading-relaxed">
+          <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
             {service.tagline}
           </p>
         </div>

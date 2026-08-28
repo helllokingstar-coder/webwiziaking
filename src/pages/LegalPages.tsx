@@ -17,14 +17,16 @@ export const PrivacyPolicyPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
         canonicalPath="/privacy-policy"
       />
 
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-sky-800 text-white py-16 sm:py-20 relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-4 text-center sm:text-left">
+      <section className="bg-gradient-to-r from-[#0b51da] via-[#155DFC] to-[#0d47a1] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff14_1px,transparent_1px),linear-gradient(to_bottom,#ffffff14_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-4">
           <Breadcrumb
             items={[{ label: 'Privacy Policy' }]}
             onNavigate={onNavigate}
             lightMode={true}
           />
-          <h1 className="text-3xl sm:text-5xl font-black text-white">Privacy Policy</h1>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">Privacy Policy</h1>
           <p className="text-blue-100 text-sm sm:text-base">Last Updated: August 2026</p>
         </div>
       </section>
@@ -83,14 +85,16 @@ export const TermsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
         canonicalPath="/terms"
       />
 
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-sky-800 text-white py-16 sm:py-20 relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-4 text-center sm:text-left">
+      <section className="bg-gradient-to-r from-[#0b51da] via-[#155DFC] to-[#0d47a1] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff14_1px,transparent_1px),linear-gradient(to_bottom,#ffffff14_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-4">
           <Breadcrumb
             items={[{ label: 'Terms & Conditions' }]}
             onNavigate={onNavigate}
             lightMode={true}
           />
-          <h1 className="text-3xl sm:text-5xl font-black text-white">Terms & Conditions</h1>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">Terms & Conditions</h1>
           <p className="text-blue-100 text-sm sm:text-base">Last Updated: August 2026</p>
         </div>
       </section>

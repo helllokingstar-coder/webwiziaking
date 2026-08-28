@@ -62,11 +62,11 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
         ogImage={post.featuredImage}
       />
 
-      {/* Header Banner */}
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-sky-800 text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px]" />
+      {/* Header Banner (Royal Blue Grid Matching Template) */}
+      <section className="bg-gradient-to-r from-[#0b51da] via-[#155DFC] to-[#0d47a1] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff14_1px,transparent_1px),linear-gradient(to_bottom,#ffffff14_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 text-center sm:text-left">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
           <Breadcrumb
             items={[
               { label: 'Our Blog', href: '/blog' },
@@ -77,14 +77,14 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
           />
           
           <div className="flex flex-wrap items-center gap-3">
-            <span className="px-3.5 py-1 rounded-full bg-blue-500/20 text-blue-200 text-xs font-bold uppercase tracking-wider">
+            <span className="px-3.5 py-1 rounded-full bg-white/15 text-blue-100 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
               {post.category}
             </span>
-            <span className="text-xs text-blue-200 flex items-center">
+            <span className="text-xs text-blue-100 flex items-center">
               <Calendar className="w-3.5 h-3.5 mr-1" />
               {post.publishedDate}
             </span>
-            <span className="text-xs text-blue-200 flex items-center">
+            <span className="text-xs text-blue-100 flex items-center">
               <Clock className="w-3.5 h-3.5 mr-1" />
               {post.readTime}
             </span>

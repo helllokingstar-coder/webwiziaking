@@ -24,10 +24,10 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
           <button
             onClick={() => onNavigate('/')}
             className={`inline-flex items-center transition-colors ${
-              lightMode ? 'text-slate-300 hover:text-white' : 'text-slate-500 hover:text-blue-600'
+              lightMode ? 'text-blue-100 hover:text-white' : 'text-slate-500 hover:text-blue-600'
             }`}
           >
-            <Home className="w-3.5 h-3.5 mr-1.5" />
+            <Home className="w-4 h-4 mr-1.5" />
             <span>Home</span>
           </button>
         </li>
@@ -36,7 +36,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
           const isLast = index === items.length - 1;
           return (
             <li key={index} className="inline-flex items-center">
-              <ChevronRight className={`w-3.5 h-3.5 mx-1 ${lightMode ? 'text-blue-200/50' : 'text-slate-400'}`} />
+              <ChevronRight className={`w-3.5 h-3.5 mx-1.5 ${lightMode ? 'text-blue-200/80' : 'text-slate-400'}`} />
               {isLast || !item.href ? (
                 <span className={`font-semibold truncate max-w-[200px] sm:max-w-xs ${
                   lightMode ? 'text-white' : 'text-slate-900'
@@ -47,7 +47,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
                 <button
                   onClick={() => item.href && onNavigate(item.href)}
                   className={`transition-colors truncate max-w-[150px] sm:max-w-xs ${
-                    lightMode ? 'text-slate-300 hover:text-white' : 'text-slate-500 hover:text-blue-600'
+                    lightMode ? 'text-blue-100 hover:text-white' : 'text-slate-500 hover:text-blue-600'
                   }`}
                 >
                   {item.label}
