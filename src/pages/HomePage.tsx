@@ -31,6 +31,7 @@ import { blogPosts } from '../data/blogData';
 import { SeoHead } from '../components/SeoHead';
 import { PortfolioItem } from '../types';
 import heroBusinesswomanImg from '../assets/images/hero_businesswoman_office_1788021044044.jpg';
+import heroPurpleAbstractBg from '../assets/images/hero_purple_abstract_bg_1788033202020.jpg';
 import aboutWomanDeskImg from '../assets/images/agency_about_workspace_1787944762954.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
 
@@ -96,33 +97,41 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       {/* ========================================================
           HERO SECTION
           ======================================================== */}
-      <section className="hero-gradient text-white pt-16 pb-24 lg:pt-20 lg:pb-32 relative overflow-hidden">
-        {/* Decorative Grid & Glow Elements */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:32px_32px] opacity-40 pointer-events-none" />
-        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl pointer-events-none" />
+      <section 
+        className="relative text-white pt-16 pb-24 lg:pt-20 lg:pb-32 overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroPurpleAbstractBg})` }}
+      >
+        {/* Crisp Gradient Overlay for Perfect Readability & Contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070b28]/90 via-[#0d1445]/75 to-[#3b0764]/40" />
+
+        {/* Decorative Grid & Ambient Glow Elements */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-fuchsia-500/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-blue-600/25 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-center lg:text-left">
               {/* Badge */}
-              <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md">
-                <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
-                <span>Premier Digital Marketing & Web Agency in Lahore</span>
+              <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-500/20 border border-blue-300/30 text-cyan-200 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+                <span>Premier Website Designing Company in Pakistan</span>
               </div>
 
               {/* Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
-                Build. Grow. Succeed. <br />
-                <span className="bg-gradient-to-r from-blue-400 via-sky-300 to-white bg-clip-text text-transparent">
-                  With Webwizia
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.15rem] xl:text-[2.55rem] font-extrabold tracking-tight text-left leading-[1.2]">
+                <span className="text-white block whitespace-normal lg:whitespace-nowrap xl:whitespace-nowrap">
+                  Professional Digital Marketing &
+                </span>
+                <span className="text-[#ec4899] sm:text-[#f43f5e] bg-gradient-to-r from-pink-500 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent block mt-1 whitespace-normal lg:whitespace-nowrap xl:whitespace-nowrap">
+                  Web Solutions in Lahore
                 </span>
               </h1>
 
               {/* Supporting Text */}
-              <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                We create high-performing websites, powerful SEO strategies and digital solutions that help businesses grow online. Engineered for speed, high conversions, and measurable ROI.
+              <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                We create high-performing, responsive websites, powerful SEO strategies and digital solutions that help businesses grow online. Engineered for speed, high conversions, and measurable ROI.
               </p>
 
               {/* Action Buttons */}
@@ -130,7 +139,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <button
                   id="hero-get-started-btn"
                   onClick={() => onNavigate('/contact')}
-                  className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-bold rounded-xl shadow-xl shadow-blue-600/30 hover:shadow-blue-500/50 transition-all duration-200 flex items-center justify-center space-x-2.5 text-base group"
+                  className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-bold rounded-xl shadow-xl shadow-blue-600/40 hover:shadow-blue-500/60 transition-all duration-200 flex items-center justify-center space-x-2.5 text-base group"
                 >
                   <span>GET STARTED</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -139,24 +148,24 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <button
                   id="hero-view-services-btn"
                   onClick={() => onNavigate('/services')}
-                  className="w-full sm:w-auto px-8 py-4 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/80 text-white font-bold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 text-base backdrop-blur-sm"
+                  className="w-full sm:w-auto px-8 py-4 bg-slate-900/70 hover:bg-slate-800/90 border border-white/20 text-white font-bold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 text-base backdrop-blur-md"
                 >
                   <span>VIEW OUR SERVICES</span>
                 </button>
               </div>
 
               {/* Trust Indicators */}
-              <div className="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-300">
+              <div className="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-200">
                 <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <CheckCircle2 className="w-4 h-4 text-cyan-300" />
                   <span>100% Custom Code & Design</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  <span>Lahore Local SEO Specialists</span>
+                  <CheckCircle2 className="w-4 h-4 text-cyan-300" />
+                  <span>SEO-Optimized Websites</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <CheckCircle2 className="w-4 h-4 text-cyan-300" />
                   <span>Proven Track Record</span>
                 </div>
               </div>
@@ -166,10 +175,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             <div className="lg:col-span-6 xl:col-span-6 relative flex justify-center items-center">
               <div className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl group flex justify-center">
                 {/* Ambient Soft Glow Behind Image */}
-                <div className="absolute inset-0 bg-blue-500/20 rounded-3xl filter blur-3xl transform -translate-y-2 scale-95 pointer-events-none" />
+                <div className="absolute inset-0 bg-cyan-500/20 rounded-3xl filter blur-3xl transform -translate-y-2 scale-95 pointer-events-none" />
 
                 {/* Image Container with Elegant Modern Border */}
-                <div className="relative z-10 w-full p-1.5 sm:p-2.5 rounded-3xl border-2 sm:border-[3px] border-blue-400/50 bg-gradient-to-b from-blue-500/30 via-slate-800/40 to-slate-900/60 backdrop-blur-md shadow-2xl shadow-blue-950/70 transition-transform duration-500 hover:scale-102">
+                <div className="relative z-10 w-full p-1.5 sm:p-2.5 rounded-3xl border-2 sm:border-[3px] border-blue-300/40 bg-gradient-to-b from-blue-400/20 via-slate-800/40 to-slate-900/60 backdrop-blur-md shadow-2xl shadow-blue-950/80 transition-transform duration-500 hover:scale-102">
                   <img
                     src={heroBusinesswomanImg}
                     alt="Webwizia professional digital consultant working in modern office"
