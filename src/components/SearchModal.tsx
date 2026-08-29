@@ -46,22 +46,28 @@ export const SearchModal: React.FC<SearchModalProps> = ({
       // Default top suggestions
       const defaultSuggestions: SearchResult[] = [
         {
-          title: 'Web Designing Services',
+          title: 'Web Design',
           category: 'Service',
           href: '/services/web-designing',
-          description: 'Modern, responsive, and conversion-focused UI/UX design.'
+          description: 'Modern, responsive and user-friendly website designs.'
         },
         {
-          title: 'SEO Services in Lahore',
-          category: 'Service',
-          href: '/services/seo-services',
-          description: 'Rank on Page 1 of Google, local SEO Lahore, and technical audits.'
-        },
-        {
-          title: 'E-Commerce Website Solutions',
+          title: 'E-Commerce Website',
           category: 'Service',
           href: '/services/e-commerce-website',
-          description: 'High-converting online store creation with JazzCash and COD.'
+          description: 'Professional and responsive e-commerce websites to sell products and grow.'
+        },
+        {
+          title: 'WordPress Website Design',
+          category: 'Service',
+          href: '/services/wordpress-website-design',
+          description: 'Professional, responsive and SEO-friendly WordPress websites.'
+        },
+        {
+          title: 'SEO Services',
+          category: 'Service',
+          href: '/services/seo-services',
+          description: 'Effective SEO strategies designed to improve search visibility and traffic.'
         },
         {
           title: 'Why Professional Web Design Matters',

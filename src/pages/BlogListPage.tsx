@@ -24,7 +24,7 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const categories = ['All', 'Web Design', 'SEO', 'E-Commerce', 'Digital Strategy'];
+  const categories = ['All', 'WordPress', 'Web Design', 'SEO', 'Digital Strategy'];
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;

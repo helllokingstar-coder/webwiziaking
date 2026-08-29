@@ -284,10 +284,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                         className="w-full px-4 py-3 rounded-xl bg-[#f0f4fc] border border-transparent focus:border-blue-500 focus:bg-white text-sm text-slate-800 focus:outline-none transition-all cursor-pointer"
                       >
                         <option value="">Select a service</option>
-                        <option value="Website Designing">Website Designing</option>
-                        <option value="SEO Services">SEO Services</option>
+                        <option value="Web Design">Web Design</option>
                         <option value="E-Commerce Website">E-Commerce Website</option>
-                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="WordPress Website Design">WordPress Website Design</option>
+                        <option value="SEO Services">SEO Services</option>
                       </select>
                     </div>
                   </div>

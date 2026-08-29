@@ -306,18 +306,24 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
 
           {/* In-Article CTA */}
           <div className="mt-16 bg-gradient-to-r from-blue-700 to-sky-700 text-white rounded-3xl p-8 sm:p-10 text-center space-y-4 shadow-xl">
-            <h3 className="text-2xl font-black">
-              Ready to Implement These Strategies for Your Business?
+            <h3 className="text-2xl sm:text-3xl font-black">
+              Need a Professional Website for Your Business?
             </h3>
-            <p className="text-blue-100 text-sm max-w-lg mx-auto">
-              Our Lahore team is ready to analyze your site and implement proven web design and SEO solutions.
+            <p className="text-blue-100 text-base max-w-xl mx-auto">
+              Contact Webwizia today for professional Web Design, WordPress Website Design, SEO and E-Commerce solutions in Lahore.
             </p>
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+              <button
+                onClick={onOpenQuote}
+                className="px-8 py-3.5 bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-xl text-sm uppercase tracking-wider shadow-md transition-all"
+              >
+                Get a Free Quote
+              </button>
               <button
                 onClick={() => onNavigate('/contact')}
-                className="px-8 py-3 bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-xl text-xs uppercase tracking-wider shadow-md"
+                className="px-8 py-3.5 bg-blue-900/70 hover:bg-blue-900 border border-white/30 text-white font-bold rounded-xl text-sm uppercase tracking-wider transition-all"
               >
-                CONTACT US
+                Contact Webwizia
               </button>
             </div>
           </div>

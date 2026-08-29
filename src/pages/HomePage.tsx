@@ -52,10 +52,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       case '01':
         return <Layout className="w-8 h-8 transition-colors" />;
       case '02':
-        return <Search className="w-8 h-8 transition-colors" />;
-      case '03':
-      case '04':
         return <ShoppingBag className="w-8 h-8 transition-colors" />;
+      case '03':
+        return <Globe2 className="w-8 h-8 transition-colors" />;
+      case '04':
+        return <Search className="w-8 h-8 transition-colors" />;
       default:
         return <Sparkles className="w-8 h-8 transition-colors" />;
     }
@@ -328,18 +329,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               Our Services
             </h2>
             <p className="text-slate-600 text-base sm:text-lg">
-              Digital Solutions Designed To Grow Your Business
+              Professional digital solutions designed to help your business build, grow and succeed online.
             </p>
           </div>
 
-          {/* 3 cards in a single line (1 row on desktop) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto text-left">
-            {servicesData.slice(0, 3).map((service) => (
+          {/* Exactly 4 Services in a 2-Column × 2-Row Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
+            {servicesData.slice(0, 4).map((service) => (
               <div
                 key={service.id}
                 id={`service-card-${service.slug}`}
                 onClick={() => onNavigate(`/services/${service.slug}`)}
-                className="group relative bg-white hover:bg-[#0a4dad] rounded-2xl sm:rounded-3xl p-8 sm:p-10 shadow-md shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-600/30 border border-slate-100 hover:border-transparent transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between"
+                className="group relative bg-white hover:bg-[#0a4dad] rounded-2xl sm:rounded-3xl p-8 sm:p-10 shadow-md shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-600/30 border border-slate-100 hover:border-transparent transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full"
               >
                 <div>
                   {/* Top-left Rounded Icon Badge */}
@@ -367,7 +368,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                     }}
                     className="px-7 py-3 bg-[#0a3871] group-hover:bg-white text-white group-hover:text-[#0a3871] font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 inline-flex items-center space-x-2"
                   >
-                    <span>READ MORE</span>
+                    <span>Learn More</span>
                   </button>
                 </div>
               </div>

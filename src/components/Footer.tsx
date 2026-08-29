@@ -164,16 +164,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   className="hover:text-blue-200 text-white font-medium transition-colors flex items-center space-x-2 group text-left"
                 >
                   <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-1 transition-transform" />
-                  <span>Web Designing</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={(e) => handleLink(e, '/services/seo-services')}
-                  className="hover:text-blue-200 text-white font-medium transition-colors flex items-center space-x-2 group text-left"
-                >
-                  <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-1 transition-transform" />
-                  <span>SEO Services</span>
+                  <span>Web Design</span>
                 </button>
               </li>
               <li>
@@ -183,6 +174,24 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 >
                   <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-1 transition-transform" />
                   <span>E-Commerce Website</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={(e) => handleLink(e, '/services/wordpress-website-design')}
+                  className="hover:text-blue-200 text-white font-medium transition-colors flex items-center space-x-2 group text-left"
+                >
+                  <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-1 transition-transform" />
+                  <span>WordPress Website Design</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={(e) => handleLink(e, '/services/seo-services')}
+                  className="hover:text-blue-200 text-white font-medium transition-colors flex items-center space-x-2 group text-left"
+                >
+                  <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-1 transition-transform" />
+                  <span>SEO Services</span>
                 </button>
               </li>
             </ul>

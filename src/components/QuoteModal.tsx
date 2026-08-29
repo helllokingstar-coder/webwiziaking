@@ -145,8 +145,8 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
                   Select Required Service *
                 </label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  {['Web Designing', 'SEO Services', 'E-Commerce Website'].map((srv) => (
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  {['Web Design', 'E-Commerce Website', 'WordPress Website Design', 'SEO Services'].map((srv) => (
                     <button
                       type="button"
                       key={srv}

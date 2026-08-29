@@ -65,22 +65,28 @@ export const mainNavItems: NavItem[] = [
     hasDropdown: true,
     dropdownItems: [
       {
-        title: 'Web Designing',
-        description: 'Modern, responsive, and conversion-focused UI/UX design',
+        title: 'Web Design',
+        description: 'Modern, responsive, and user-friendly website designs',
         href: '/services/web-designing',
         iconName: 'Layout'
       },
       {
-        title: 'SEO Services',
-        description: 'Boost search rankings, traffic, and Lahore local presence',
-        href: '/services/seo-services',
-        iconName: 'TrendingUp'
-      },
-      {
         title: 'E-Commerce Website',
-        description: 'High-converting online stores with secure checkout',
+        description: 'High-converting online stores with secure checkout & payments',
         href: '/services/e-commerce-website',
         iconName: 'ShoppingBag'
+      },
+      {
+        title: 'WordPress Website Design',
+        description: 'Custom, fast, and SEO-friendly WordPress websites & WooCommerce',
+        href: '/services/wordpress-website-design',
+        iconName: 'Layers'
+      },
+      {
+        title: 'SEO Services',
+        description: 'Boost search rankings, organic traffic, and online visibility',
+        href: '/services/seo-services',
+        iconName: 'Search'
       }
     ]
   },
