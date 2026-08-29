@@ -30,7 +30,7 @@ import { testimonialsData } from '../data/testimonialsData';
 import { blogPosts } from '../data/blogData';
 import { SeoHead } from '../components/SeoHead';
 import { PortfolioItem } from '../types';
-import heroWomanImg from '../assets/images/hero_woman_laptop_1787864217779.jpg';
+import heroBusinesswomanImg from '../assets/images/hero_businesswoman_office_1788021044044.jpg';
 import aboutWomanDeskImg from '../assets/images/agency_about_workspace_1787944762954.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
 
@@ -106,7 +106,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-center lg:text-left">
               {/* Badge */}
               <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md">
                 <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
@@ -163,18 +163,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               </div>
             </div>
 
-            {/* Right Side: Professional Consultant with Laptop */}
-            <div className="lg:col-span-5 relative flex justify-center items-center">
-              <div className="relative w-full max-w-md lg:max-w-lg group flex justify-center">
+            {/* Right Side: Professional Consultant with Laptop in Office with Border */}
+            <div className="lg:col-span-6 xl:col-span-6 relative flex justify-center items-center">
+              <div className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl group flex justify-center">
                 {/* Ambient Soft Glow Behind Image */}
                 <div className="absolute inset-0 bg-blue-500/20 rounded-3xl filter blur-3xl transform -translate-y-2 scale-95 pointer-events-none" />
 
-                {/* Woman with Laptop with High-Quality Rounded Border Frame */}
-                <div className="relative z-10 p-1.5 sm:p-2 rounded-3xl border-2 border-blue-400/40 bg-gradient-to-b from-blue-500/20 to-slate-800/40 backdrop-blur-sm shadow-2xl shadow-blue-950/60 transition-transform duration-500 hover:scale-102">
+                {/* Image Container with Elegant Modern Border */}
+                <div className="relative z-10 w-full p-1.5 sm:p-2.5 rounded-3xl border-2 sm:border-[3px] border-blue-400/50 bg-gradient-to-b from-blue-500/30 via-slate-800/40 to-slate-900/60 backdrop-blur-md shadow-2xl shadow-blue-950/70 transition-transform duration-500 hover:scale-102">
                   <img
-                    src={heroWomanImg}
-                    alt="Webwizia digital marketing and web development specialist working on laptop"
-                    className="w-full h-auto max-h-[460px] sm:max-h-[500px] object-cover rounded-2xl border border-white/10"
+                    src={heroBusinesswomanImg}
+                    alt="Webwizia professional digital consultant working in modern office"
+                    className="w-full h-auto min-w-full max-h-[520px] sm:max-h-[580px] lg:max-h-[620px] object-cover rounded-2xl border border-white/20 shadow-inner"
                     referrerPolicy="no-referrer"
                     loading="eager"
                   />
