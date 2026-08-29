@@ -43,7 +43,7 @@ export const PrivacyPolicyPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
           <div>
             <h2 className="text-xl font-bold text-slate-900 mb-2">2. Information We Collect</h2>
             <p className="text-slate-600">
-              When you submit a quote request, contact form inquiry, or initiate a consultation, we may collect your name, email address, phone number, company name, and project specifications. We only collect information strictly required to deliver our web design, SEO, and development services.
+              When you submit a quote request, contact form inquiry, or initiate a consultation, we may collect your name, email address, phone number, company name, and project specifications. We only collect information strictly required to deliver our web design, SEO, and digital services.
             </p>
           </div>
 
@@ -104,14 +104,14 @@ export const TermsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
           <div>
             <h2 className="text-xl font-bold text-slate-900 mb-2">1. Acceptance of Terms</h2>
             <p className="text-slate-600">
-              By accessing Webwizia.com or engaging our agency for web design, SEO, custom development, or digital marketing services, you agree to comply with these terms.
+              By accessing Webwizia.com or engaging our agency for web design, SEO, e-commerce, or digital marketing services, you agree to comply with these terms.
             </p>
           </div>
 
           <div>
             <h2 className="text-xl font-bold text-slate-900 mb-2">2. Scope of Services</h2>
             <p className="text-slate-600">
-              Each web design, development, or search engine optimization engagement is governed by an agreed project statement of work detailing timeline, deliverables, milestones, and payment structure.
+              Each web design, e-commerce, or search engine optimization engagement is governed by an agreed project statement of work detailing timeline, deliverables, milestones, and payment structure.
             </p>
           </div>
 

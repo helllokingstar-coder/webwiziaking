@@ -52,7 +52,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
             About Us
           </h1>
           <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
-            Empowering businesses in Lahore and across the globe with transformative web designs, robust technical development, and high-impact SEO growth.
+            Empowering businesses in Lahore and across the globe with transformative web designs, e-commerce solutions, and high-impact SEO growth.
           </p>
         </div>
       </section>

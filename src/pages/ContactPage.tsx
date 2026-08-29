@@ -285,11 +285,9 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       >
                         <option value="">Select a service</option>
                         <option value="Website Designing">Website Designing</option>
-                        <option value="E-Commerce Website">E-Commerce Website</option>
-                        <option value="Website Development">Website Development</option>
                         <option value="SEO Services">SEO Services</option>
+                        <option value="E-Commerce Website">E-Commerce Website</option>
                         <option value="Digital Marketing">Digital Marketing</option>
-                        <option value="Custom Web App">Custom Web App</option>
                       </select>
                     </div>
                   </div>

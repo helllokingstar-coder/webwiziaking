@@ -28,7 +28,6 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
       case '02':
         return <TrendingUp className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />;
       case '03':
-        return <Code className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />;
       case '04':
         return <ShoppingBag className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />;
       default:
@@ -39,13 +38,12 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
   return (
     <>
       <SeoHead
-        title="Our Services | Web Design, SEO & Web Development in Lahore | Webwizia"
-        description="Explore Webwizia's core digital solutions: Web Designing, Search Engine Optimization (SEO), Custom Website Development, and E-Commerce store engineering in Lahore."
+        title="Our Services | Web Design, SEO & E-Commerce in Lahore | Webwizia"
+        description="Explore Webwizia's core digital solutions: Web Designing, Search Engine Optimization (SEO), and E-Commerce store engineering in Lahore."
         keywords={[
           'Web Design Lahore',
           'SEO Services Lahore',
-          'Website Development Lahore',
-          'E-Commerce Development Pakistan',
+          'E-Commerce Stores Pakistan',
           'Digital Marketing Solutions'
         ]}
         canonicalPath="/services"
@@ -65,28 +63,28 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
             Our Services
           </h1>
           <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
-            High-impact digital marketing, web engineering, and search optimization solutions engineered to grow your revenue and market reach.
+            High-impact digital marketing, modern web design, and search optimization solutions engineered to grow your revenue and market reach.
           </p>
         </div>
       </section>
 
-      {/* Core Services 2x2 Grid */}
+      {/* Core Services 3-Card Grid */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
-              <span>Full-Stack Capabilities</span>
+              <span>Core Capabilities</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
               Designed For End-to-End Digital Transformation
             </h2>
             <p className="text-slate-600 text-base">
-              Each of our service offerings is built on proven development frameworks, modern UI principles, and aggressive organic search strategies.
+              Each of our service offerings is built on modern UI principles, conversion psychology, and aggressive organic search strategies.
             </p>
           </div>
 
-          {/* 2x2 Desktop Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* 3-Card Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {servicesData.map((service) => (
               <div
                 key={service.id}

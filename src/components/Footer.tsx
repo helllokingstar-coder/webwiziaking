@@ -49,7 +49,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
 
             <p className="text-sm text-blue-50/90 leading-relaxed font-medium">
-              Webwizia is a full-service digital marketing and web development agency in Lahore, Pakistan. We help startups, established brands, and enterprises engineer high-converting websites and dominant organic search strategies.
+              Webwizia is a full-service digital marketing and web design agency in Lahore, Pakistan. We help startups, established brands, and enterprises engineer high-converting websites and dominant organic search strategies.
             </p>
 
             {/* Social Media Links */}
@@ -174,15 +174,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 >
                   <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-1 transition-transform" />
                   <span>SEO Services</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={(e) => handleLink(e, '/services/website-development')}
-                  className="hover:text-blue-200 text-white font-medium transition-colors flex items-center space-x-2 group text-left"
-                >
-                  <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-1 transition-transform" />
-                  <span>Website Development</span>
                 </button>
               </li>
               <li>

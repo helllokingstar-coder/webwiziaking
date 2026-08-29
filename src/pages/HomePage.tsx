@@ -54,7 +54,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       case '02':
         return <Search className="w-8 h-8 transition-colors" />;
       case '03':
-        return <Code className="w-8 h-8 transition-colors" />;
       case '04':
         return <ShoppingBag className="w-8 h-8 transition-colors" />;
       default:
@@ -81,12 +80,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
     <>
       <SeoHead
         title="Webwizia | Digital Marketing & Web Design Agency in Lahore"
-        description="Build. Grow. Succeed. Webwizia is a premier digital marketing agency in Lahore specializing in Web Designing, SEO Services, Custom Website Development, and E-Commerce."
+        description="Build. Grow. Succeed. Webwizia is a premier digital marketing agency in Lahore specializing in Web Designing, SEO Services, and E-Commerce."
         keywords={[
           'Web Design Company in Lahore',
-          'Website Development Company in Lahore',
           'SEO Services in Lahore',
-          'E-Commerce Website Development in Lahore',
+          'E-Commerce Online Stores Lahore',
           'Digital Marketing Agency in Lahore',
           'Web Design Services in Pakistan',
           'SEO Company in Lahore'
@@ -334,9 +332,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             </p>
           </div>
 
-          {/* Exactly 2 cards on first row, 2 cards on second row on desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
-            {servicesData.map((service) => (
+          {/* 3 cards in a single line (1 row on desktop) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto text-left">
+            {servicesData.slice(0, 3).map((service) => (
               <div
                 key={service.id}
                 id={`service-card-${service.slug}`}
@@ -408,7 +406,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
 
           {/* Filter Categories */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-            {['All', 'Web Design', 'Website Development', 'E-Commerce', 'SEO'].map((cat) => (
+            {['All', 'Web Design', 'E-Commerce', 'SEO'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedPortfolioCategory(cat)}

@@ -267,153 +267,21 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
-    id: 'website-development',
-    slug: 'website-development',
-    number: '03',
-    title: 'Website Development',
-    shortDescription: 'Build fast, secure, scalable and functional websites tailored to business requirements.',
-    fullTitle: 'Custom Website Development Services in Lahore & Global Markets',
-    tagline: 'Engineering High-Performance, Scalable & Rock-Solid Web Applications',
-    heroImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
-    metaTitle: 'Custom Website Development Company in Lahore | Webwizia',
-    metaDescription: 'Build fast, secure, and scalable web solutions with Webwizia. Full-stack development, modern frontend frameworks, secure backend APIs, and maintenance.',
-    keywords: ['Website Development Company in Lahore', 'Custom Web Development Pakistan', 'Full Stack Developers Lahore', 'PHP React Web Development', 'Fast WordPress Websites'],
-    overview: 'Webwizia builds resilient, scalable, and high-performance websites engineered for speed, top-tier security, and seamless business automation. Whether you need a corporate portal, custom web application, or dynamic CMS platform, our engineering team delivers clean code that scales with your growth.',
-    keyOfferings: [
-      {
-        title: 'Custom Website Development',
-        description: 'Bespoke web architectures coded with clean, modular TypeScript, React, Next.js, or lightweight PHP.',
-        icon: 'Code'
-      },
-      {
-        title: 'Corporate & Business Portals',
-        description: 'Robust company platforms with client portals, lead intake automations, and employee intranets.',
-        icon: 'Server'
-      },
-      {
-        title: 'Responsive Frontend Engineering',
-        description: 'Pixel-perfect CSS execution, lightweight bundles, zero layout shift, and 60fps smooth animations.',
-        icon: 'Layout'
-      },
-      {
-        title: 'Secure Backend & API Integration',
-        description: 'Restful API integration, CRM hooks, webhook listeners, database architecture, and authentication.',
-        icon: 'ShieldCheck'
-      },
-      {
-        title: 'Performance & Speed Optimization',
-        description: 'Optimized server response times, HTTP/3 caching, code splitting, and sub-second page loads.',
-        icon: 'Gauge'
-      },
-      {
-        title: 'Ongoing Maintenance & Security',
-        description: 'Continuous uptime monitoring, daily automated backups, SSL enforcement, and vulnerability patching.',
-        icon: 'LifeBuoy'
-      }
-    ],
-    detailedSections: [
-      {
-        title: 'Modern Architecture Built For Speed & Zero Downtime',
-        content: 'Slow websites kill conversions. We build with modern performance standards, ensuring 95+ Google PageSpeed scores, instant server response times, and bulletproof security protocols.',
-        points: [
-          'Clean semantic HTML5 structure with zero bloat or unnecessary third-party plugins',
-          'Containerized deployment pipelines ready for Cloud Run, Vercel, AWS, or cPanel',
-          'CSRF protection, XSS sanitization, rate-limiting, and hardened SSL certificates',
-          'Cross-browser and legacy browser compatibility testing across Chrome, Safari, Firefox, and Edge'
-        ]
-      },
-      {
-        title: 'Easy Content Management & Tailored Admin Control',
-        content: 'You should never need to hire a developer just to update a phone number or publish a new case study. We provide intuitive content management solutions so your marketing team can update pages effortlessly.',
-        points: [
-          'Custom fields and drag-and-drop page builders structured strictly to your design standards',
-          'Automated image compression on upload converting assets to optimized WebP formats',
-          'Multi-user role permission controls (Admin, Editor, Author, Viewer)',
-          'Comprehensive video training and documentation provided upon project launch'
-        ]
-      }
-    ],
-    benefits: [
-      {
-        title: 'Sub-Second Page Load Speeds',
-        description: 'Delight visitors and please search engine bots with ultra-optimized code and CDN caching.'
-      },
-      {
-        title: 'Enterprise-Grade Security',
-        description: 'Protect your business and customer data with industry-leading encryption and security headers.'
-      },
-      {
-        title: 'Scalable for Millions of Visitors',
-        description: 'Cloud-ready infrastructure that effortlessly handles sudden viral traffic spikes and seasonal promotions.'
-      },
-      {
-        title: '100% Code Ownership',
-        description: 'You retain full unencumbered ownership of your source code, database, and hosting environments.'
-      }
-    ],
-    process: [
-      {
-        step: '01',
-        title: 'Architecture & Tech Stack Selection',
-        description: 'We evaluate technical requirements to pick the ideal frameworks, database engines, and hosting setup.'
-      },
-      {
-        step: '02',
-        title: 'Database & Backend API Modeling',
-        description: 'We structure secure database schemas, data validation rules, and server endpoints.'
-      },
-      {
-        step: '03',
-        title: 'Frontend Component Development',
-        description: 'We translate approved UI designs into responsive, accessible, interactive frontend components.'
-      },
-      {
-        step: '04',
-        title: 'Rigorous QA & Security Testing',
-        description: 'We run cross-device testing, load simulations, form validation checks, and security audits.'
-      },
-      {
-        step: '05',
-        title: 'Deployment & Go-Live Support',
-        description: 'We configure DNS, SSL certificates, search engine index pings, and provide 24/7 go-live monitoring.'
-      }
-    ],
-    techStack: ['TypeScript', 'React.js', 'Node.js', 'Express', 'Tailwind CSS', 'PostgreSQL / MySQL', 'Vite', 'Docker'],
-    faqs: [
-      {
-        question: 'Which technologies do you specialize in for website development?',
-        answer: 'We build using modern TypeScript, React, Next.js, Node.js, Express, Tailwind CSS, as well as customized WordPress and PHP stacks depending on project requirements and client preferences.'
-      },
-      {
-        question: 'Will I be able to edit and update my website content easily?',
-        answer: 'Yes! We configure user-friendly admin panels and content management dashboards where you can update text, photos, services, and blog articles with zero coding knowledge.'
-      },
-      {
-        question: 'Do you provide website hosting and domain setup assistance in Pakistan?',
-        answer: 'Yes, we assist in domain registration, cloud server provisioning, fast CDN configuration, business email setup (e.g. yourname@webwizia.com), and SSL security setup.'
-      },
-      {
-        question: 'What happens if our website experiences technical issues after launch?',
-        answer: 'All our development projects come with 30 days of post-launch warranty support, and we offer cost-effective monthly maintenance packages for continuous backups, security monitoring, and updates.'
-      }
-    ]
-  },
-  {
     id: 'e-commerce-website',
     slug: 'e-commerce-website',
-    number: '04',
+    number: '03',
     title: 'E-Commerce Website',
     shortDescription: 'Create professional online stores designed to provide a smooth shopping experience and increase sales.',
-    fullTitle: 'Professional E-Commerce Website Development in Lahore & Global Markets',
+    fullTitle: 'Professional E-Commerce Stores in Lahore & Global Markets',
     tagline: 'High-Converting Online Stores Built To Scale Product Sales & Streamline Operations',
     heroImage: ecommerceHeroImg,
-    metaTitle: 'E-Commerce Website Development Company in Lahore | Webwizia',
-    metaDescription: 'Launch your online store with Webwizia. Custom e-commerce web development, secure payment gateways, inventory management, mobile shopping carts, and SEO.',
-    keywords: ['E-Commerce Website Development in Lahore', 'Shopify Developers Pakistan', 'WooCommerce Experts Lahore', 'Online Store Development', 'Payment Gateway Integration Pakistan'],
+    metaTitle: 'E-Commerce Online Store Solutions in Lahore | Webwizia',
+    metaDescription: 'Launch your online store with Webwizia. Custom e-commerce online stores, secure payment gateways, inventory management, mobile shopping carts, and SEO.',
+    keywords: ['E-Commerce Store in Lahore', 'Shopify Experts Pakistan', 'WooCommerce Experts Lahore', 'Online Store Setup', 'Payment Gateway Integration Pakistan'],
     overview: 'In modern retail, a great e-commerce store is the lifeblood of business revenue. Webwizia builds intuitive, blazing-fast, and secure online shopping experiences that turn casual browsers into repeat buyers while giving you full control over orders, inventory, and marketing campaigns.',
     keyOfferings: [
       {
-        title: 'Custom Online Store Development',
+        title: 'Custom Online Store Setup',
         description: 'Bespoke e-commerce architectures tailored for retail, fashion, electronics, FMCG, and B2B wholesale.',
         icon: 'ShoppingBag'
       },

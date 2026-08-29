@@ -86,7 +86,7 @@ export interface BlogPost {
 export interface PortfolioItem {
   id: string;
   title: string;
-  category: 'Web Design' | 'Website Development' | 'E-Commerce' | 'SEO';
+  category: 'Web Design' | 'E-Commerce' | 'SEO';
   categorySlug: string;
   image: string;
   altText: string;

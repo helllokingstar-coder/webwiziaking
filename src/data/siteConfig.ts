@@ -21,7 +21,7 @@ export const siteConfig = {
     sunday: 'Sunday: Closed (Available via WhatsApp)'
   },
   stats: [
-    { value: '100+', label: 'Projects Completed', description: 'Web design, development, and digital marketing projects delivered' },
+    { value: '100+', label: 'Projects Completed', description: 'Web design, SEO, and digital marketing projects delivered' },
     { value: '80+', label: 'Happy Clients', description: 'Trusted by businesses across Pakistan and internationally' },
     { value: '95%', label: 'Client Satisfaction', description: 'Proven track record of high retention & measurable ROI' },
     { value: '24/7', label: 'Dedicated Support', description: 'Continuous maintenance, security audits, and quick assistance' }
@@ -75,12 +75,6 @@ export const mainNavItems: NavItem[] = [
         description: 'Boost search rankings, traffic, and Lahore local presence',
         href: '/services/seo-services',
         iconName: 'TrendingUp'
-      },
-      {
-        title: 'Website Development',
-        description: 'Fast, secure, and scalable custom web applications',
-        href: '/services/website-development',
-        iconName: 'Code'
       },
       {
         title: 'E-Commerce Website',

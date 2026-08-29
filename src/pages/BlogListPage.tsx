@@ -24,7 +24,7 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const categories = ['All', 'Web Design', 'SEO', 'E-Commerce', 'Digital Strategy', 'Website Development'];
+  const categories = ['All', 'Web Design', 'SEO', 'E-Commerce', 'Digital Strategy'];
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
@@ -41,12 +41,12 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
     <>
       <SeoHead
         title="Blog & Digital Marketing Insights | Webwizia Lahore"
-        description="Read the latest actionable insights, web design best practices, SEO guides, and e-commerce tips from Webwizia's Lahore engineering and marketing leads."
+        description="Read the latest actionable insights, web design best practices, SEO guides, and e-commerce tips from Webwizia's Lahore marketing and design leads."
         keywords={[
           'Digital Marketing Blog Pakistan',
           'SEO Tips Lahore',
           'Web Design Guides',
-          'E-Commerce Development Blog',
+          'E-Commerce Online Store Blog',
           'Website Best Practices'
         ]}
         canonicalPath="/blog"

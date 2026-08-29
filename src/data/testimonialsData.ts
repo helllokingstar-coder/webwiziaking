@@ -9,8 +9,8 @@ export const testimonialsData: Testimonial[] = [
     location: 'Lahore, Pakistan',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
-    content: 'Webwizia delivered our custom web platform right on schedule. Their technical proficiency in website development and clean UI design transformed how our corporate clients interact with our tracking systems. Highly recommended!',
-    service: 'Website Development'
+    content: 'Webwizia delivered our custom web platform right on schedule. Their technical proficiency in digital solutions and clean UI design transformed how our corporate clients interact with our tracking systems. Highly recommended!',
+    service: 'Web Designing'
   },
   {
     id: '2',

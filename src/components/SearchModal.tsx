@@ -58,13 +58,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           description: 'Rank on Page 1 of Google, local SEO Lahore, and technical audits.'
         },
         {
-          title: 'Website Development',
-          category: 'Service',
-          href: '/services/website-development',
-          description: 'Custom full-stack web applications, portals, and CMS platforms.'
-        },
-        {
-          title: 'E-Commerce Website Development',
+          title: 'E-Commerce Website Solutions',
           category: 'Service',
           href: '/services/e-commerce-website',
           description: 'High-converting online store creation with JazzCash and COD.'
