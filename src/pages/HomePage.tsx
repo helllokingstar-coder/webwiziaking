@@ -29,6 +29,7 @@ import { portfolioData } from '../data/portfolioData';
 import { testimonialsData } from '../data/testimonialsData';
 import { blogPosts } from '../data/blogData';
 import { SeoHead } from '../components/SeoHead';
+import { SeoReadySection } from '../components/SeoReadySection';
 import { PortfolioItem } from '../types';
 import heroBusinesswomanImg from '../assets/images/hero_businesswoman_office_1788021044044.jpg';
 import heroPurpleAbstractBg from '../assets/images/hero_purple_abstract_bg_1788033202020.jpg';
@@ -207,7 +208,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 Company in <span className="text-[#f43f5e]">Pakistan</span>
               </h2>
 
-              <div className="space-y-4 text-slate-500 text-sm sm:text-base leading-relaxed max-w-xl">
+              <div className="space-y-4 text-[#1e1b4b] text-sm sm:text-base leading-relaxed max-w-xl font-normal">
                 <p>
                   Webwizia was founded with a singular purpose: to bridge the gap between creative visual artistry and measurable digital business outcomes. Based in Hall Road, Lahore, we have evolved into a full-scale digital agency serving retail brands, healthcare specialists, logistics firms, real estate giants, and fast-growing tech startups.
                 </p>
@@ -222,28 +223,28 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   <div className="w-7 h-7 rounded-full bg-[#1e1b4b] text-white flex items-center justify-center shrink-0 shadow-sm">
                     <Check className="w-4 h-4 stroke-[3]" />
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-slate-800">Custom Website Design</span>
+                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Custom Website Design</span>
                 </div>
 
                 <div className="flex items-center space-x-3">
                   <div className="w-7 h-7 rounded-full bg-[#6366f1] text-white flex items-center justify-center shrink-0 shadow-sm">
                     <Check className="w-4 h-4 stroke-[3]" />
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-slate-800">SEO-Friendly Websites</span>
+                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">SEO-Friendly Websites</span>
                 </div>
 
                 <div className="flex items-center space-x-3">
                   <div className="w-7 h-7 rounded-full bg-[#f43f5e] text-white flex items-center justify-center shrink-0 shadow-sm">
                     <Check className="w-4 h-4 stroke-[3]" />
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-slate-800">Responsive Web Design</span>
+                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Responsive Web Design</span>
                 </div>
 
                 <div className="flex items-center space-x-3">
                   <div className="w-7 h-7 rounded-full bg-[#1e293b] text-white flex items-center justify-center shrink-0 shadow-sm">
                     <Check className="w-4 h-4 stroke-[3]" />
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-slate-800">Digital Marketing</span>
+                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Digital Marketing</span>
                 </div>
               </div>
 
@@ -264,7 +265,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                     className="w-12 h-12 rounded-full object-cover border-2 border-slate-100 shadow-sm"
                   />
                   <div>
-                    <h4 className="text-base font-black text-slate-900 leading-tight">Meggie Wilson</h4>
+                    <h4 className="text-base font-black text-[#1e1b4b] leading-tight">Meggie Wilson</h4>
                     <p className="text-[11px] font-bold text-slate-400 tracking-wider uppercase">CEO, HEAD DIRECTOR</p>
                   </div>
                 </div>
@@ -289,7 +290,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                     <BarChart3 className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-xl font-black text-slate-900 leading-none">120%</div>
+                    <div className="text-xl font-black text-[#1e1b4b] leading-none">120%</div>
                     <div className="text-[10px] font-extrabold text-slate-400 tracking-wider uppercase mt-1">ENGAGEMENT</div>
                   </div>
                 </div>
@@ -297,7 +298,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 {/* Floating Badge 2: Increase Sales Chart */}
                 <div className="absolute -bottom-5 sm:-bottom-7 -left-3 sm:-left-6 z-20 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl shadow-slate-300/60 border border-slate-100 w-44 sm:w-52">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs font-bold text-slate-700">Increase Sales</span>
+                    <span className="text-xs font-bold text-[#1e1b4b]">Increase Sales</span>
                     <span className="text-[11px] font-black text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">+65,4%</span>
                   </div>
                   {/* Smooth Green SVG Line Chart */}
@@ -334,10 +335,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
               <span>What We Do</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               Our Services
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg">
+            <p className="text-[#1e1b4b] text-base sm:text-lg">
               Professional digital solutions designed to help your business build, grow and succeed online.
             </p>
           </div>
@@ -358,12 +359,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-slate-900 group-hover:text-white transition-colors duration-300 mb-3">
+                  <h3 className="text-2xl font-bold text-[#1e1b4b] group-hover:text-white transition-colors duration-300 mb-3">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-600 group-hover:text-blue-50 text-sm sm:text-base leading-relaxed mb-8 transition-colors duration-300">
+                  <p className="text-[#1e1b4b] group-hover:text-blue-50 text-sm sm:text-base leading-relaxed mb-8 transition-colors duration-300 font-normal">
                     {service.shortDescription}
                   </p>
                 </div>
@@ -398,6 +399,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       </section>
 
       {/* ========================================================
+          SEO-READY WEBSITES SECTION (Immediately after Services)
+          ======================================================== */}
+      <SeoReadySection onNavigate={onNavigate} />
+
+      {/* ========================================================
           PORTFOLIO SECTION
           ======================================================== */}
       <section className="py-20 lg:py-28 bg-slate-50 border-t border-slate-200/60">
@@ -406,10 +412,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
               <span>Showcase</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               Our Recent Work
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg">
+            <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
               Creative Digital Solutions Built For Growing Businesses
             </p>
           </div>
@@ -423,7 +429,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 className={`px-5 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all ${
                   selectedPortfolioCategory === cat
                     ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                    : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'
+                    : 'bg-white text-[#1e1b4b] hover:bg-slate-200 border border-slate-200'
                 }`}
               >
                 {cat}
@@ -457,10 +463,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
 
                 <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
+                    <h3 className="text-xl font-bold text-[#1e1b4b] group-hover:text-blue-600 transition-colors mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                    <p className="text-[#1e1b4b] text-xs sm:text-sm leading-relaxed mb-4 font-normal">
                       {item.shortDescription}
                     </p>
                   </div>
@@ -493,10 +499,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
               <span>Why Webwizia</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               Why Businesses Choose Webwizia
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg">
+            <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
               We combine technical craftsmanship with result-driven digital strategies to elevate your brand.
             </p>
           </div>
@@ -510,10 +516,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <div className="w-14 h-14 rounded-2xl bg-white text-blue-600 shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
                   {getFeatureIcon(feature.icon)}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-[#1e1b4b] group-hover:text-blue-600 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-[#1e1b4b] text-sm leading-relaxed font-normal">
                   {feature.description}
                 </p>
               </div>
@@ -531,10 +537,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
               <span>Client Feedback</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               What Our Clients Say
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg">
+            <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
               Real feedback from business leaders and founders who grew their companies with Webwizia.
             </p>
           </div>
@@ -551,7 +557,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <p className="text-slate-700 text-sm leading-relaxed italic">
+                  <p className="text-[#1e1b4b] text-sm leading-relaxed italic font-normal">
                     "{item.content}"
                   </p>
                 </div>
@@ -563,10 +569,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                     className="w-11 h-11 rounded-full object-cover border-2 border-blue-500"
                   />
                   <div>
-                    <h4 className="text-sm font-bold text-slate-900">
+                    <h4 className="text-sm font-bold text-[#1e1b4b]">
                       {item.name}
                     </h4>
-                    <span className="block text-xs text-slate-500">
+                    <span className="block text-xs text-[#1e1b4b]/80">
                       {item.role}, {item.company}
                     </span>
                   </div>
@@ -586,10 +592,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
               <span>Articles & Insights</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               Latest Blog & Insights
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg">
+            <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
               Explore our latest guides on web design, SEO rankings, and digital business strategies.
             </p>
           </div>
@@ -616,17 +622,17 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   </div>
 
                   <div className="p-6 sm:p-7">
-                    <div className="flex items-center space-x-3 text-xs text-slate-400 mb-3">
+                    <div className="flex items-center space-x-3 text-xs text-[#1e1b4b]/70 mb-3">
                       <span>{post.publishedDate}</span>
                       <span>•</span>
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2 mb-3">
+                    <h3 className="text-xl font-bold text-[#1e1b4b] group-hover:text-blue-600 transition-colors line-clamp-2 mb-3">
                       {post.title}
                     </h3>
 
-                    <p className="text-slate-600 text-sm line-clamp-2 leading-relaxed">
+                    <p className="text-[#1e1b4b] text-sm line-clamp-2 leading-relaxed font-normal">
                       {post.excerpt}
                     </p>
                   </div>
@@ -685,10 +691,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   Location: {activePortfolioModal.location}
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900">
+              <h3 className="text-2xl font-bold text-[#1e1b4b]">
                 {activePortfolioModal.title}
               </h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
+              <p className="text-[#1e1b4b] text-sm leading-relaxed font-normal">
                 {activePortfolioModal.fullDescription}
               </p>
               <div>
@@ -697,7 +703,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {activePortfolioModal.deliverables.map((del, i) => (
-                    <span key={i} className="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg">
+                    <span key={i} className="px-3 py-1 bg-slate-100 text-[#1e1b4b] text-xs font-semibold rounded-lg">
                       {del}
                     </span>
                   ))}
@@ -705,7 +711,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               </div>
               <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                 <div className="text-xs">
-                  <span className="font-bold text-slate-900">{activePortfolioModal.impactMetric}</span> {activePortfolioModal.impactLabel}
+                  <span className="font-bold text-[#1e1b4b]">{activePortfolioModal.impactMetric}</span> <span className="text-[#1e1b4b]/80">{activePortfolioModal.impactLabel}</span>
                 </div>
                 <button
                   onClick={() => {

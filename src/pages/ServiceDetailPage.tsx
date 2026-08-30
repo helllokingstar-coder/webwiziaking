@@ -155,10 +155,10 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Service Overview</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight leading-tight">
                 {service.title} Engineered For Maximum Impact
               </h2>
-              <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p className="text-[#1e1b4b] text-base sm:text-lg leading-relaxed font-normal">
                 {service.overview}
               </p>
 
@@ -193,10 +193,10 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
               <span>What We Offer</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               Comprehensive Capabilities
             </h2>
-            <p className="text-slate-600 text-base">
+            <p className="text-[#1e1b4b] text-base font-normal">
               Everything required to deliver an exceptional digital result from strategy to execution.
             </p>
           </div>
@@ -210,10 +210,10 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
                 <div className="w-14 h-14 rounded-2xl bg-blue-50 group-hover:bg-blue-600 group-hover:text-white text-blue-600 flex items-center justify-center transition-colors shadow-xs">
                   {getOfferingIcon(offering.icon)}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-[#1e1b4b] group-hover:text-blue-600 transition-colors">
                   {offering.title}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-[#1e1b4b] text-sm leading-relaxed font-normal">
                   {offering.description}
                 </p>
               </div>
@@ -227,17 +227,17 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {service.detailedSections.map((sec, idx) => (
             <div key={idx} className="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200/80 text-left space-y-6">
-              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+              <h3 className="text-2xl sm:text-3xl font-black text-[#1e1b4b] tracking-tight">
                 {sec.title}
               </h3>
-              <p className="text-slate-600 text-base leading-relaxed">
+              <p className="text-[#1e1b4b] text-base leading-relaxed font-normal">
                 {sec.content}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 {sec.points.map((pt, i) => (
                   <div key={i} className="flex items-start space-x-3">
                     <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span className="text-sm font-semibold text-slate-800">{pt}</span>
+                    <span className="text-sm font-semibold text-[#1e1b4b]">{pt}</span>
                   </div>
                 ))}
               </div>
@@ -253,7 +253,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
               <span>Why It Matters</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               Tangible Benefits For Your Business
             </h2>
           </div>
@@ -264,8 +264,8 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
                 <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm">
                   0{idx + 1}
                 </div>
-                <h4 className="text-lg font-bold text-slate-900">{benefit.title}</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">{benefit.description}</p>
+                <h4 className="text-lg font-bold text-[#1e1b4b]">{benefit.title}</h4>
+                <p className="text-[#1e1b4b] text-sm leading-relaxed font-normal">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -279,7 +279,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
               <span>Workflow</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               Our {service.title} Process
             </h2>
           </div>
@@ -288,8 +288,8 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             {service.process.map((step) => (
               <div key={step.step} className="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 space-y-3 relative">
                 <span className="text-3xl font-black text-blue-600">{step.step}</span>
-                <h4 className="text-base font-bold text-slate-900">{step.title}</h4>
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{step.description}</p>
+                <h4 className="text-base font-bold text-[#1e1b4b]">{step.title}</h4>
+                <p className="text-[#1e1b4b] text-xs sm:text-sm leading-relaxed font-normal">{step.description}</p>
               </div>
             ))}
           </div>
@@ -306,7 +306,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             {service.techStack.map((tech, idx) => (
               <span
                 key={idx}
-                className="px-4 py-2 bg-white text-slate-800 font-semibold text-xs rounded-xl border border-slate-200 shadow-xs"
+                className="px-4 py-2 bg-white text-[#1e1b4b] font-semibold text-xs rounded-xl border border-slate-200 shadow-xs"
               >
                 {tech}
               </span>
@@ -323,7 +323,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
               <HelpCircle className="w-3.5 h-3.5" />
               <span>Questions & Answers</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               Frequently Asked Questions
             </h2>
           </div>
@@ -336,7 +336,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
               >
                 <button
                   onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between font-bold text-slate-900 hover:text-blue-600 transition-colors"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between font-bold text-[#1e1b4b] hover:text-blue-600 transition-colors"
                 >
                   <span className="text-base sm:text-lg pr-4">{faq.question}</span>
                   <ChevronDown
@@ -347,7 +347,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
                 </button>
 
                 {openFaqIndex === idx && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 bg-white">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-[#1e1b4b] text-sm sm:text-base leading-relaxed border-t border-slate-100 bg-white font-normal">
                     {faq.answer}
                   </div>
                 )}

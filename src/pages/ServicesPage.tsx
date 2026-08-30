@@ -78,10 +78,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
               <span>Core Capabilities</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               Designed For End-to-End Digital Transformation
             </h2>
-            <p className="text-slate-600 text-base">
+            <p className="text-[#1e1b4b] text-base font-normal">
               Each of our service offerings is built on modern UI principles, conversion psychology, and aggressive organic search strategies.
             </p>
           </div>
@@ -100,11 +100,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
                     {getServiceIcon(service.number)}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-slate-900 group-hover:text-white transition-colors duration-300 mb-3">
+                  <h3 className="text-2xl font-bold text-[#1e1b4b] group-hover:text-white transition-colors duration-300 mb-3">
                     {service.title}
                   </h3>
 
-                  <p className="text-slate-600 group-hover:text-blue-50 text-sm sm:text-base leading-relaxed mb-6 transition-colors duration-300">
+                  <p className="text-[#1e1b4b] group-hover:text-blue-50 text-sm sm:text-base leading-relaxed mb-6 transition-colors duration-300 font-normal">
                     {service.shortDescription}
                   </p>
 
@@ -152,10 +152,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
               <span>Our Process</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               How We Deliver High-Impact Results
             </h2>
-            <p className="text-slate-600 text-base">
+            <p className="text-[#1e1b4b] text-base font-normal">
               A structured 4-phase agile methodology ensuring on-time delivery and zero guesswork.
             </p>
           </div>
@@ -185,8 +185,8 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
             ].map((p, idx) => (
               <div key={idx} className="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 space-y-3">
                 <span className="text-2xl font-black text-blue-600">{p.step}</span>
-                <h4 className="text-lg font-bold text-slate-900">{p.title}</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">{p.desc}</p>
+                <h4 className="text-lg font-bold text-[#1e1b4b]">{p.title}</h4>
+                <p className="text-[#1e1b4b] text-sm leading-relaxed font-normal">{p.desc}</p>
               </div>
             ))}
           </div>

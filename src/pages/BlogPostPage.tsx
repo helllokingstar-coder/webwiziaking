@@ -130,17 +130,17 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
               {post.keyTakeaways.map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-2.5">
                   <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
-                  <span className="text-xs sm:text-sm font-semibold text-slate-800">{item}</span>
+                  <span className="text-xs sm:text-sm font-semibold text-[#1e1b4b]">{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Formatted Article Body */}
-          <div className="space-y-10 text-left text-slate-700 leading-relaxed text-base sm:text-lg">
+          <div className="space-y-10 text-left text-[#1e1b4b] leading-relaxed text-base sm:text-lg">
             {post.sections.map((sec, idx) => (
               <div key={idx} className="space-y-4">
-                <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#1e1b4b] tracking-tight">
                   {sec.heading}
                 </h2>
                 {sec.subheading && (
@@ -149,14 +149,14 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
                   </h3>
                 )}
                 {sec.paragraphs.map((para, pIdx) => (
-                  <p key={pIdx} className="text-slate-600 leading-relaxed text-base">
+                  <p key={pIdx} className="text-[#1e1b4b] leading-relaxed text-base font-normal">
                     {para}
                   </p>
                 ))}
                 {sec.bulletPoints && sec.bulletPoints.length > 0 && (
                   <ul className="space-y-2.5 pt-2 pl-2">
                     {sec.bulletPoints.map((pt, i) => (
-                      <li key={i} className="flex items-start space-x-3 text-sm sm:text-base text-slate-700">
+                      <li key={i} className="flex items-start space-x-3 text-sm sm:text-base text-[#1e1b4b]">
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 shrink-0" />
                         <span>{pt}</span>
                       </li>
@@ -172,7 +172,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
             <div className="flex flex-wrap items-center gap-2">
               <Tag className="w-4 h-4 text-slate-400 mr-1" />
               {post.tags.map((tag, i) => (
-                <span key={i} className="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg">
+                <span key={i} className="px-3 py-1 bg-slate-100 text-[#1e1b4b] text-xs font-semibold rounded-lg">
                   #{tag}
                 </span>
               ))}
@@ -180,7 +180,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
 
             <button
               onClick={handleShare}
-              className="px-4 py-2 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-600 text-xs font-bold rounded-xl transition-all flex items-center space-x-2"
+              className="px-4 py-2 bg-slate-100 hover:bg-blue-50 text-[#1e1b4b] hover:text-blue-600 text-xs font-bold rounded-xl transition-all flex items-center space-x-2"
             >
               <Share2 className="w-4 h-4" />
               <span>{copied ? 'Link Copied!' : 'Share Article'}</span>
@@ -196,9 +196,9 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
             />
             <div className="space-y-1 text-center sm:text-left">
               <span className="text-xs font-bold uppercase text-blue-600 tracking-wider">Written By</span>
-              <h4 className="text-lg font-bold text-slate-900">{post.author.name}</h4>
-              <p className="text-xs text-slate-500 font-semibold">{post.author.role}</p>
-              <p className="text-xs text-slate-600 leading-relaxed pt-1">
+              <h4 className="text-lg font-bold text-[#1e1b4b]">{post.author.name}</h4>
+              <p className="text-xs text-[#1e1b4b]/70 font-semibold">{post.author.role}</p>
+              <p className="text-xs text-[#1e1b4b] leading-relaxed pt-1 font-normal">
                 {post.author.bio}
               </p>
             </div>
@@ -207,7 +207,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
           {/* Article FAQs Accordion */}
           {post.faqs && post.faqs.length > 0 && (
             <div className="mt-16 text-left space-y-6">
-              <div className="flex items-center space-x-2 text-slate-900 font-black text-2xl">
+              <div className="flex items-center space-x-2 text-[#1e1b4b] font-black text-2xl">
                 <HelpCircle className="w-6 h-6 text-blue-600" />
                 <span>Article FAQs</span>
               </div>
@@ -220,7 +220,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
                   >
                     <button
                       onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
-                      className="w-full p-4 sm:p-5 text-left flex items-center justify-between font-bold text-slate-900 hover:text-blue-600 transition-colors"
+                      className="w-full p-4 sm:p-5 text-left flex items-center justify-between font-bold text-[#1e1b4b] hover:text-blue-600 transition-colors"
                     >
                       <span className="text-sm sm:text-base pr-4">{faq.question}</span>
                       <ChevronDown
@@ -231,7 +231,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
                     </button>
 
                     {openFaqIndex === idx && (
-                      <div className="px-4 sm:px-5 pb-5 pt-1 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 bg-white">
+                      <div className="px-4 sm:px-5 pb-5 pt-1 text-[#1e1b4b] text-xs sm:text-sm leading-relaxed border-t border-slate-100 bg-white font-normal">
                         {faq.answer}
                       </div>
                     )}
@@ -248,11 +248,11 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
                 onClick={() => onNavigate(`/blog/${prevPost.slug}`)}
                 className="p-5 rounded-2xl bg-slate-50 hover:bg-blue-50 border border-slate-200 text-left group transition-all"
               >
-                <div className="flex items-center space-x-1 text-xs font-bold text-slate-400 group-hover:text-blue-600 mb-1">
+                <div className="flex items-center space-x-1 text-xs font-bold text-[#1e1b4b]/60 group-hover:text-blue-600 mb-1">
                   <ArrowLeft className="w-3.5 h-3.5" />
                   <span>Previous Article</span>
                 </div>
-                <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 line-clamp-1">
+                <div className="text-sm font-bold text-[#1e1b4b] group-hover:text-blue-600 line-clamp-1">
                   {prevPost.title}
                 </div>
               </button>
@@ -263,11 +263,11 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
                 onClick={() => onNavigate(`/blog/${nextPost.slug}`)}
                 className="p-5 rounded-2xl bg-slate-50 hover:bg-blue-50 border border-slate-200 text-right group transition-all"
               >
-                <div className="flex items-center justify-end space-x-1 text-xs font-bold text-slate-400 group-hover:text-blue-600 mb-1">
+                <div className="flex items-center justify-end space-x-1 text-xs font-bold text-[#1e1b4b]/60 group-hover:text-blue-600 mb-1">
                   <span>Next Article</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </div>
-                <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 line-clamp-1">
+                <div className="text-sm font-bold text-[#1e1b4b] group-hover:text-blue-600 line-clamp-1">
                   {nextPost.title}
                 </div>
               </button>
@@ -276,7 +276,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
 
           {/* Related Articles Section */}
           <div className="mt-16 pt-12 border-t border-slate-200 text-left space-y-6">
-            <h3 className="text-2xl font-black text-slate-900">
+            <h3 className="text-2xl font-black text-[#1e1b4b]">
               Related Articles
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -295,7 +295,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
                     <span className="text-[10px] font-bold uppercase text-blue-600 tracking-wider">
                       {rPost.category}
                     </span>
-                    <h4 className="text-sm font-bold text-slate-900 group-hover:text-blue-600 line-clamp-2 mt-1">
+                    <h4 className="text-sm font-bold text-[#1e1b4b] group-hover:text-blue-600 line-clamp-2 mt-1">
                       {rPost.title}
                     </h4>
                   </div>

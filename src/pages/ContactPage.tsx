@@ -196,11 +196,11 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl font-black text-slate-900">
+                  <h3 className="text-2xl font-black text-[#1e1b4b]">
                     Message Sent Successfully!
                   </h3>
-                  <p className="text-slate-600 text-sm max-w-md mx-auto leading-relaxed">
-                    Thank you for reaching out to Webzify. Our team will review your inquiry and get back to you within 24 hours at <span className="font-bold text-slate-900">{formData.email}</span>.
+                  <p className="text-[#1e1b4b] text-sm max-w-md mx-auto leading-relaxed font-normal">
+                    Thank you for reaching out to Webzify. Our team will review your inquiry and get back to you within 24 hours at <span className="font-bold text-[#1e1b4b]">{formData.email}</span>.
                   </p>
                   <div className="pt-4">
                     <button
@@ -213,14 +213,14 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                  <h2 className="text-2xl sm:text-3xl font-black text-[#1e1b4b] tracking-tight">
                     Send us a Message
                   </h2>
 
                   {/* Row 1: Full Name & Email Address */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-800 mb-1.5">
+                      <label className="block text-xs font-bold text-[#1e1b4b] mb-1.5">
                         Full Name *
                       </label>
                       <input
@@ -229,7 +229,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                         placeholder="John Doe"
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        className={`w-full px-4 py-3 rounded-xl bg-[#f0f4fc] border focus:bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none transition-all ${
+                        className={`w-full px-4 py-3 rounded-xl bg-[#f0f4fc] border focus:bg-white text-sm text-[#1e1b4b] placeholder-slate-400 focus:outline-none transition-all ${
                           errors.fullName ? 'border-red-400 focus:border-red-400' : 'border-transparent focus:border-blue-500'
                         }`}
                       />
@@ -237,7 +237,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-800 mb-1.5">
+                      <label className="block text-xs font-bold text-[#1e1b4b] mb-1.5">
                         Email Address *
                       </label>
                       <input
@@ -246,7 +246,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                         placeholder="john@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className={`w-full px-4 py-3 rounded-xl bg-[#f0f4fc] border focus:bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none transition-all ${
+                        className={`w-full px-4 py-3 rounded-xl bg-[#f0f4fc] border focus:bg-white text-sm text-[#1e1b4b] placeholder-slate-400 focus:outline-none transition-all ${
                           errors.email ? 'border-red-400 focus:border-red-400' : 'border-transparent focus:border-blue-500'
                         }`}
                       />
@@ -257,7 +257,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   {/* Row 2: Phone Number & Interested Service */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-800 mb-1.5">
+                      <label className="block text-xs font-bold text-[#1e1b4b] mb-1.5">
                         Phone Number *
                       </label>
                       <input
@@ -266,7 +266,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                         placeholder="+92 300 0000000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className={`w-full px-4 py-3 rounded-xl bg-[#f0f4fc] border focus:bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none transition-all ${
+                        className={`w-full px-4 py-3 rounded-xl bg-[#f0f4fc] border focus:bg-white text-sm text-[#1e1b4b] placeholder-slate-400 focus:outline-none transition-all ${
                           errors.phone ? 'border-red-400 focus:border-red-400' : 'border-transparent focus:border-blue-500'
                         }`}
                       />
@@ -274,14 +274,14 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-800 mb-1.5">
+                      <label className="block text-xs font-bold text-[#1e1b4b] mb-1.5">
                         Interested Service
                       </label>
                       <select
                         id="contact-service-select"
                         value={formData.serviceInterest}
                         onChange={(e) => setFormData({ ...formData, serviceInterest: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-[#f0f4fc] border border-transparent focus:border-blue-500 focus:bg-white text-sm text-slate-800 focus:outline-none transition-all cursor-pointer"
+                        className="w-full px-4 py-3 rounded-xl bg-[#f0f4fc] border border-transparent focus:border-blue-500 focus:bg-white text-sm text-[#1e1b4b] focus:outline-none transition-all cursor-pointer"
                       >
                         <option value="">Select a service</option>
                         <option value="Web Design">Web Design</option>
@@ -294,7 +294,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                   {/* Row 3: Project Details */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1.5">
+                    <label className="block text-xs font-bold text-[#1e1b4b] mb-1.5">
                       Project Details *
                     </label>
                     <textarea
@@ -303,7 +303,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       placeholder="Tell us about your project, goals, and timeline..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className={`w-full px-4 py-3.5 rounded-xl bg-[#f0f4fc] border focus:bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none transition-all resize-none ${
+                      className={`w-full px-4 py-3.5 rounded-xl bg-[#f0f4fc] border focus:bg-white text-sm text-[#1e1b4b] placeholder-slate-400 focus:outline-none transition-all resize-none ${
                         errors.message ? 'border-red-400 focus:border-red-400' : 'border-transparent focus:border-blue-500'
                       }`}
                     />
@@ -339,8 +339,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
           {/* Floating Map Location Card */}
           <div className="absolute top-6 left-6 z-20 bg-white px-5 py-3.5 rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 flex items-center space-x-4 max-w-sm">
             <div>
-              <h4 className="text-sm font-black text-slate-900">Hall Road</h4>
-              <p className="text-xs text-slate-500 mt-0.5 leading-tight">
+              <h4 className="text-sm font-black text-[#1e1b4b]">Hall Road</h4>
+              <p className="text-xs text-[#1e1b4b]/80 mt-0.5 leading-tight font-normal">
                 Hall Rd, Garhi Shahu, Lahore,<br />54000, Pakistan
               </p>
             </div>

@@ -86,26 +86,26 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
                 <span>Who We Are</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight leading-tight">
                 Your Strategic Digital Growth Partner in Lahore
               </h2>
 
-              <p className="text-slate-600 text-base leading-relaxed">
+              <p className="text-[#1e1b4b] text-base leading-relaxed font-normal">
                 Webwizia was founded with a singular purpose: to bridge the gap between creative visual artistry and measurable digital business outcomes. Based in Hall Road, Lahore, we have evolved into a full-scale digital agency serving retail brands, healthcare specialists, logistics firms, real estate giants, and fast-growing tech startups.
               </p>
 
-              <p className="text-slate-600 text-base leading-relaxed">
+              <p className="text-[#1e1b4b] text-base leading-relaxed font-normal">
                 We believe that a website should never be an idle digital brochure. It must be an active 24/7 revenue engine that drives customer inquiries, dominates local search rankings, and reinforces customer trust.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
                   <div className="text-2xl font-black text-blue-600">80+</div>
-                  <div className="text-xs font-bold text-slate-700 mt-1">Happy Clients</div>
+                  <div className="text-xs font-bold text-[#1e1b4b] mt-1">Happy Clients</div>
                 </div>
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
                   <div className="text-2xl font-black text-blue-600">95%</div>
-                  <div className="text-xs font-bold text-slate-700 mt-1">Satisfaction Rate</div>
+                  <div className="text-xs font-bold text-[#1e1b4b] mt-1">Satisfaction Rate</div>
                 </div>
               </div>
             </div>
@@ -122,13 +122,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               <div className="w-14 h-14 rounded-2xl bg-blue-50 group-hover:bg-blue-600 group-hover:text-white text-blue-600 flex items-center justify-center transition-colors">
                 <Target className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-black text-slate-900">
+              <h3 className="text-2xl font-black text-[#1e1b4b]">
                 Our Mission
               </h3>
-              <p className="text-slate-600 text-base leading-relaxed">
+              <p className="text-[#1e1b4b] text-base leading-relaxed font-normal">
                 To empower businesses with innovative, reliable, and result-focused digital solutions that maximize visibility, streamline customer acquisition, and yield measurable revenue growth.
               </p>
-              <ul className="space-y-2 pt-2 text-sm text-slate-700">
+              <ul className="space-y-2 pt-2 text-sm text-[#1e1b4b]">
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-600" />
                   <span>Deliver human-centered UI/UX with modern conversion science</span>
@@ -149,13 +149,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               <div className="w-14 h-14 rounded-2xl bg-blue-50 group-hover:bg-blue-600 group-hover:text-white text-blue-600 flex items-center justify-center transition-colors">
                 <Eye className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-black text-slate-900">
+              <h3 className="text-2xl font-black text-[#1e1b4b]">
                 Our Vision
               </h3>
-              <p className="text-slate-600 text-base leading-relaxed">
+              <p className="text-[#1e1b4b] text-base leading-relaxed font-normal">
                 To become the most trusted digital technology partner for businesses in Pakistan and internationally, recognized for uncompromising engineering quality, transparent reporting, and transformative client growth.
               </p>
-              <ul className="space-y-2 pt-2 text-sm text-slate-700">
+              <ul className="space-y-2 pt-2 text-sm text-[#1e1b4b]">
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-600" />
                   <span>Set new benchmarks for digital marketing excellence in Lahore</span>
@@ -181,10 +181,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
               <span>Our Principles</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
               The Principles Behind Webwizia
             </h2>
-            <p className="text-slate-600 text-base">
+            <p className="text-[#1e1b4b] text-base font-normal">
               Every design decision and line of code we write is guided by four foundational pillars.
             </p>
           </div>
@@ -216,8 +216,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
                 <div className="w-12 h-12 rounded-xl bg-white text-blue-600 shadow-sm flex items-center justify-center">
                   <val.icon className="w-6 h-6" />
                 </div>
-                <h4 className="text-lg font-bold text-slate-900">{val.title}</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">{val.desc}</p>
+                <h4 className="text-lg font-bold text-[#1e1b4b]">{val.title}</h4>
+                <p className="text-[#1e1b4b] text-sm leading-relaxed font-normal">{val.desc}</p>
               </div>
             ))}
           </div>
