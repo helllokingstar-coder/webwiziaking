@@ -30,6 +30,7 @@ import { testimonialsData } from '../data/testimonialsData';
 import { blogPosts } from '../data/blogData';
 import { SeoHead } from '../components/SeoHead';
 import { SeoReadySection } from '../components/SeoReadySection';
+import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
 import heroBusinesswomanImg from '../assets/images/hero_businesswoman_office_1788021044044.jpg';
 import heroPurpleAbstractBg from '../assets/images/hero_purple_abstract_bg_1788033202020.jpg';
@@ -491,42 +492,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       </section>
 
       {/* ========================================================
-          WHY CHOOSE WEBWIZIA
+          WHY CHOOSE US / OUR EDGE (After Services & Before Blog)
           ======================================================== */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-2xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
-              <span>Why Webwizia</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
-              Why Businesses Choose Webwizia
-            </h2>
-            <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
-              We combine technical craftsmanship with result-driven digital strategies to elevate your brand.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-            {siteConfig.whyChooseUs.map((feature, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-50 hover:bg-blue-50/60 p-8 rounded-3xl border border-slate-200/80 hover:border-blue-300 transition-all duration-300 space-y-4 group"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-white text-blue-600 shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
-                  {getFeatureIcon(feature.icon)}
-                </div>
-                <h3 className="text-xl font-bold text-[#1e1b4b] group-hover:text-blue-600 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-[#1e1b4b] text-sm leading-relaxed font-normal">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhyChooseUsSection onNavigate={onNavigate} />
 
       {/* ========================================================
           TESTIMONIAL SECTION
