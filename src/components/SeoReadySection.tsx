@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   CheckCircle2,
-  Globe,
-  ExternalLink,
   Zap,
 } from 'lucide-react';
 import seoFriendlyImg from '../assets/images/seo_friendly_showcase_1788113502855.jpg';
@@ -13,14 +11,10 @@ interface SeoReadySectionProps {
 
 export const SeoReadySection: React.FC<SeoReadySectionProps> = ({ onNavigate }) => {
   const checklistItems = [
-    { text: 'SEO-Friendly Page Structure', accent: 'blue' },
-    { text: 'Proper Heading Structure (H1, H2, H3)', accent: 'navy' },
+    { text: 'SEO-Friendly Page Structure', accent: 'navy' },
+    { text: 'Proper Heading Structure (H1, H2, H3)', accent: 'blue' },
     { text: 'Meta Title & Meta Description Setup', accent: 'rose' },
-    { text: 'Image Alt Text Optimization', accent: 'blue' },
-    { text: 'Mobile Responsive Design', accent: 'rose' },
-    { text: 'Clean & Search-Friendly URLs', accent: 'navy' },
-    { text: 'Sitemap & Basic Search Engine Setup', accent: 'blue' },
-    { text: 'Fast & User-Friendly Website Structure', accent: 'rose' },
+    { text: 'Mobile Responsive Design', accent: 'navy' },
   ];
 
   return (
@@ -78,7 +72,7 @@ export const SeoReadySection: React.FC<SeoReadySectionProps> = ({ onNavigate }) 
               Building a beautiful website isn't enough on its own. We build every website with essential on-page SEO best practices so search engines can easily discover, understand, and crawl your content from day one.
             </p>
 
-            {/* 8-Point SEO Feature Checklist Grid */}
+            {/* 4-Point SEO Feature Checklist Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
               {checklistItems.map((item, idx) => {
                 // Style icon badge background depending on item accent
@@ -92,7 +86,7 @@ export const SeoReadySection: React.FC<SeoReadySectionProps> = ({ onNavigate }) 
                 return (
                   <div
                     key={idx}
-                    className="flex items-center space-x-3 p-2.5 rounded-2xl bg-slate-50/80 hover:bg-slate-100/80 border border-slate-100 transition-colors"
+                    className="flex items-center space-x-3 p-3 rounded-2xl bg-slate-50/80 hover:bg-slate-100/80 border border-slate-100 transition-colors"
                   >
                     <div
                       className={`w-7 h-7 rounded-full ${badgeColor} flex items-center justify-center shrink-0 shadow-2xs`}
@@ -107,37 +101,6 @@ export const SeoReadySection: React.FC<SeoReadySectionProps> = ({ onNavigate }) 
               })}
             </div>
 
-            {/* Supporting Clarification Box */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border-l-4 border-[#F43F5E] border-slate-200/80 space-y-1">
-              <div className="flex items-center space-x-1.5 text-xs font-bold text-[#1e1b4b]">
-                <Globe className="w-3.5 h-3.5 text-[#F43F5E]" />
-                <span>Foundation vs. Ongoing SEO</span>
-              </div>
-              <p className="text-xs sm:text-sm text-[#1e1b4b] leading-relaxed font-normal">
-                This foundational SEO setup makes your website naturally search-friendly. Comprehensive keyword targeting, off-page strategies, and continuous ranking optimization can be provided as a dedicated advanced SEO service.
-              </p>
-            </div>
-
-            {/* Action Button & Under-text */}
-            <div className="pt-2 space-y-2.5">
-              <div>
-                <a
-                  href="https://webwiziaking.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2.5 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-black text-sm tracking-wider uppercase rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transform hover:-translate-y-0.5 transition-all duration-200 group"
-                >
-                  <span>VIEW OUR WEBSITE</span>
-                  <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
-              </div>
-              
-              <p className="text-xs font-semibold text-[#1e1b4b] flex items-center space-x-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span>See how we build SEO-ready websites</span>
-              </p>
-            </div>
-
           </div>
 
         </div>
@@ -145,3 +108,4 @@ export const SeoReadySection: React.FC<SeoReadySectionProps> = ({ onNavigate }) 
     </section>
   );
 };
+
