@@ -79,13 +79,13 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onNaviga
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top Centered Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16 lg:mb-20">
+        <div className="max-w-4xl mx-auto text-center space-y-4 mb-16 lg:mb-20">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/80 text-blue-600 text-xs font-black uppercase tracking-wider shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 fill-current" />
             <span>WHY CHOOSE US</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1e1b4b] tracking-tight leading-[1.15]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1e1b4b] tracking-tight leading-[1.15] md:whitespace-nowrap">
             What Makes{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
               WebWiziaKing
