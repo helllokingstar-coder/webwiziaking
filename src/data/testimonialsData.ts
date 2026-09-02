@@ -9,8 +9,8 @@ export const testimonialsData: Testimonial[] = [
     location: 'Lahore, Pakistan',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
-    content: 'Webwizia delivered our custom web platform right on schedule. Their technical proficiency in digital solutions and clean UI design transformed how our corporate clients interact with our tracking systems. Highly recommended!',
-    service: 'Web Designing'
+    content: 'Webwizia delivered our bespoke corporate website on schedule and within budget. Their attention to detail, clear communication, and clean layout made a noticeable difference to how clients perceive our brand.',
+    service: 'Web Design'
   },
   {
     id: '2',
@@ -20,7 +20,7 @@ export const testimonialsData: Testimonial[] = [
     location: 'Gulberg, Lahore',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
-    content: 'Our online sales tripled within 60 days after Webwizia launched our new e-commerce store. The mobile checkout is silky smooth, and the JazzCash and courier integrations save us dozens of hours every week.',
+    content: 'Our online sales increased significantly after Webwizia launched our new e-commerce store. The mobile shopping experience is smooth, and the integrated local payment options make ordering effortless for our customers.',
     service: 'E-Commerce Website'
   },
   {
@@ -31,7 +31,7 @@ export const testimonialsData: Testimonial[] = [
     location: 'DHA, Lahore',
     avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
-    content: 'The SEO results have been remarkable. We are now ranked #1 in Lahore for all our primary healthcare services on Google Maps. Patient inquiries through our website have increased more than 300%.',
+    content: 'Webwizia’s targeted local SEO work helped establish our clinic’s visibility across Lahore. We now receive regular, relevant inquiries directly from patients searching for our medical services on Google.',
     service: 'SEO Services'
   },
   {
@@ -42,7 +42,7 @@ export const testimonialsData: Testimonial[] = [
     location: 'Lahore & UK',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
-    content: 'Webwizia’s design team has an exceptional eye for detail. They took our complex financial services and created a clean, modern, and credible website that has impressed both our local and international partners.',
-    service: 'Web Designing'
+    content: 'The team at Webwizia took the time to understand our financial consulting services. They built an authoritative, modern website that gives prospective clients immediate confidence in our expertise.',
+    service: 'Web Design'
   }
 ];

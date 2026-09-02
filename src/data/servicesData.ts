@@ -7,130 +7,138 @@ export const servicesData: ServiceDetail[] = [
     slug: 'web-designing',
     number: '01',
     title: 'Web Design',
-    shortDescription: 'Modern, responsive and user-friendly website designs created to give your business a professional online presence.',
-    fullTitle: 'Professional Web Design Services in Lahore & Worldwide',
-    tagline: 'Crafting Visually Stunning, Brand-Defining & High-Converting Digital Interfaces',
+    shortDescription: 'Leading web design agency in Lahore crafting custom website design Lahore, responsive website design, and professional web design Lahore for growing businesses.',
+    fullTitle: 'Web Design Agency in Lahore',
+    tagline: 'Custom, Responsive & Business-Focused Website Design Solutions',
     heroImage: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
-    metaTitle: 'Professional Web Design Services in Lahore | Webwizia',
-    metaDescription: 'Transform your digital presence with Webwizia. Custom UI/UX, responsive layouts, conversion-focused landing pages, and modern corporate website designs.',
-    keywords: ['Web Design Company in Lahore', 'UI UX Design Agency Pakistan', 'Responsive Web Design', 'Landing Page Design', 'Custom Business Websites'],
-    overview: 'At Webwizia, we engineer human-centered, visually captivating web designs that do more than just look pretty—they tell your brand story and guide visitors into becoming paying customers. Every website we design is tailored from the ground up to reflect your brand identity, load swiftly on all screen sizes, and deliver frictionless user experiences.',
+    metaTitle: 'Web Design Agency in Lahore | Custom Website Design | Webwizia',
+    metaDescription: 'Looking for a professional web design agency in Lahore? Webwizia creates custom, responsive, and mobile-friendly websites designed for business growth.',
+    keywords: [
+      'Web Design Agency in Lahore',
+      'Website Design Lahore',
+      'Professional Web Design Lahore',
+      'Custom Website Design Lahore',
+      'Responsive Web Design Lahore',
+      'Business Website Design',
+      'Professional Website Development'
+    ],
+    overview: 'As a dedicated web design agency in Lahore, Webwizia creates custom, responsive websites tailored to your business requirements. We focus on clean visual presentation, intuitive user experience, and mobile-friendly layouts that present your products and services clearly to prospective customers.',
     keyOfferings: [
       {
+        title: 'Custom Website Design',
+        description: 'Bespoke website design layouts crafted from the ground up to reflect your brand identity and business objectives.',
+        icon: 'Layout'
+      },
+      {
         title: 'Responsive Web Design',
-        description: 'Fluid layout architectures engineered to adapt smoothly across smartphones, iPads, laptops, and 4K displays.',
+        description: 'Fluid, mobile-friendly layouts engineered to display seamlessly across smartphones, tablets, laptops, and desktop screens.',
         icon: 'Smartphone'
       },
       {
-        title: 'UI/UX Design & Prototyping',
-        description: 'Figma wireframes, interactive user journey maps, and high-fidelity mockups built around psychology and visual clarity.',
+        title: 'User Experience (UX) & UI Design',
+        description: 'Intuitive interface design, structured navigation, and clean typography that provide a smooth browsing experience.',
         icon: 'Palette'
       },
       {
-        title: 'High-Converting Landing Pages',
-        description: 'Targeted single-page funnels optimized for Google Ads, social campaigns, lead generation, and immediate ROI.',
-        icon: 'Target'
-      },
-      {
-        title: 'Corporate & Business Websites',
-        description: 'Authoritative, clean web presence built for enterprises, consulting firms, startups, and service providers.',
+        title: 'Business & Corporate Websites',
+        description: 'Professional website development for companies, consulting firms, healthcare practices, and service providers.',
         icon: 'Building'
       },
       {
-        title: 'Mobile-Friendly Architecture',
-        description: 'Touch-optimized gestures, legible typography, instant tap targets, and streamlined mobile navigation.',
-        icon: 'Layers'
+        title: 'Conversion-Friendly Layouts',
+        description: 'Strategic page hierarchy, prominent contact points, and clear calls-to-action that encourage customer inquiries.',
+        icon: 'Target'
       },
       {
-        title: 'Conversion-Focused Layouts',
-        description: 'Strategic visual hierarchy, trust badges, clear calls-to-action, and psychological micro-interactions.',
+        title: 'Website Redesign Services',
+        description: 'Modernising outdated websites with fresh visual design, faster loading performance, and improved mobile navigation.',
         icon: 'Zap'
       }
     ],
     detailedSections: [
       {
-        title: 'Human-Centered Design Meets High Conversion Science',
-        content: 'Your website is frequently the first touchpoint a potential client has with your brand. We blend cutting-edge design aesthetics with user psychology to reduce bounce rates, increase session duration, and maximize sales conversions.',
+        title: 'Professional Website Design Focused on User Experience',
+        content: 'Your business website is often the first impression a potential client has of your company. We design clean, modern, and uncluttered layouts that make it easy for visitors to understand what you offer and how to get in touch.',
         points: [
-          'Design systems with custom color harmony, typography scales, and modular design components',
-          'Interactive prototype walk-throughs before writing a single line of production code',
-          'Accessibility compliance (WCAG 2.1 AA) ensuring full inclusivity for all users',
-          'Optimized asset delivery ensuring visual assets never degrade page load speeds'
+          'Custom typography and colour schemes aligned with your brand identity',
+          'Structured page hierarchy allowing visitors to find key information quickly',
+          'Clean, uncluttered interfaces that maintain visitor attention on core services',
+          'Fast-loading visual assets optimized for quick initial page rendering'
         ]
       },
       {
-        title: 'Designed For Modern Search & Social Discovery',
-        content: 'Great web design does not exist in a vacuum. We integrate semantic HTML structures, structured schemas, social Open Graph visuals, and Core Web Vitals best practices right inside the design canvas.',
+        title: 'Responsive & Mobile-Friendly Web Design',
+        content: 'With the majority of web traffic originating on mobile devices, responsive web design is essential. Every website we create is thoroughly tested across multiple screen resolutions and browser environments.',
         points: [
-          'Mobile viewport optimization avoiding any unexpected horizontal layout shifts',
-          'Optimized vector SVG graphics and modern WebP image processing',
-          'Clear breadcrumbs, intuitive mega-menus, and accessible drawer navigations',
-          'Integration with analytics, Google Tag Manager, and user heatmaps'
+          'Fluid grid systems that automatically adjust to any device viewport',
+          'Touch-friendly navigation menus and accessible tap targets on mobile screens',
+          'Optimized imagery and clean layouts without awkward horizontal scrolling',
+          'Cross-browser compatibility across Chrome, Safari, Edge, and Firefox'
         ]
       }
     ],
     benefits: [
       {
-        title: 'Elevated Brand Credibility',
-        description: 'Instantly build trust with modern, polished visual aesthetics that position you as an industry leader.'
+        title: 'Professional Brand Image',
+        description: 'Establish immediate credibility with a clean, modern design that accurately reflects your business quality.'
       },
       {
-        title: 'Lower Bounce Rates',
-        description: 'Engage visitors within 3 seconds using crisp headlines, logical navigation, and lightning-fast rendering.'
+        title: 'Intuitive User Experience',
+        description: 'Clear menus and structured page layouts guide visitors naturally through your service offerings.'
       },
       {
-        title: 'Measurable Lead Generation',
-        description: 'Strategically positioned CTAs, quote calculators, and sticky contact elements maximize inquiries.'
+        title: 'Mobile-Ready Presentation',
+        description: 'Provide an engaging and consistent visual experience for visitors browsing on smartphones and tablets.'
       },
       {
-        title: 'Seamless Multi-Device Experience',
-        description: 'Provide an identical first-class experience whether a customer visits on iPhone, Android, or desktop.'
+        title: 'Increased Inquiries',
+        description: 'Clear contact options, consultation buttons, and straightforward inquiry forms encourage user contact.'
       }
     ],
     process: [
       {
         step: '01',
-        title: 'Discovery & Brand Analysis',
-        description: 'We audit your competitor landscape, target audience personas, and primary conversion objectives.'
+        title: 'Discovery & Requirements',
+        description: 'We discuss your business model, target audience, brand preferences, and required website sections.'
       },
       {
         step: '02',
-        title: 'Wireframing & UX Architecture',
-        description: 'We map site structure, content hierarchy, and user decision pathways using low-fidelity blueprints.'
+        title: 'Structure & Wireframing',
+        description: 'We organize the site navigation, page hierarchy, and key content areas into a logical structural blueprint.'
       },
       {
         step: '03',
-        title: 'High-Fidelity Visual Design',
-        description: 'We craft pixel-perfect mockups with brand color schemes, typography, and interactive state feedback.'
+        title: 'Custom Visual Design',
+        description: 'We create high-fidelity design mockups incorporating your brand colors, typography, and visual assets.'
       },
       {
         step: '04',
-        title: 'Client Review & Iteration',
-        description: 'We conduct collaborative design reviews to refine every micro-interaction to absolute perfection.'
+        title: 'Review & Refinement',
+        description: 'We gather your feedback and make necessary revisions to ensure the design meets your specifications.'
       },
       {
         step: '05',
-        title: 'Handoff & Implementation',
-        description: 'Design assets and design systems are exported with clean specs ready for frontend engineering.'
+        title: 'Implementation & Launch',
+        description: 'The approved design is developed into a functional, responsive website tested across devices and launched.'
       }
     ],
-    techStack: ['Figma', 'Adobe XD', 'Tailwind CSS', 'Responsive Grid', 'SVG Vector Graphics', 'WCAG AA Accessibility'],
+    techStack: ['Figma', 'Responsive Grid', 'Tailwind CSS', 'Semantic HTML5', 'Vector Graphics', 'Cross-Browser Standards'],
     faqs: [
       {
-        question: 'How long does a custom web design project take at Webwizia?',
-        answer: 'Most standard business web designs take between 1 to 3 weeks depending on the number of unique templates, custom illustrations, and revision cycles. We provide a guaranteed milestone schedule upfront.'
+        question: 'What makes a professional custom website design important for businesses in Lahore?',
+        answer: 'A custom website design helps your business stand out from competitors who use generic templates. It ensures your site is tailored specifically to your audience, loads quickly, and presents your services in a clear, credible manner.'
       },
       {
-        question: 'Will my website look great on mobile devices and tablets?',
-        answer: 'Absolutely. Every single design we produce is mobile-first and tested rigorously across iOS, Android, tablets, laptops, and ultra-wide desktop monitors.'
+        question: 'Will my website be mobile-friendly and responsive?',
+        answer: 'Yes. Every website design created by Webwizia is fully responsive, ensuring optimal layout and legibility on smartphones, tablets, laptops, and desktop monitors.'
       },
       {
-        question: 'Can you redesign our existing outdated website?',
-        answer: 'Yes! We frequently help brands modernize legacy websites, improving visual appeal, mobile responsiveness, load times, and conversion rates while preserving existing SEO authority.'
+        question: 'Can you redesign our existing company website?',
+        answer: 'Yes. We offer website redesign services to update outdated interfaces, enhance mobile responsiveness, improve navigation, and give your brand a modern visual presentation.'
       },
       {
-        question: 'Do you provide the source design files after completion?',
-        answer: 'Yes, full ownership and all editable Figma/design files, visual assets, fonts, and icon packages are delivered to you upon project sign-off.'
+        question: 'How long does the website design process typically take?',
+        answer: 'The timeframe varies based on the number of pages, custom features, and feedback rounds. Most standard business website designs are completed within 2 to 4 weeks.'
       }
     ]
   },
@@ -139,130 +147,139 @@ export const servicesData: ServiceDetail[] = [
     slug: 'e-commerce-website',
     number: '02',
     title: 'E-Commerce Website',
-    shortDescription: 'Professional and responsive e-commerce websites designed to help businesses sell products and grow their online store.',
-    fullTitle: 'Professional E-Commerce Stores in Lahore & Global Markets',
-    tagline: 'High-Converting Online Stores Built To Scale Product Sales & Streamline Operations',
+    shortDescription: 'Comprehensive e-commerce website development Lahore delivering responsive online stores with structured catalogues, local payment integration, and smooth checkout.',
+    fullTitle: 'E-Commerce Website Development Lahore',
+    tagline: 'Custom Online Store Development & E-Commerce Web Design Solutions',
     heroImage: ecommerceHeroImg,
-    metaTitle: 'E-Commerce Online Store Solutions in Lahore | Webwizia',
-    metaDescription: 'Launch your online store with Webwizia. Custom e-commerce online stores, secure payment gateways, inventory management, mobile shopping carts, and SEO.',
-    keywords: ['E-Commerce Store in Lahore', 'Shopify Experts Pakistan', 'WooCommerce Experts Lahore', 'Online Store Setup', 'Payment Gateway Integration Pakistan'],
-    overview: 'In modern retail, a great e-commerce store is the lifeblood of business revenue. Webwizia builds intuitive, blazing-fast, and secure online shopping experiences that turn casual browsers into repeat buyers while giving you full control over orders, inventory, and marketing campaigns.',
+    metaTitle: 'E-Commerce Website Development Lahore | Online Store Design | Webwizia',
+    metaDescription: 'Professional e-commerce website development in Lahore. We build responsive online stores with secure checkout, payment gateway integration, and product catalogues.',
+    keywords: [
+      'E-Commerce Website Development Lahore',
+      'E-Commerce Web Design Lahore',
+      'Online Store Development Lahore',
+      'E-Commerce Website Design',
+      'Shopify Alternative Lahore',
+      'Online Shopping Website Development',
+      'E-Commerce Development Services',
+      'Mobile-Friendly E-Commerce Website'
+    ],
+    overview: 'Webwizia provides e-commerce website development in Lahore to help retail businesses, wholesalers, and consumer brands sell their products online. We build responsive, structured, and easy-to-navigate online stores with reliable shopping carts, secure checkout systems, and local payment gateway integrations.',
     keyOfferings: [
       {
-        title: 'Custom Online Store Setup',
-        description: 'Bespoke e-commerce architectures tailored for retail, fashion, electronics, FMCG, and B2B wholesale.',
+        title: 'Custom Online Store Development',
+        description: 'Tailored e-commerce website development designed around your product categories, brand presentation, and business model.',
         icon: 'ShoppingBag'
       },
       {
-        title: 'Conversion-Optimized Product Pages',
-        description: 'Multi-angle image zoom, product variants (color/size), inventory counts, and customer reviews.',
+        title: 'Structured Product Catalogues',
+        description: 'Clear product listings with high-resolution imagery, detailed specifications, variant selections (size/colour), and stock indicators.',
         icon: 'Grid'
       },
       {
-        title: 'Frictionless Cart & 1-Click Checkout',
-        description: 'Streamlined checkout flows designed to slash cart abandonment and support guest checkouts.',
+        title: 'Secure Checkout Experience',
+        description: 'Straightforward shopping cart and checkout flows designed for smooth ordering and reduced friction.',
         icon: 'ShoppingCart'
       },
       {
-        title: 'Local & Global Payment Gateways',
-        description: 'Seamless integration with JazzCash, EasyPaisa, PayFast, Bank Alfalah, Stripe, PayPal, and COD.',
+        title: 'Payment Gateway Integration',
+        description: 'Integration with local Pakistani payment systems including JazzCash, EasyPaisa, PayFast, bank cards, and Cash on Delivery.',
         icon: 'CreditCard'
       },
       {
-        title: 'Automated Order & Inventory System',
-        description: 'Real-time stock tracking, automated invoice generation, and courier API shipping integrations.',
+        title: 'Inventory & Order Management',
+        description: 'Intuitive administrative dashboard allowing your team to update stock levels, manage customer orders, and track shipments.',
         icon: 'Package'
       },
       {
-        title: 'Mobile-First Shopping Experience',
-        description: 'Over 80% of Pakistani online orders happen on mobile. We ensure lightning-fast mobile transactions.',
+        title: 'Mobile-Friendly Shopping Experience',
+        description: 'Responsive layouts ensuring smooth product browsing, filtering, and purchasing on mobile smartphones and tablets.',
         icon: 'Smartphone'
       }
     ],
     detailedSections: [
       {
-        title: 'Engineered For Higher Average Order Value (AOV) & Lower Abandonment',
-        content: 'We optimize every step of the buyer journey—from initial homepage discovery and smart faceted search filters to sticky add-to-cart buttons, related product upsells, and trust-certified checkout pages.',
+        title: 'User-Focused E-Commerce Web Design & Navigation',
+        content: 'An effective online store requires clear visual organisation and effortless navigation. We design product category trees, faceted filters, and intuitive search functions that make it simple for shoppers to discover what they need.',
         points: [
-          'Dynamic currency converters and multi-lingual support for international retail exports',
-          'Abandoned cart recovery automations via email and WhatsApp alerts',
-          'Coupons, flash sale countdown timers, discount bundles, and loyalty point systems',
-          'Instant search with predictive autocomplete and fuzzy keyword matching'
+          'Organized category structures with intuitive breadcrumb navigation',
+          'Responsive search and filtering by price, size, brand, and category',
+          'Clear product presentation with zoomable gallery images and transparent pricing',
+          'Fast-loading shopping pages optimized for mobile devices'
         ]
       },
       {
-        title: 'Pakistan Logistics & Payment Ecosystem Integration',
-        content: 'Running an e-commerce store in Pakistan requires localized payment and logistics solutions. We integrate Cash on Delivery (COD) workflows, automated TCS / Leopards / Trax / Call Courier tracking, and seamless digital wallet checkouts.',
+        title: 'Local Payment Gateway & Shipping Integration in Pakistan',
+        content: 'We integrate essential payment and order management workflows required by e-commerce businesses operating in Pakistan and internationally.',
         points: [
-          'Direct integration with JazzCash, EasyPaisa, PayFast, and local Pakistani merchant accounts',
-          'Automated courier booking and real-time package tracking webhooks for customers',
-          'Customer SMS and WhatsApp order confirmation notifications',
-          'Tax calculation, invoice printing, and financial sales ledger exports'
+          'Integration with JazzCash, EasyPaisa, PayFast, and merchant card processing',
+          'Configured Cash on Delivery (COD) options with order confirmation details',
+          'Order notification systems via email and instant messaging',
+          'Structured receipt generation and exportable sales order records'
         ]
       }
     ],
     benefits: [
       {
-        title: 'Maximize Sales & Conversion Rates',
-        description: 'User-tested checkout flows eliminate friction, turning more store visitors into verified buyers.'
+        title: 'Clear Product Presentation',
+        description: 'Showcase your complete catalogue with structured categories, detailed descriptions, and high-quality visuals.'
       },
       {
-        title: 'Complete Inventory Management',
-        description: 'Track stock across multiple warehouses, receive low-stock alerts, and manage product variants.'
+        title: 'Smooth Shopping Experience',
+        description: 'Provide visitors with a clear and straightforward path from product discovery to order completion.'
       },
       {
-        title: 'Seamless Payment Gateway Hookups',
-        description: 'Accept credit cards, mobile wallets, debit cards, and cash on delivery securely.'
+        title: 'Convenient Local Payments',
+        description: 'Allow customers to pay using preferred local payment methods including mobile wallets, cards, and COD.'
       },
       {
-        title: 'Search-Engine Optimized Catalog',
-        description: 'Schema markup for prices, in-stock badges, and star ratings visible directly on Google search results.'
+        title: 'Scalable Store Architecture',
+        description: 'Easily expand your store catalogue as your product lines and customer base grow over time.'
       }
     ],
     process: [
       {
         step: '01',
-        title: 'Product Catalog & Flow Strategy',
-        description: 'We structure your category hierarchy, variant configurations, shipping zones, and tax rules.'
+        title: 'Product & Catalog Planning',
+        description: 'We review your product range, categories, pricing structures, shipping zones, and payment requirements.'
       },
       {
         step: '02',
-        title: 'Store UI/UX & Mobile Wireframes',
-        description: 'We design modern product cards, filters, sticky cart drawers, and single-page checkout screens.'
+        title: 'Store Layout & Wireframing',
+        description: 'We map out the homepage structure, category layout, product detail view, cart drawer, and checkout screens.'
       },
       {
         step: '03',
-        title: 'Engine Development & Payment Hookups',
-        description: 'We build the cart logic, integrate payment gateways (Stripe/JazzCash/EasyPaisa), and setup shipping.'
+        title: 'Store Development & Configuration',
+        description: 'We build the store, set up product databases, configure tax rules, and integrate payment methods.'
       },
       {
         step: '04',
-        title: 'End-to-End Test Transactions',
-        description: 'We perform end-to-end sandbox purchases, test mobile checkouts, coupon codes, and email receipts.'
+        title: 'Checkout & Transaction Testing',
+        description: 'We test the complete ordering process, payment gateway responses, stock updates, and confirmation notifications.'
       },
       {
         step: '05',
-        title: 'Launch, Training & Marketing Handover',
-        description: 'We deploy to live servers, train your operations team on order fulfillment, and install ad tracking pixels.'
+        title: 'Deployment & Administrative Handover',
+        description: 'We launch the live store and train your staff on adding products, managing stock, and processing incoming orders.'
       }
     ],
-    techStack: ['WooCommerce', 'Shopify', 'Custom React E-Commerce', 'Stripe API', 'JazzCash / EasyPaisa', 'Trax / Leopards APIs'],
+    techStack: ['WooCommerce', 'Shopify', 'Custom Web Technologies', 'Payment Gateways', 'SSL Encryption', 'Responsive Frameworks'],
     faqs: [
       {
         question: 'Can you integrate JazzCash, EasyPaisa, and Cash on Delivery (COD)?',
-        answer: 'Yes! We provide complete integration for all major Pakistani payment methods including JazzCash, EasyPaisa, PayFast, local bank gateways, and Cash on Delivery with SMS verification.'
+        answer: 'Yes. We configure standard Pakistani payment methods including JazzCash, EasyPaisa, PayFast, bank cards, and Cash on Delivery.'
       },
       {
-        question: 'Which e-commerce platform is best for my business?',
-        answer: 'We evaluate your product count, budget, and customization needs to recommend the best fit—whether that is WooCommerce for flexible custom control, Shopify for easy management, or a custom headless React store for massive volume.'
+        question: 'Which platform do you recommend for e-commerce websites?',
+        answer: 'We recommend platforms based on your product catalogue size and technical preferences. WooCommerce on WordPress is great for complete custom control, while Shopify offers managed convenience.'
       },
       {
-        question: 'How many products can I upload to my new online store?',
-        answer: 'There is no limit! You can list anywhere from 10 products to over 50,000+ items with high-speed categorization and instant search capabilities.'
+        question: 'How do I manage products and inventory on my online store?',
+        answer: 'You will receive access to an easy-to-use administrative dashboard where you can add new products, edit pricing, update stock numbers, and manage orders without coding knowledge.'
       },
       {
-        question: 'Do you help setup courier and shipping automation in Pakistan?',
-        answer: 'Yes, we connect courier APIs (TCS, Leopards, Trax, Call Courier, PostEx) to automate consignment note generation and customer tracking.'
+        question: 'Will our online store be mobile-friendly?',
+        answer: 'Yes. All e-commerce stores developed by Webwizia are fully responsive and optimized for smooth mobile shopping and checkout.'
       }
     ]
   },
@@ -271,178 +288,138 @@ export const servicesData: ServiceDetail[] = [
     slug: 'wordpress-website-design',
     number: '03',
     title: 'WordPress Website Design',
-    shortDescription: 'Professional, responsive and SEO-friendly WordPress websites designed to help businesses build a strong online presence.',
-    fullTitle: 'Professional WordPress Website Design in Lahore',
-    tagline: 'Custom, High-Speed & SEO-Optimized WordPress Solutions Built for Growth',
+    shortDescription: 'Custom WordPress website design Lahore delivering responsive, secure, and easily manageable business website design tailored for corporate growth.',
+    fullTitle: 'WordPress Website Design Lahore',
+    tagline: 'Custom, Responsive & SEO-Friendly WordPress Website Development',
     heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-    metaTitle: 'WordPress Website Design in Lahore | Webwizia',
-    metaDescription: 'Get a professional, responsive, fast and SEO-friendly WordPress website designed specifically for your business in Lahore. Modern UI/UX, WooCommerce, and Google SEO by Webwizia.',
+    metaTitle: 'WordPress Website Design Lahore | Custom WordPress Development | Webwizia',
+    metaDescription: 'Custom WordPress website design in Lahore by Webwizia. Responsive, fast-loading, and easy-to-manage WordPress websites tailored for businesses and corporate brands.',
     keywords: [
-      'WordPress website design Lahore',
-      'WordPress developer Lahore',
-      'WordPress website company Lahore',
-      'WordPress website cost in Lahore',
-      'Custom WordPress design Pakistan',
-      'WooCommerce store design Lahore'
+      'WordPress Website Design Lahore',
+      'WordPress Development Lahore',
+      'WordPress Web Design',
+      'Custom WordPress Website',
+      'Business WordPress Website',
+      'WordPress Website Development',
+      'Responsive WordPress Website'
     ],
-    overview: 'Get a professional, responsive, fast and SEO-friendly WordPress website designed specifically for your business. Webwizia creates modern WordPress websites that look great on every device and help businesses attract more customers online. WordPress powers over 43% of the web, providing unparalleled flexibility for corporate sites, service firms, medical clinics, real estate companies, educational institutions, blogs, and online stores.',
+    overview: 'Webwizia provides professional WordPress website design in Lahore for businesses, corporate firms, healthcare practices, and service organizations. We craft custom, responsive WordPress websites with clean coding, fast loading times, and intuitive content management dashboards so your team can easily update content.',
     keyOfferings: [
       {
         title: 'Custom WordPress Website Design',
-        description: 'Bespoke layouts designed from scratch in Figma and developed into high-speed, lightweight WordPress themes.',
+        description: 'Bespoke page layouts and design systems crafted to represent your business identity without relying on bloated templates.',
         icon: 'Layout'
       },
       {
         title: 'Business & Corporate WordPress Websites',
-        description: 'Authoritative, modern digital presence tailored for small businesses, enterprises, consultants, and agencies.',
+        description: 'Professional website design for consulting firms, commercial companies, clinics, and service businesses.',
         icon: 'Building'
       },
       {
-        title: 'Responsive & Mobile-First Design',
-        description: 'Flawless fluid responsiveness engineered to adapt across iPhones, Android smartphones, tablets, and desktops.',
+        title: 'Responsive & Mobile Design',
+        description: 'Clean responsive formatting ensuring your website displays correctly on smartphones, tablets, and desktops.',
         icon: 'Smartphone'
       },
       {
-        title: 'SEO-Friendly WordPress Architecture',
-        description: 'Clean semantic heading hierarchy, automated XML sitemaps, structured schemas, and fast loading for Google.',
+        title: 'SEO-Friendly Structure',
+        description: 'Clean semantic markup, optimized heading hierarchy, XML sitemaps, and metadata configuration for search engines.',
         icon: 'Search'
       },
       {
-        title: 'WordPress Landing Pages',
-        description: 'High-converting single-page landing pages optimized for Google Ads, Facebook campaigns, and lead generation.',
-        icon: 'Target'
-      },
-      {
-        title: 'WordPress Blog & Content Portals',
-        description: 'Intuitive publishing systems with categories, tags, social sharing, and search functionality to build authority.',
+        title: 'Easy Content Management',
+        description: 'Intuitive administrative dashboard enabling your team to edit text, upload images, and publish new pages easily.',
         icon: 'FileText'
       },
       {
-        title: 'WordPress E-Commerce (WooCommerce)',
-        description: 'Full-featured online stores with product catalogs, shopping carts, and local Pakistani payment integrations.',
-        icon: 'ShoppingBag'
-      },
-      {
-        title: 'WordPress Website Redesign',
-        description: 'Modernizing outdated WordPress websites with fresh UI/UX, enhanced mobile navigation, and faster speed.',
-        icon: 'Palette'
-      },
-      {
-        title: 'WordPress Speed & Core Web Vitals Optimization',
-        description: 'Database caching, LiteSpeed / Redis configuration, image WebP compression, and sub-2-second loading.',
+        title: 'WordPress Website Redesign & Maintenance',
+        description: 'Upgrading older WordPress websites with fresh layouts, enhanced security, performance updates, and ongoing support.',
         icon: 'Zap'
-      },
-      {
-        title: 'WordPress Maintenance & Security',
-        description: 'Regular core updates, plugin audits, automated daily backups, firewall hardening, and malware protection.',
-        icon: 'ShieldCheck'
       }
     ],
     detailedSections: [
       {
-        title: 'Why Choose WordPress Website Design?',
-        content: 'WordPress is the world’s leading content management system, trusted by millions of businesses worldwide. It provides unbeatable flexibility, complete ownership of your data, and effortless day-to-day management without requiring technical coding skills.',
+        title: 'Why Choose WordPress for Your Business Website?',
+        content: 'WordPress is one of the most widely used content management systems in the world, offering great flexibility, an accessible dashboard, and strong scalability for businesses of all sizes.',
         points: [
-          'Unmatched flexibility: Ideal for business websites, service firms, medical clinics, real estate, and online stores',
-          'Easy content management: Update text, photos, services, and blog articles anytime from an intuitive dashboard',
-          'Search engine friendly: Engineered for top search rankings with clean permalinks, fast indexing, and meta tags',
-          'Limitless scalability: Expand from a 5-page brochure into an e-commerce shop or multi-service portal with ease'
+          'Content management flexibility: Easily add and update service pages, articles, and company announcements',
+          'SEO-friendly foundations: Built-in support for permalinks, meta tags, and structured heading hierarchies',
+          'Extensible functionality: Add contact forms, appointment booking, or e-commerce features when required',
+          'Complete asset ownership: Full control over your website files, media, and database without proprietary platform lock-in'
         ]
       },
       {
-        title: 'Essential Features Included in Every WordPress Build',
-        content: 'At Webwizia, we never cut corners with bloated generic templates. Every WordPress website we build includes a comprehensive suite of enterprise-grade features:',
+        title: 'Performance & Security Standards in Our WordPress Builds',
+        content: 'We build WordPress websites using lightweight development practices, avoiding unnecessary plugins to maintain clean code and security.',
         points: [
-          'Mobile Responsive Design & Modern UI/UX tested across multiple screen resolutions',
-          'SEO-Friendly Structure with clean code, meta tag configuration, and Google Indexing integration',
-          'Fast Loading Speed with Redis / LiteSpeed caching and next-gen WebP image optimization',
-          'Secure WordPress Setup with brute-force defense, SSL encryption, and automated backups',
-          'High-converting Contact Forms with instant email alerts and anti-spam protection',
-          'Direct WhatsApp Contact Button and Click-to-Call triggers for immediate mobile inquiries',
-          'Google Maps Integration and localized NAP schema for dominant Lahore local search visibility',
-          'Social Media Integration, custom blog framework, and full content management empowerment'
-        ]
-      },
-      {
-        title: 'Who Needs a Professional WordPress Website?',
-        content: 'A custom WordPress website is the ideal digital growth vehicle for a wide spectrum of industries and organizations across Lahore and Pakistan:',
-        points: [
-          'Small Businesses & Startups looking to establish strong credibility and capture inbound leads',
-          'Consultants, Lawyers & Chartered Accountants seeking authoritative corporate presence',
-          'Doctors, Clinics & Healthcare Providers needing appointment booking and patient information',
-          'Restaurants & Cafes wanting online menus, location maps, and reservation triggers',
-          'Real Estate Businesses & Property Consultants showcasing listings and project portfolios',
-          'Educational Institutes, Academies & Training Centers publishing courses and admissions data',
-          'Agencies, Freelancers & Online Stores wanting scalable, high-converting digital storefronts'
+          'Lightweight theme implementation and clean CSS styling',
+          'Asset optimization and caching configuration for fast loading speeds',
+          'Standard security hardening including SSL setup and protected admin login',
+          'Thorough cross-device testing to ensure seamless responsive behaviour'
         ]
       }
     ],
     benefits: [
       {
-        title: '100% Content Ownership',
-        description: 'You own your website, code, and database completely with no ongoing vendor lock-in or recurring CMS fees.'
+        title: 'Full Content Ownership',
+        description: 'Retain complete ownership of your website data, media, and hosting with no restrictive platform lock-ins.'
       },
       {
-        title: 'Effortless Self-Management',
-        description: 'Update text, images, blog posts, and products in minutes with our user-friendly visual editor and video tutorials.'
+        title: 'Simple Dashboard Management',
+        description: 'Easily update text, photos, services, and blog posts without needing technical programming skills.'
       },
       {
-        title: 'Google Page 1 Ready',
-        description: 'Built with clean semantic markup, fast loading, and structured schemas to maximize search engine rankings.'
+        title: 'Search-Engine Friendly Setup',
+        description: 'Constructed with clean HTML structure, sitemaps, and meta configurations to assist search engine indexing.'
       },
       {
-        title: 'High-Converting Inquiries',
-        description: 'Equipped with WhatsApp chat triggers, sticky contact forms, and clear CTAs that convert visitors into paying clients.'
+        title: 'Responsive Cross-Device Layout',
+        description: 'Ensure a clean, consistent user experience whether visitors browse from phones, tablets, or computers.'
       }
     ],
     process: [
       {
         step: '01',
-        title: 'Requirement & Business Analysis',
-        description: 'We analyze your business goals, target audience in Lahore or abroad, competitor landscape, and core functionality requirements.'
+        title: 'Planning & Requirements',
+        description: 'We review your business goals, target audience, preferred pages, and required website features.'
       },
       {
         step: '02',
-        title: 'Website Structure & Design',
-        description: 'We create a logical sitemap, wireframe user journeys, and design modern, brand-aligned mockups for your approval.'
+        title: 'Wireframing & Visual Layout',
+        description: 'We establish the site structure and design clean page mockups matching your brand aesthetic.'
       },
       {
         step: '03',
         title: 'WordPress Development',
-        description: 'We develop a custom, lightweight WordPress theme, configure essential plugins, setup contact forms, and build all required pages.'
+        description: 'We build the custom WordPress pages, configure required functionality, and set up forms.'
       },
       {
         step: '04',
-        title: 'SEO & Mobile Optimization',
-        description: 'We optimize Core Web Vitals, compress assets, configure meta titles/descriptions, and test responsiveness across all smartphone viewports.'
+        title: 'Speed & Mobile Testing',
+        description: 'We optimize loading performance, verify mobile responsiveness, and check cross-browser display.'
       },
       {
         step: '05',
-        title: 'Testing & Launch',
-        description: 'We perform end-to-end security audits, verify form submissions, connect your domain, deploy live, and provide admin training.'
+        title: 'Launch & Admin Handover',
+        description: 'We deploy the website to your live domain and provide guidance on managing content through the dashboard.'
       }
     ],
-    techStack: ['WordPress CMS', 'WooCommerce', 'Elementor Pro / Gutenberg', 'LiteSpeed Cache', 'Yoast / RankMath SEO', 'Redis Object Cache', 'MySQL'],
+    techStack: ['WordPress CMS', 'Custom CSS/Tailwind', 'PHP Standards', 'MySQL', 'LiteSpeed Caching', 'Yoast / RankMath SEO'],
     faqs: [
       {
         question: 'How much does a WordPress website cost in Lahore?',
-        answer: 'The cost depends on the website\'s size, features, number of pages and customization requirements. Contact Webwizia for a customized quote tailored to your exact business objectives.'
+        answer: 'The cost depends on the number of pages, custom features, and specific functionality your business needs. Contact Webwizia for a transparent, itemized quote tailored to your project.'
       },
       {
-        question: 'Is a WordPress website mobile friendly?',
-        answer: 'Yes. Webwizia designs responsive WordPress websites that work smoothly on smartphones, tablets and desktop computers.'
+        question: 'Is a WordPress website mobile-friendly?',
+        answer: 'Yes. Every WordPress website designed by Webwizia is fully responsive, ensuring optimal display and usability across smartphones, tablets, and desktop computers.'
       },
       {
-        question: 'Can you optimize my WordPress website for Google?',
-        answer: 'Yes. We create SEO-friendly website structures and can provide professional SEO services to improve your website\'s search visibility.'
+        question: 'Can I edit the content myself after the website is launched?',
+        answer: 'Yes. WordPress provides an intuitive administration dashboard where you can easily edit text, add images, and publish new pages without touching code.'
       },
       {
-        question: 'Can you redesign my existing WordPress website?',
-        answer: 'Yes. Webwizia can redesign outdated WordPress websites with a modern, responsive and professional interface.'
-      },
-      {
-        question: 'Can you create an E-Commerce website with WordPress?',
-        answer: 'Yes. We can create professional WordPress-based online stores with the required e-commerce functionality using WooCommerce.'
+        question: 'Can you redesign or update my existing WordPress website?',
+        answer: 'Yes. We offer WordPress redesign services to modernize outdated layouts, improve mobile usability, and boost page loading performance.'
       }
     ]
   },
@@ -451,130 +428,140 @@ export const servicesData: ServiceDetail[] = [
     slug: 'seo-services',
     number: '04',
     title: 'SEO Services',
-    shortDescription: "Effective SEO strategies designed to improve your website's search visibility, attract relevant visitors and grow your online presence.",
-    fullTitle: 'Professional SEO Services & Local Search Optimization in Lahore',
-    tagline: 'Dominate Google Search Rankings, Attract High-Intent Traffic & Scale Revenue Organically',
+    shortDescription: 'Results-driven SEO services in Lahore and local SEO services Lahore providing technical audits, on-page optimization, and targeted organic search growth.',
+    fullTitle: 'SEO Services in Lahore',
+    tagline: 'Search Engine Optimisation, Technical SEO & Local Search Growth',
     heroImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
-    metaTitle: 'Professional SEO Services in Lahore | SEO Agency Pakistan | Webwizia',
-    metaDescription: 'Rank #1 on Google with Webwizia. Comprehensive SEO audits, on-page optimization, technical SEO, Lahore local SEO, link building, and data-driven organic growth.',
-    keywords: ['SEO Services in Lahore', 'SEO Company in Lahore', 'Digital Marketing Agency Lahore', 'Local SEO Pakistan', 'Technical SEO Audit'],
-    overview: 'Search Engine Optimization is the highest-ROI digital channel for growing businesses. Webwizia provides end-to-end, white-hat SEO campaigns engineered to get your brand noticed by customers actively searching for your services in Lahore, across Pakistan, and globally.',
+    metaTitle: 'SEO Services in Lahore | Search Engine Optimisation Agency | Webwizia',
+    metaDescription: 'Improve your search engine visibility with professional SEO services in Lahore by Webwizia. On-page SEO, technical audits, content optimization, and local SEO.',
+    keywords: [
+      'SEO Services in Lahore',
+      'SEO Agency Lahore',
+      'Local SEO Lahore',
+      'Search Engine Optimisation Lahore',
+      'Technical SEO Lahore',
+      'On-Page SEO Lahore',
+      'SEO Company Lahore',
+      'Google Business Profile Optimisation',
+      'Organic Search Optimisation'
+    ],
+    overview: 'Webwizia provides strategic SEO services in Lahore to help businesses improve their organic search presence, attract targeted website visitors, and build long-term digital credibility. We implement ethical, search engine-compliant optimisation strategies focused on technical website health, relevant keyword targeting, and local search visibility.',
     keyOfferings: [
       {
-        title: 'Comprehensive SEO Audits',
-        description: 'Deep technical scan analyzing crawl errors, indexability, site speed, schema markup, and competitor gaps.',
+        title: 'Technical SEO Audits',
+        description: 'Comprehensive technical reviews addressing website crawlability, indexation status, site speed, and XML sitemaps.',
         icon: 'Search'
       },
       {
-        title: 'On-Page SEO Optimization',
-        description: 'Optimization of title tags, meta descriptions, H1-H6 headers, internal linking hierarchy, and content depth.',
+        title: 'On-Page SEO Optimisation',
+        description: 'Optimising title tags, meta descriptions, heading structure (H1-H6), internal linking, and content relevance.',
         icon: 'FileText'
       },
       {
-        title: 'Technical SEO & Core Web Vitals',
-        description: 'Fixing XML sitemaps, robots.txt, canonical tags, mobile usability, HTTPS security, and JavaScript rendering.',
-        icon: 'Cpu'
-      },
-      {
-        title: 'In-Depth Keyword Research',
-        description: 'Identifying high-volume, low-competition, and high-commercial-intent buyer search queries for your niche.',
+        title: 'Targeted Keyword Research',
+        description: 'Identifying relevant search queries and commercial-intent terms used by potential customers searching for your services.',
         icon: 'Key'
       },
       {
-        title: 'Local SEO for Lahore & Pakistan',
-        description: 'Google Business Profile optimization, local citation building, and geo-targeted ranking strategies in Lahore.',
+        title: 'Local SEO & Google Business Profile',
+        description: 'Optimising Google Business Profiles, local NAP consistency, and localized content for Lahore-based businesses.',
         icon: 'MapPin'
       },
       {
-        title: 'High-Authority Link Building',
-        description: 'Ethical outreach, digital PR, and contextual backlink acquisition that builds lasting domain authority.',
-        icon: 'Link'
+        title: 'Website Structure & Speed Optimisation',
+        description: 'Improving page load performance, mobile usability, and logical information hierarchy for better search indexing.',
+        icon: 'Cpu'
+      },
+      {
+        title: 'SEO Monitoring & Performance Reporting',
+        description: 'Tracking organic impressions, keyword rankings, and search traffic trends with regular status updates.',
+        icon: 'TrendingUp'
       }
     ],
     detailedSections: [
       {
-        title: 'Data-Driven Keyword Strategy & Search Intent Matching',
-        content: 'Ranking on Google is not about spamming keywords; it is about providing the best answer for specific search intent. We analyze whether your potential customers are looking for informational guides, transactional services, or local agency assistance.',
+        title: 'Strategic On-Page & Technical Search Engine Optimisation',
+        content: 'Effective search engine optimization requires a solid technical foundation combined with well-structured, relevant content that addresses what users are searching for.',
         points: [
-          'Targeted research for high-value phrases like "Web Design Company in Lahore" and "SEO Services in Pakistan"',
-          'Search intent segmentation (Informational, Commercial, Transactional, Navigational)',
-          'Competitor backlink gap analysis to find immediate link-earning opportunities',
-          'Content cluster blueprints to establish topical authority across your core business domains'
+          'Thorough keyword analysis matching user search intent for your industry',
+          'Optimization of page titles, meta descriptions, and header tags for clarity and relevance',
+          'Remediation of broken links, duplicate metadata, and crawl impediments',
+          'Structured data markup implementation to assist search engine understanding'
         ]
       },
       {
-        title: 'Local Search Domination & Google Maps Visibility',
-        content: 'For businesses serving clients in Lahore and surrounding regions, appearing in the Google Local 3-Pack is crucial. We optimize your local presence so customers nearby find your office, phone number, and services first.',
+        title: 'Local SEO for Lahore Businesses & Service Providers',
+        content: 'For businesses serving clients locally, local SEO helps potential customers find your office, services, and contact information when searching nearby.',
         points: [
-          'Google Business Profile setup, category optimization, and geo-tagged visual uploads',
-          'NAP (Name, Address, Phone) consistency across premier business directories',
-          'Customer review generation systems and reputation management frameworks',
-          'Localized landing page content specifically optimized for Lahore districts and landmarks'
+          'Google Business Profile setup and category optimization',
+          'Consistent NAP (Name, Address, Phone) details across key directory listings',
+          'Localized content structuring reflecting your target geographic service areas in Lahore',
+          'Guidance on gathering and managing authentic customer reviews'
         ]
       }
     ],
     benefits: [
       {
-        title: 'Sustainable Organic Traffic',
-        description: 'Unlike paid ads that stop the moment budget runs out, SEO builds compound long-term traffic value.'
+        title: 'Improved Search Visibility',
+        description: 'Help prospective clients find your website when searching for your relevant products and services.'
       },
       {
-        title: 'High-Intent Customer Leads',
-        description: 'Connect with prospects precisely at the moment they are searching for web and digital solutions.'
+        title: 'Targeted Organic Traffic',
+        description: 'Attract visitors who are actively searching for the specific services and solutions your business provides.'
       },
       {
-        title: 'Dominant Industry Authority',
-        description: 'Appearing on page 1 of Google elevates your brand perception above competitors in your market.'
+        title: 'Stronger Technical Foundation',
+        description: 'Ensure your website meets modern search engine best practices for speed, structure, and mobile readiness.'
       },
       {
-        title: 'Transparent Monthly Reporting',
-        description: 'Live dashboards tracking keyword positions, click-through rates, impression spikes, and conversions.'
+        title: 'Clear Progress Tracking',
+        description: 'Understand how your website performs over time through transparent search console and ranking metrics.'
       }
     ],
     process: [
       {
         step: '01',
-        title: 'Deep Technical & Content Audit',
-        description: 'We run a 120-point diagnostic on your website health, indexing status, and existing backlink profile.'
+        title: 'Website & Keyword Audit',
+        description: 'We analyze your website’s current search standing, technical health, and keyword opportunities.'
       },
       {
         step: '02',
-        title: 'Keyword & Competitor Strategy',
-        description: 'We map target keywords to existing pages and identify content creation gaps for high-volume opportunities.'
+        title: 'Strategy & Mapping',
+        description: 'We assign primary and supporting keywords to specific pages based on search relevance and intent.'
       },
       {
         step: '03',
-        title: 'On-Page & Technical Remediation',
-        description: 'We fix Core Web Vitals, restructure metadata, update URL slugs, and implement JSON-LD Schema markup.'
+        title: 'On-Page & Technical Implementation',
+        description: 'We update meta tags, headings, internal links, sitemaps, and address technical crawl factors.'
       },
       {
         step: '04',
-        title: 'Content Creation & Authority Building',
-        description: 'We publish authoritative content clusters and execute ethical white-hat digital PR outreach for backlinks.'
+        title: 'Local SEO & Profile Optimisation',
+        description: 'We optimize your Google Business Profile and verify consistent business information across directories.'
       },
       {
         step: '05',
-        title: 'Monitoring, Refinement & Growth',
-        description: 'We track Google Search Console and analytics data weekly, doubling down on highest converting keywords.'
+        title: 'Monitoring & Continuous Refinement',
+        description: 'We monitor index status, keyword progress, and organic traffic data to guide ongoing improvements.'
       }
     ],
-    techStack: ['Google Search Console', 'Google Analytics 4', 'Ahrefs', 'Semrush', 'Screaming Frog', 'Schema.org JSON-LD'],
+    techStack: ['Google Search Console', 'Google Analytics 4', 'Schema.org JSON-LD', 'XML Sitemaps', 'Technical SEO Tools', 'PageSpeed Insights'],
     faqs: [
       {
-        question: 'How quickly can I expect to see SEO results?',
-        answer: 'SEO is a compounding process. Initial technical and indexing improvements typically show movement within 4 to 8 weeks, with substantial ranking growth, organic traffic spikes, and inbound leads becoming prominent within 3 to 6 months.'
+        question: 'What are SEO services and how do they benefit my business?',
+        answer: 'SEO (Search Engine Optimisation) is the process of improving your website’s visibility in organic search engine results. It helps potential customers discover your business when searching for your services online.'
       },
       {
-        question: 'Why is Local SEO important for businesses in Lahore?',
-        answer: 'Over 46% of all Google searches have local intent. Optimizing for phrases like "Web Design Company in Lahore" allows you to capture nearby corporate clients and walk-in inquiries with high conversion readiness.'
+        question: 'How long does it take to see improvements from SEO?',
+        answer: 'SEO is a gradual and ongoing process. Initial technical and indexing improvements typically take a few weeks, while noticeable organic visibility and search traffic growth generally develop over several months of consistent optimization.'
       },
       {
-        question: 'Do you use safe, white-hat SEO techniques?',
-        answer: 'Yes, strictly 100% white-hat techniques compliant with Google Search Essentials and Helpful Content guidelines. We never use spammy automation or risky PBNs.'
+        question: 'What is Local SEO and why is it important in Lahore?',
+        answer: 'Local SEO focuses on improving your visibility for location-based searches, such as users searching for service providers in Lahore. It helps local customers find your address, phone number, and services easily.'
       },
       {
-        question: 'What kind of reports will I receive each month?',
-        answer: 'You receive transparent monthly reports detailing keyword rank changes, organic traffic growth, top landing pages, bounce rate improvements, and lead form conversion counts.'
+        question: 'Do you guarantee #1 rankings on Google?',
+        answer: 'No reputable agency can guarantee a #1 ranking, as search engine algorithms are proprietary and constantly evolving. We follow ethical, white-hat best practices that build sustainable search visibility over time.'
       }
     ]
   }

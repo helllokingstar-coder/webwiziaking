@@ -156,7 +156,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
                 <span>Service Overview</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight leading-tight">
-                {service.title} Engineered For Maximum Impact
+                {service.fullTitle}
               </h2>
               <p className="text-[#1e1b4b] text-base sm:text-lg leading-relaxed font-normal">
                 {service.overview}

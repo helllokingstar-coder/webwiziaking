@@ -77,13 +77,16 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
   return (
     <>
       <SeoHead
-        title="Contact Us | Webzify Digital Marketing & Web Design Agency Lahore"
-        description="Have a website, e-commerce or SEO project in mind? Contact Webzify and let's discuss how we can help. Office # 5, Brother Plaza, Hall Road, Lahore, Pakistan."
+        title="Contact Web Design Agency Lahore | Webwizia"
+        description="Get in touch with Webwizia, a leading web design agency in Lahore. Contact us for custom web design, SEO services, WordPress, and website development in Lahore."
         keywords={[
-          'Contact Webzify',
-          'Web Design Lahore Office',
-          'SEO Company Hall Road Lahore',
-          'Digital Marketing Lahore Contact Number'
+          'Web Design Agency Lahore',
+          'Contact Webwizia',
+          'Web Design Lahore',
+          'SEO Services Lahore',
+          'Website Development Lahore',
+          'Digital Marketing Lahore',
+          'Web Design Company Lahore'
         ]}
         canonicalPath="/contact"
         schemaType="LocalBusiness"
@@ -112,12 +115,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-              Let's Talk About Your Project
+              Web Design Agency Lahore
             </h1>
 
             {/* Subtitle */}
             <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed pt-1">
-              Have a website, e-commerce or SEO project in mind? Contact Webzify and let's discuss how we can help.
+              Have a website design, WordPress, e-commerce, or SEO project in mind? Contact Webwizia today to request a project quote or schedule a consultation at our Lahore office.
             </p>
           </div>
         </section>
@@ -164,10 +167,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     <div>
                       <span className="text-xs font-semibold text-blue-200 block">Email</span>
                       <a 
-                        href="mailto:info@webzify.com" 
-                        className="text-base font-bold text-white hover:text-blue-200 transition-colors mt-0.5 block"
+                        href={`mailto:${siteConfig.email}`} 
+                        className="text-base font-bold text-white hover:text-blue-200 transition-colors mt-0.5 block break-all"
                       >
-                        info@webzify.com
+                        {siteConfig.email}
                       </a>
                     </div>
                   </div>
@@ -200,7 +203,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     Message Sent Successfully!
                   </h3>
                   <p className="text-[#1e1b4b] text-sm max-w-md mx-auto leading-relaxed font-normal">
-                    Thank you for reaching out to Webzify. Our team will review your inquiry and get back to you within 24 hours at <span className="font-bold text-[#1e1b4b]">{formData.email}</span>.
+                    Thank you for reaching out to Webwizia. Our team will review your inquiry and get back to you within 24 hours at <span className="font-bold text-[#1e1b4b]">{formData.email}</span>.
                   </p>
                   <div className="pt-4">
                     <button

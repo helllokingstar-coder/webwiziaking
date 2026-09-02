@@ -20,9 +20,9 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onNaviga
   const leftFeatures = [
     {
       number: '01',
-      title: 'Custom-Built Websites',
+      title: 'Bespoke Website Development',
       description:
-        'We create modern, responsive websites tailored to your brand, business goals, and audience — not one-size-fits-all templates.',
+        'As a dedicated web development company in Lahore, every project is planned around your business requirements with custom website design Lahore standards.',
       icon: Code2,
       badge: 'Tailored Solutions',
       gradient: 'from-blue-600 to-indigo-600',
@@ -31,9 +31,9 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onNaviga
     },
     {
       number: '02',
-      title: 'SEO-Ready Development',
+      title: 'Built-In SEO Foundation',
       description:
-        'Our websites are built with a strong technical foundation, clean structure, responsive design, and SEO best practices to help your business get discovered online.',
+        'Engineered with on-page SEO services in Lahore, clean semantic code, fast loading speeds, and responsive website design for superior search engine performance.',
       icon: Search,
       badge: 'High Visibility',
       gradient: 'from-indigo-600 to-purple-600',
@@ -45,9 +45,9 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onNaviga
   const rightFeatures = [
     {
       number: '03',
-      title: 'Conversion-Focused Design',
+      title: 'Conversion-Focused UX',
       description:
-        'We combine attractive UI with smart user experience to turn website visitors into customers, leads, and long-term clients.',
+        'We design user journeys and intuitive navigation that guide visitors toward consultations, helping your business generate qualified leads.',
       icon: Target,
       badge: 'ROI & Leads',
       gradient: 'from-blue-600 to-cyan-600',
@@ -56,9 +56,9 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onNaviga
     },
     {
       number: '04',
-      title: 'Built for Growth',
+      title: 'Built for Sustainable Growth',
       description:
-        'From a simple business website to a complete digital presence, we build scalable solutions that can grow with your business.',
+        'From single-page corporate sites to full-scale e-commerce stores and local SEO campaigns, Webwizia Lahore builds scalable digital assets.',
       icon: Rocket,
       badge: 'Scalable Architecture',
       gradient: 'from-purple-600 to-pink-600',
@@ -88,13 +88,13 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onNaviga
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1e1b4b] tracking-tight leading-[1.15] md:whitespace-nowrap">
             What Makes{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
-              WebWiziaKing
+              Webwizia
             </span>{' '}
             Different
           </h2>
 
           <p className="text-[#1e1b4b] text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-            We bridge the gap between creative visual artistry, resilient engineering, and measurable digital growth.
+            As a reputable web design company and digital marketing agency in Lahore, we build high-performing websites and strategic SEO campaigns tailored to your commercial goals.
           </p>
         </div>
 
@@ -156,7 +156,7 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onNaviga
               <div className="relative flex-1 w-full rounded-2xl overflow-hidden bg-slate-50 flex items-center justify-center">
                 <img
                   src={whyChooseUsImg}
-                  alt="WebWiziaKing Digital Agency Custom Web Development, SEO and Growth Solutions"
+                  alt="Webwizia web design, SEO and digital marketing agency in Lahore"
                   className="w-full h-full object-cover rounded-2xl transform group-hover:scale-102 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                   loading="lazy"
@@ -181,7 +181,7 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onNaviga
               <div className="absolute -top-2 -right-2 sm:-right-3 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-2 z-20">
                 <div className="w-2 h-2 rounded-full bg-blue-600 animate-ping" />
                 <span className="text-[11px] font-bold text-[#1e1b4b]">
-                  100% Tailored
+                  100% Bespoke
                 </span>
               </div>
             </div>

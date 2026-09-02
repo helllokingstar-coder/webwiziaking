@@ -26,14 +26,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
   return (
     <>
       <SeoHead
-        title="About Us | Webwizia Digital Marketing & Web Agency Lahore"
-        description="Learn about Webwizia, a leading digital marketing, web design, and SEO agency in Lahore, Pakistan. Discover our mission, vision, team, and client-first values."
+        title="Digital Marketing Agency in Lahore | About Webwizia"
+        description="Webwizia is a full-service digital marketing agency in Lahore, Pakistan. We deliver custom web design, web development, and SEO services to help businesses grow."
         keywords={[
-          'About Webwizia',
-          'Digital Marketing Agency Lahore',
-          'Web Design Company in Lahore',
-          'SEO Experts Lahore',
-          'IT Company Hall Road Lahore'
+          'Digital Marketing Agency in Lahore',
+          'Web Design Agency Lahore',
+          'Web Development Company Lahore',
+          'SEO Company Lahore',
+          'Digital Marketing Company Lahore',
+          'Webwizia Lahore',
+          'Professional Digital Agency Lahore'
         ]}
         canonicalPath="/about"
       />
@@ -49,10 +51,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
             lightMode={true}
           />
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-            About Us
+            About Webwizia
           </h1>
           <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
-            Empowering businesses in Lahore and across the globe with transformative web designs, e-commerce solutions, and high-impact SEO growth.
+            A dedicated digital marketing agency in Lahore helping businesses build modern websites, expand their online presence, and achieve measurable organic search growth.
           </p>
         </div>
       </section>
@@ -66,7 +68,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-50">
                 <img
                   src={aboutWomanDeskImg}
-                  alt="Webwizia digital strategy and web design specialists at work"
+                  alt="Webwizia digital marketing and web design agency team in Lahore"
                   className="w-full h-80 sm:h-[460px] object-cover"
                 />
               </div>
@@ -74,7 +76,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               <div className="absolute -bottom-6 -right-2 sm:right-6 bg-blue-600 text-white p-6 rounded-2xl shadow-xl max-w-xs">
                 <div className="text-3xl font-black mb-1">100+</div>
                 <div className="text-xs font-semibold text-blue-100">
-                  Successful Web & Digital Marketing Deployments
+                  Web Design, Development & SEO Deployments
                 </div>
               </div>
             </div>
@@ -87,25 +89,25 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight leading-tight">
-                Your Strategic Digital Growth Partner in Lahore
+                Digital Marketing & Web Design Agency in Lahore
               </h2>
 
               <p className="text-[#1e1b4b] text-base leading-relaxed font-normal">
-                Webwizia was founded with a singular purpose: to bridge the gap between creative visual artistry and measurable digital business outcomes. Based in Hall Road, Lahore, we have evolved into a full-scale digital agency serving retail brands, healthcare specialists, logistics firms, real estate giants, and fast-growing tech startups.
+                Webwizia is a professional digital agency and web development company based on Hall Road in Lahore, Pakistan. We specialise in crafting responsive business websites, e-commerce stores, custom WordPress solutions, and organic search engine optimisation campaigns tailored to the needs of growing companies.
               </p>
 
               <p className="text-[#1e1b4b] text-base leading-relaxed font-normal">
-                We believe that a website should never be an idle digital brochure. It must be an active 24/7 revenue engine that drives customer inquiries, dominates local search rankings, and reinforces customer trust.
+                As a client-focused digital marketing company in Lahore, our mission is to deliver dependable digital assets that serve as functional business tools. From responsive interface design to technical SEO audits, we combine clean design with practical marketing strategies to help businesses establish a credible and sustainable online presence.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
                   <div className="text-2xl font-black text-blue-600">80+</div>
-                  <div className="text-xs font-bold text-[#1e1b4b] mt-1">Happy Clients</div>
+                  <div className="text-xs font-bold text-[#1e1b4b] mt-1">Clients Served</div>
                 </div>
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
                   <div className="text-2xl font-black text-blue-600">95%</div>
-                  <div className="text-xs font-bold text-[#1e1b4b] mt-1">Satisfaction Rate</div>
+                  <div className="text-xs font-bold text-[#1e1b4b] mt-1">Client Retention</div>
                 </div>
               </div>
             </div>
@@ -126,20 +128,20 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
                 Our Mission
               </h3>
               <p className="text-[#1e1b4b] text-base leading-relaxed font-normal">
-                To empower businesses with innovative, reliable, and result-focused digital solutions that maximize visibility, streamline customer acquisition, and yield measurable revenue growth.
+                To deliver practical, transparent, and high-quality web design and digital marketing services that help businesses increase their search visibility, attract targeted customer inquiries, and build lasting digital authority.
               </p>
               <ul className="space-y-2 pt-2 text-sm text-[#1e1b4b]">
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                  <span>Deliver human-centered UI/UX with modern conversion science</span>
+                  <span>Build user-centred, mobile-friendly websites with clear structure</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                  <span>Engineer lightning-fast, secure, and maintainable web applications</span>
+                  <span>Develop secure, fast-loading, and maintainable web applications</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                  <span>Execute ethical, white-hat SEO that builds lasting organic authority</span>
+                  <span>Implement ethical, white-hat SEO strategies that support organic visibility</span>
                 </li>
               </ul>
             </div>
@@ -153,20 +155,20 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
                 Our Vision
               </h3>
               <p className="text-[#1e1b4b] text-base leading-relaxed font-normal">
-                To become the most trusted digital technology partner for businesses in Pakistan and internationally, recognized for uncompromising engineering quality, transparent reporting, and transformative client growth.
+                To be recognized as a dependable web development company and SEO agency in Lahore, trusted by organizations for technical precision, honest advice, and consistent long-term results.
               </p>
               <ul className="space-y-2 pt-2 text-sm text-[#1e1b4b]">
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                  <span>Set new benchmarks for digital marketing excellence in Lahore</span>
+                  <span>Maintain high benchmarks for web standards and search compliance in Pakistan</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                  <span>Foster long-term, compounding partnerships with every client</span>
+                  <span>Build collaborative, transparent partnerships with every business client</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                  <span>Stay at the vanguard of web architecture and search engine algorithms</span>
+                  <span>Continuously adapt our strategies to evolving search algorithms and modern web tech</span>
                 </li>
               </ul>
             </div>
@@ -182,10 +184,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               <span>Our Principles</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
-              The Principles Behind Webwizia
+              Our Approach to Web & Digital Services
             </h2>
             <p className="text-[#1e1b4b] text-base font-normal">
-              Every design decision and line of code we write is guided by four foundational pillars.
+              Every design project, development sprint, and search campaign at Webwizia is guided by four fundamental principles.
             </p>
           </div>
 
@@ -194,22 +196,22 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               {
                 icon: ShieldCheck,
                 title: 'Integrity & Transparency',
-                desc: 'No hidden fees, no smoke-and-mirrors metrics. You receive clear timelines, direct communication, and 100% code ownership.'
+                desc: 'Clear project scopes, realistic deliverables, and straightforward communication with full ownership of your assets.'
               },
               {
                 icon: TrendingUp,
-                title: 'Data-Driven Execution',
-                desc: 'We make decisions backed by user heatmaps, Google analytics data, competitor research, and proven conversion science.'
+                title: 'Data-Informed Decisions',
+                desc: 'We structure site navigation, page speed, and content strategies around user intent and search engine best practices.'
               },
               {
                 icon: Code2,
-                title: 'Modern Craftsmanship',
-                desc: 'We refuse to use bloated templates. We write clean, semantic, accessible code that runs smoothly for years.'
+                title: 'Clean Code Standards',
+                desc: 'We focus on semantic HTML, accessible UI components, and lightweight code to ensure speed and longevity.'
               },
               {
                 icon: HeartHandshake,
-                title: 'Continuous Partnership',
-                desc: 'Our relationship does not end at deployment. We provide ongoing support, security audits, and continuous optimization.'
+                title: 'Dedicated Client Support',
+                desc: 'We provide ongoing technical assistance, security reviews, and website guidance following deployment.'
               }
             ].map((val, idx) => (
               <div key={idx} className="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 space-y-4">
@@ -228,10 +230,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
       <section className="py-16 bg-blue-600 text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white">
-            Let’s Build Something Remarkable Together
+            Discuss Your Web Project With Webwizia
           </h2>
           <p className="text-blue-100 text-base max-w-xl mx-auto">
-            Discuss your upcoming project with our Lahore web design and marketing experts today.
+            Contact our Lahore web design and digital marketing team to discuss your website or SEO goals today.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <button

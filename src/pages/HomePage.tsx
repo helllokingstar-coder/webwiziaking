@@ -83,15 +83,31 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
   return (
     <>
       <SeoHead
-        title="Webwizia | Digital Marketing & Web Design Agency in Lahore"
-        description="Build. Grow. Succeed. Webwizia is a premier digital marketing agency in Lahore specializing in Web Designing, SEO Services, and E-Commerce."
+        title="Web Design & SEO Agency in Lahore | Webwizia"
+        description="Webwizia is a leading web design company and digital marketing agency in Lahore. We deliver custom website development, WordPress design, e-commerce stores, and SEO services."
         keywords={[
+          'Web Design Agency in Lahore',
           'Web Design Company in Lahore',
-          'SEO Services in Lahore',
-          'E-Commerce Online Stores Lahore',
+          'Website Design Lahore',
           'Digital Marketing Agency in Lahore',
-          'Web Design Services in Pakistan',
-          'SEO Company in Lahore'
+          'SEO Services in Lahore',
+          'SEO Agency in Lahore',
+          'Professional Web Design Lahore',
+          'Website Development Lahore',
+          'WordPress Website Design Lahore',
+          'E-Commerce Website Development Lahore',
+          'Local SEO Services Lahore',
+          'Responsive Website Design',
+          'Professional Website Development',
+          'Web Development Company Lahore',
+          'Online Marketing Services Lahore',
+          'Business Website Design',
+          'Custom Website Design Lahore',
+          'Affordable Web Design Lahore',
+          'Webwizia',
+          'Webwizia Lahore',
+          'Webwizia Web Design',
+          'Webwizia SEO Services'
         ]}
         canonicalPath="/"
       />
@@ -118,22 +134,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               {/* Badge */}
               <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-500/20 border border-blue-300/30 text-cyan-200 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-                <span>Premier Website Designing Company in Pakistan</span>
+                <span>Web Design & Digital Marketing Agency in Lahore</span>
               </div>
 
               {/* Headline */}
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.15rem] xl:text-[2.55rem] font-extrabold tracking-tight text-left leading-[1.2]">
                 <span className="text-white block whitespace-normal lg:whitespace-nowrap xl:whitespace-nowrap">
-                  Professional Digital Marketing &
+                  Professional Web Design &
                 </span>
                 <span className="text-[#ec4899] sm:text-[#f43f5e] bg-gradient-to-r from-pink-500 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent block mt-1 whitespace-normal lg:whitespace-nowrap xl:whitespace-nowrap">
-                  Web Solutions in Lahore
+                  SEO Agency in Lahore
                 </span>
               </h1>
 
               {/* Supporting Text */}
               <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                We create high-performing, responsive websites, powerful SEO strategies and digital solutions that help businesses grow online. Engineered for speed, high conversions, and measurable ROI.
+                Webwizia is a leading web design company in Lahore providing professional website development, custom WordPress website design in Lahore, e-commerce website development Lahore, and results-driven SEO services in Lahore to help businesses attract qualified inquiries.
               </p>
 
               {/* Action Buttons */}
@@ -160,15 +176,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               <div className="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-200">
                 <div className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-cyan-300" />
-                  <span>100% Custom Code & Design</span>
+                  <span>Custom Website Design Lahore</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-cyan-300" />
-                  <span>SEO-Optimized Websites</span>
+                  <span>SEO Services in Lahore</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-cyan-300" />
-                  <span>Proven Track Record</span>
+                  <span>Webwizia Lahore Team</span>
                 </div>
               </div>
             </div>
@@ -183,7 +199,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <div className="relative z-10 w-full p-1.5 sm:p-2.5 rounded-3xl border-2 sm:border-[3px] border-blue-300/40 bg-gradient-to-b from-blue-400/20 via-slate-800/40 to-slate-900/60 backdrop-blur-md shadow-2xl shadow-blue-950/80 transition-transform duration-500 hover:scale-102">
                   <img
                     src={heroBusinesswomanImg}
-                    alt="Webwizia professional digital consultant working in modern office"
+                    alt="Webwizia web design and digital marketing specialist at work"
                     className="w-full h-auto min-w-full max-h-[520px] sm:max-h-[580px] lg:max-h-[620px] object-cover rounded-2xl border border-white/20 shadow-inner"
                     referrerPolicy="no-referrer"
                     loading="eager"
@@ -205,16 +221,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             {/* Left Content Column */}
             <div className="lg:col-span-6 space-y-6 text-left">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1e1b4b] leading-[1.15] tracking-tight">
-                Web Designing <br />
-                Company in <span className="text-[#f43f5e]">Pakistan</span>
+                Web Design & SEO <br />
+                Agency in <span className="text-[#f43f5e]">Lahore</span>
               </h2>
 
               <div className="space-y-4 text-[#1e1b4b] text-sm sm:text-base leading-relaxed max-w-xl font-normal">
                 <p>
-                  Webwizia was founded with a singular purpose: to bridge the gap between creative visual artistry and measurable digital business outcomes. Based in Hall Road, Lahore, we have evolved into a full-scale digital agency serving retail brands, healthcare specialists, logistics firms, real estate giants, and fast-growing tech startups.
+                  Webwizia is a full-service web design agency in Lahore and digital marketing company specializing in website development Lahore, custom WordPress website design in Lahore, and local SEO services Lahore. We work closely with commercial enterprises, healthcare providers, retail stores, and emerging brands across Pakistan.
                 </p>
                 <p>
-                  We believe that a website should never be an idle digital brochure. It must be an active 24/7 revenue engine that drives customer inquiries, dominates local search rankings, and reinforces customer trust.
+                  Our experienced team creates business website design tailored for high performance and conversions. From affordable web design Lahore solutions to sophisticated custom website design Lahore projects, we combine responsive website design with on-page SEO services in Lahore to turn search visitors into customers.
                 </p>
               </div>
 
@@ -224,28 +240,28 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   <div className="w-7 h-7 rounded-full bg-[#1e1b4b] text-white flex items-center justify-center shrink-0 shadow-sm">
                     <Check className="w-4 h-4 stroke-[3]" />
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Custom Website Design</span>
+                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Custom Website Design Lahore</span>
                 </div>
 
                 <div className="flex items-center space-x-3">
                   <div className="w-7 h-7 rounded-full bg-[#6366f1] text-white flex items-center justify-center shrink-0 shadow-sm">
                     <Check className="w-4 h-4 stroke-[3]" />
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">SEO-Friendly Websites</span>
+                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Professional Website Development</span>
                 </div>
 
                 <div className="flex items-center space-x-3">
                   <div className="w-7 h-7 rounded-full bg-[#f43f5e] text-white flex items-center justify-center shrink-0 shadow-sm">
                     <Check className="w-4 h-4 stroke-[3]" />
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Responsive Web Design</span>
+                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Responsive Website Design</span>
                 </div>
 
                 <div className="flex items-center space-x-3">
                   <div className="w-7 h-7 rounded-full bg-[#1e293b] text-white flex items-center justify-center shrink-0 shadow-sm">
                     <Check className="w-4 h-4 stroke-[3]" />
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Digital Marketing</span>
+                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Local SEO Services Lahore</span>
                 </div>
               </div>
 
@@ -267,7 +283,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   />
                   <div>
                     <h4 className="text-base font-black text-[#1e1b4b] leading-tight">Meggie Wilson</h4>
-                    <p className="text-[11px] font-bold text-slate-400 tracking-wider uppercase">CEO, HEAD DIRECTOR</p>
+                    <p className="text-[11px] font-bold text-slate-400 tracking-wider uppercase">CEO & CREATIVE DIRECTOR</p>
                   </div>
                 </div>
               </div>
@@ -280,7 +296,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <div className="relative z-10 rounded-2xl lg:rounded-l-3xl lg:rounded-tr-[110px] lg:rounded-br-[110px] overflow-hidden shadow-2xl shadow-slate-200 border-4 border-white bg-slate-100">
                   <img
                     src={aboutWomanDeskImg}
-                    alt="Professional web designer working on laptop at modern workspace"
+                    alt="Webwizia web development and strategy team at work in Lahore"
                     className="w-full h-80 sm:h-[420px] object-cover"
                   />
                 </div>
@@ -334,13 +350,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
-              <span>What We Do</span>
+              <span>Our Core Capabilities</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
-              Our Services
+              Services We Provide
             </h2>
             <p className="text-[#1e1b4b] text-base sm:text-lg">
-              Professional digital solutions designed to help your business build, grow and succeed online.
+              Professional web design Lahore, custom WordPress websites, e-commerce development, and search engine marketing for Pakistani businesses.
             </p>
           </div>
 
@@ -411,13 +427,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-12">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
-              <span>Showcase</span>
+              <span>Our Work</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
-              Our Recent Work
+              Selected Recent Projects
             </h2>
             <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
-              Creative Digital Solutions Built For Growing Businesses
+              A showcase of custom website design Lahore, online stores, and SEO projects built for growing businesses by Webwizia Lahore.
             </p>
           </div>
 
@@ -509,7 +525,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               What Our Clients Say
             </h2>
             <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
-              Real feedback from business leaders and founders who grew their companies with Webwizia.
+              Direct feedback from business founders who partner with Webwizia for professional web design Lahore, SEO services in Lahore, and digital marketing.
             </p>
           </div>
 
@@ -558,13 +574,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
-              <span>Articles & Insights</span>
+              <span>Articles & Advice</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
-              Latest Blog & Insights
+              Latest Insights & Industry Guides
             </h2>
             <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
-              Explore our latest guides on web design, SEO rankings, and digital business strategies.
+              Practical guides on website design, SEO rankings, and online marketing strategies for Pakistani businesses.
             </p>
           </div>
 

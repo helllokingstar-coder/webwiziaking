@@ -40,14 +40,17 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
   return (
     <>
       <SeoHead
-        title="Blog & Digital Marketing Insights | Webwizia Lahore"
-        description="Read the latest actionable insights, web design best practices, SEO guides, and e-commerce tips from Webwizia's Lahore marketing and design leads."
+        title="Web Design & SEO Blog | Webwizia Lahore"
+        description="Read practical web design tips, SEO guides, WordPress tutorials, and digital marketing insights for businesses on the Webwizia blog."
         keywords={[
-          'Digital Marketing Blog Pakistan',
-          'SEO Tips Lahore',
-          'Web Design Guides',
-          'E-Commerce Online Store Blog',
-          'Website Best Practices'
+          'Web Design & SEO Blog',
+          'Web Design Tips',
+          'SEO Tips Pakistan',
+          'Digital Marketing Tips',
+          'WordPress Tips',
+          'E-Commerce Tips',
+          'Website Development Tips',
+          'Local SEO Tips'
         ]}
         canonicalPath="/blog"
       />
@@ -58,15 +61,15 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
           <Breadcrumb
-            items={[{ label: 'Our Blog' }]}
+            items={[{ label: 'Blog' }]}
             onNavigate={onNavigate}
             lightMode={true}
           />
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-            Our Blog & Insights
+            Web Design & SEO Blog
           </h1>
           <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
-            Practical strategies, technical teardowns, and growth blueprints to help you dominate your digital market.
+            Helpful articles, web design tips, WordPress guides, e-commerce strategies, and search engine optimisation insights to help your business succeed online.
           </p>
         </div>
       </section>

@@ -11,10 +11,10 @@ interface SeoReadySectionProps {
 
 export const SeoReadySection: React.FC<SeoReadySectionProps> = ({ onNavigate }) => {
   const checklistItems = [
-    { text: 'SEO-Friendly Page Structure', accent: 'navy' },
-    { text: 'Proper Heading Structure (H1, H2, H3)', accent: 'blue' },
-    { text: 'Meta Title & Meta Description Setup', accent: 'rose' },
-    { text: 'Mobile Responsive Design', accent: 'navy' },
+    { text: 'Structured Heading Hierarchy (H1, H2, H3)', accent: 'navy' },
+    { text: 'Accurate Meta Title & Description Setup', accent: 'blue' },
+    { text: 'Fast, Mobile-First Responsive Design', accent: 'rose' },
+    { text: 'Search-Engine Friendly Site Architecture', accent: 'navy' },
   ];
 
   return (
@@ -40,7 +40,7 @@ export const SeoReadySection: React.FC<SeoReadySectionProps> = ({ onNavigate }) 
             <div className="relative bg-white rounded-3xl p-2 sm:p-3 shadow-2xl shadow-slate-900/10 border border-slate-100 overflow-hidden">
               <img
                 src={seoFriendlyImg}
-                alt="WebWizia SEO-Friendly Website Architecture and High Performance Growth"
+                alt="Webwizia website architecture and search engine optimisation structure"
                 className="w-full h-auto rounded-2xl object-cover shadow-xs"
                 referrerPolicy="no-referrer"
                 loading="lazy"
@@ -56,20 +56,20 @@ export const SeoReadySection: React.FC<SeoReadySectionProps> = ({ onNavigate }) 
             {/* Eyebrow Badge */}
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-rose-50 border border-rose-100 text-[#F43F5E] text-xs font-black uppercase tracking-wider shadow-xs">
               <Zap className="w-3.5 h-3.5 fill-current" />
-              <span>SEO-READY WEBSITES</span>
+              <span>SEARCH-READY WEBSITES</span>
             </div>
 
             {/* Main Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-[#1e1b4b] tracking-tight leading-[1.18]">
-              We Build Every Website Ready For{' '}
+              Every Website Built Ready For{' '}
               <span className="text-[#F43F5E] underline decoration-[#F43F5E]/20 underline-offset-8">
-                Basic SEO
+                Search Engines
               </span>
             </h2>
 
             {/* Primary Description */}
             <p className="text-[#1e1b4b] text-base sm:text-lg leading-relaxed font-normal">
-              Building a beautiful website isn't enough on its own. We build every website with essential on-page SEO best practices so search engines can easily discover, understand, and crawl your content from day one.
+              At Webwizia Web Design and Webwizia SEO Services, every business website is built with search engine discovery in mind. We implement structured on-page optimization, clean coding standards, and responsive website design so search engines can index and rank your pages effectively.
             </p>
 
             {/* 4-Point SEO Feature Checklist Grid */}

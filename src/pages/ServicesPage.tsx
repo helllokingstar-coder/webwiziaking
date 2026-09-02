@@ -41,13 +41,16 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
   return (
     <>
       <SeoHead
-        title="Our Services | Web Design, SEO & E-Commerce in Lahore | Webwizia"
-        description="Explore Webwizia's core digital solutions: Web Designing, Search Engine Optimization (SEO), and E-Commerce store engineering in Lahore."
+        title="Digital Marketing Services in Lahore | Webwizia"
+        description="Explore professional digital marketing services in Lahore by Webwizia. Custom web design, WordPress development, e-commerce stores, and local SEO services."
         keywords={[
-          'Web Design Lahore',
+          'Digital Marketing Services in Lahore',
+          'Web Design Services Lahore',
           'SEO Services Lahore',
-          'E-Commerce Stores Pakistan',
-          'Digital Marketing Solutions'
+          'Website Development Lahore',
+          'E-Commerce Development Lahore',
+          'WordPress Website Design Lahore',
+          'Digital Marketing Services'
         ]}
         canonicalPath="/services"
       />
@@ -63,10 +66,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
             lightMode={true}
           />
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-            Our Services
+            Digital Marketing Services in Lahore
           </h1>
           <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
-            High-impact digital marketing, modern web design, and search optimization solutions engineered to grow your revenue and market reach.
+            Professional web design services, website development, custom WordPress solutions, e-commerce development, and search engine optimisation tailored for growing businesses.
           </p>
         </div>
       </section>
@@ -79,10 +82,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
               <span>Core Capabilities</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
-              Designed For End-to-End Digital Transformation
+              Comprehensive Web & Digital Marketing Services
             </h2>
             <p className="text-[#1e1b4b] text-base font-normal">
-              Each of our service offerings is built on modern UI principles, conversion psychology, and aggressive organic search strategies.
+              From bespoke website design to organic search engine optimisation, each service is engineered to help your business establish authority and reach potential customers.
             </p>
           </div>
 
@@ -153,10 +156,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
               <span>Our Process</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
-              How We Deliver High-Impact Results
+              Our Web Development & Marketing Process
             </h2>
             <p className="text-[#1e1b4b] text-base font-normal">
-              A structured 4-phase agile methodology ensuring on-time delivery and zero guesswork.
+              A structured four-phase workflow ensuring clear project milestones, quality design, and dependable delivery.
             </p>
           </div>
 
@@ -164,23 +167,23 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
             {[
               {
                 step: '01',
-                title: 'Discovery & Research',
-                desc: 'We analyze your target market in Lahore, competitor strengths, and primary conversion funnels.'
+                title: 'Discovery & Planning',
+                desc: 'We review your business goals, target audience in Lahore or abroad, and functional requirements.'
               },
               {
                 step: '02',
-                title: 'Architecture & Design',
-                desc: 'We create intuitive wireframes, responsive UI components, and search engine content outlines.'
+                title: 'Design & Wireframing',
+                desc: 'We map out intuitive user journeys, responsive website layouts, and clear content hierarchies.'
               },
               {
                 step: '03',
-                title: 'Engineering & Testing',
-                desc: 'Clean code development, Core Web Vitals optimization, and multi-device QA verification.'
+                title: 'Development & Testing',
+                desc: 'Clean code implementation, mobile responsiveness testing, and performance optimization across devices.'
               },
               {
                 step: '04',
-                title: 'Launch & Growth',
-                desc: 'Smooth go-live deployment, search indexing pings, analytics tracking, and continuous scaling.'
+                title: 'Launch & Optimization',
+                desc: 'Secure deployment, search console setup, basic on-page verification, and client handover.'
               }
             ].map((p, idx) => (
               <div key={idx} className="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 space-y-3">
@@ -197,10 +200,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
       <section className="py-20 bg-gradient-to-r from-blue-700 via-blue-600 to-sky-600 text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white">
-            Need A Custom Digital Solution?
+            Discuss Your Website or Digital Marketing Project
           </h2>
           <p className="text-blue-100 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-            Have a unique web application, multi-vendor marketplace, or enterprise SEO project? Let’s structure a tailor-made roadmap for your business.
+            Whether you require a custom business website, a WordPress redesign, an e-commerce store, or ongoing SEO services in Lahore, we are ready to assist.
           </p>
           <div className="pt-2">
             <button
