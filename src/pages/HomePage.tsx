@@ -32,7 +32,7 @@ import { SeoHead } from '../components/SeoHead';
 import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
-import heroBusinesswomanImg from '../assets/images/hero_businesswoman_office_1788021044044.jpg';
+import heroBusinesswomanImg from '../assets/images/hero_woman_laptop_office_1788433140608.jpg';
 import heroPurpleAbstractBg from '../assets/images/hero_purple_abstract_bg_1788033202020.jpg';
 import aboutWomanDeskImg from '../assets/images/agency_about_workspace_1787944762954.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
@@ -189,18 +189,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               </div>
             </div>
 
-            {/* Right Side: Professional Consultant with Laptop in Office with Border */}
+            {/* Right Side: Professional Consultant with Laptop */}
             <div className="lg:col-span-6 xl:col-span-6 relative flex justify-center items-center">
-              <div className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl group flex justify-center">
-                {/* Ambient Soft Glow Behind Image */}
-                <div className="absolute inset-0 bg-cyan-500/20 rounded-3xl filter blur-3xl transform -translate-y-2 scale-95 pointer-events-none" />
-
-                {/* Image Container with Elegant Modern Border */}
-                <div className="relative z-10 w-full p-1.5 sm:p-2.5 rounded-3xl border-2 sm:border-[3px] border-blue-300/40 bg-gradient-to-b from-blue-400/20 via-slate-800/40 to-slate-900/60 backdrop-blur-md shadow-2xl shadow-blue-950/80 transition-transform duration-500 hover:scale-102">
+              <div className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl flex justify-center">
+                {/* Isolated Subject with Transparent Background */}
+                <div className="relative z-10 w-full flex justify-center items-center">
                   <img
                     src={heroBusinesswomanImg}
-                    alt="Webwizia web design and digital marketing specialist at work"
-                    className="w-full h-auto min-w-full max-h-[520px] sm:max-h-[580px] lg:max-h-[620px] object-cover rounded-2xl border border-white/20 shadow-inner"
+                    alt="Webwizia web design and digital marketing specialist"
+                    className="w-full h-auto max-h-[520px] sm:max-h-[580px] lg:max-h-[620px] object-cover rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-cyan-400/60 ring-2 sm:ring-4 ring-white/20 shadow-2xl shadow-blue-950/80 transition-transform duration-300 hover:scale-[1.01]"
                     referrerPolicy="no-referrer"
                     loading="eager"
                   />
