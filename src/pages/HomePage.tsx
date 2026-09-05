@@ -21,7 +21,8 @@ import {
   BarChart3,
   Globe2,
   Users,
-  Award
+  Award,
+  Play
 } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { servicesData } from '../data/servicesData';
@@ -32,8 +33,7 @@ import { SeoHead } from '../components/SeoHead';
 import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
-import heroBusinesswomanImg from '../assets/images/hero_woman_laptop_office_1788433140608.jpg';
-import heroPurpleAbstractBg from '../assets/images/hero_purple_abstract_bg_1788033202020.jpg';
+import heroWomanLaptopOfficeCutout from '../assets/images/hero_woman_laptop_office_cutout.png';
 import aboutWomanDeskImg from '../assets/images/agency_about_workspace_1787944762954.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
 
@@ -113,94 +113,134 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       />
 
       {/* ========================================================
-          HERO SECTION
+          HERO SECTION (MATCHING REFERENCE TEMPLATE DESIGN)
           ======================================================== */}
-      <section 
-        className="relative text-white pt-16 pb-24 lg:pt-20 lg:pb-32 overflow-hidden bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroPurpleAbstractBg})` }}
-      >
-        {/* Crisp Gradient Overlay for Perfect Readability & Contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070b28]/90 via-[#0d1445]/75 to-[#3b0764]/40" />
+      <section className="relative pt-10 sm:pt-14 lg:pt-16 pb-0 overflow-hidden bg-gradient-to-b from-[#f8f9fe] via-[#f1f3fd] to-[#f9f7ff]">
+        {/* Floating Geometric Decorative Elements (Matching Template) */}
+        <div className="absolute top-10 left-8 sm:left-16 w-8 h-8 sm:w-10 sm:h-10 border-2 sm:border-[2.5px] border-blue-400/40 rounded-[3px] rotate-12 pointer-events-none" />
+        <div className="absolute top-44 left-6 sm:left-24 w-4 h-4 rounded-full bg-orange-300/60 pointer-events-none" />
+        <div className="absolute top-80 left-8 sm:left-14 w-3.5 h-3.5 bg-cyan-300/60 rotate-45 pointer-events-none" />
+        
+        {/* Dot matrix accents */}
+        <div className="absolute top-12 right-1/4 w-32 h-32 opacity-25 pointer-events-none bg-[radial-gradient(#4338ca_1.5px,transparent_1.5px)] [background-size:12px_12px]" />
+        <div className="absolute top-72 right-12 sm:right-24 w-32 h-32 opacity-25 pointer-events-none bg-[radial-gradient(#4338ca_1.5px,transparent_1.5px)] [background-size:12px_12px]" />
 
-        {/* Decorative Grid & Ambient Glow Elements */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
-        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-fuchsia-500/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-blue-600/25 rounded-full blur-3xl pointer-events-none" />
+        {/* Far-right pastel ring & sparkle */}
+        <div className="absolute top-44 right-6 sm:right-10 w-14 h-14 sm:w-18 sm:h-18 rounded-full border-2 border-purple-300/50 pointer-events-none" />
+        <div className="absolute bottom-56 right-36 w-3 h-3 bg-amber-300/70 rotate-45 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-            {/* Left Content */}
-            <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-center lg:text-left">
-              {/* Badge */}
-              <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-500/20 border border-blue-300/30 text-cyan-200 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-                <span>Web Design & Digital Marketing Agency in Lahore</span>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+            {/* Left Column: Consultant with Laptop & Lavender Circular Backdrop */}
+            <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-end order-2 lg:order-1 pt-4 lg:pt-0">
+              <div className="relative w-full max-w-sm sm:max-w-md flex justify-center items-end">
+                {/* Lavender circular backdrop (from template) */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[290px] h-[290px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full bg-[#ded6f8] -z-10 shadow-sm" />
 
-              {/* Headline */}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.15rem] xl:text-[2.55rem] font-extrabold tracking-tight text-left leading-[1.2]">
-                <span className="text-white block whitespace-normal lg:whitespace-nowrap xl:whitespace-nowrap">
-                  Professional Web Design &
-                </span>
-                <span className="text-[#ec4899] sm:text-[#f43f5e] bg-gradient-to-r from-pink-500 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent block mt-1 whitespace-normal lg:whitespace-nowrap xl:whitespace-nowrap">
-                  SEO Agency in Lahore
-                </span>
-              </h1>
-
-              {/* Supporting Text */}
-              <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                Webwizia is a leading web design company in Lahore providing professional website development, custom WordPress website design in Lahore, e-commerce website development Lahore, and results-driven SEO services in Lahore to help businesses attract qualified inquiries.
-              </p>
-
-              {/* Action Buttons */}
-              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <button
-                  id="hero-get-started-btn"
-                  onClick={() => onNavigate('/contact')}
-                  className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-bold rounded-xl shadow-xl shadow-blue-600/40 hover:shadow-blue-500/60 transition-all duration-200 flex items-center justify-center space-x-2.5 text-base group"
-                >
-                  <span>GET STARTED</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-
-                <button
-                  id="hero-view-services-btn"
-                  onClick={() => onNavigate('/services')}
-                  className="w-full sm:w-auto px-8 py-4 bg-slate-900/70 hover:bg-slate-800/90 border border-white/20 text-white font-bold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 text-base backdrop-blur-md"
-                >
-                  <span>VIEW OUR SERVICES</span>
-                </button>
-              </div>
-
-              {/* Trust Indicators */}
-              <div className="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-200">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-300" />
-                  <span>Custom Website Design Lahore</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-300" />
-                  <span>SEO Services in Lahore</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-300" />
-                  <span>Webwizia Lahore Team</span>
-                </div>
+                {/* Professional Consultant with Laptop (Cutout from uploaded photo) */}
+                <img
+                  src={heroWomanLaptopOfficeCutout}
+                  alt="Professional Web Design Specialist"
+                  className="relative z-10 w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[460px] max-h-[440px] sm:max-h-[500px] lg:max-h-[540px] object-contain drop-shadow-2xl translate-y-3 sm:translate-y-4 lg:translate-y-5 select-none"
+                  referrerPolicy="no-referrer"
+                  loading="eager"
+                />
               </div>
             </div>
 
-            {/* Right Side: Professional Consultant with Laptop */}
-            <div className="lg:col-span-6 xl:col-span-6 relative flex justify-center items-center">
-              <div className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl flex justify-center">
-                {/* Isolated Subject with Transparent Background */}
-                <div className="relative z-10 w-full flex justify-center items-center">
-                  <img
-                    src={heroBusinesswomanImg}
-                    alt="Webwizia web design and digital marketing specialist"
-                    className="w-full h-auto max-h-[520px] sm:max-h-[580px] lg:max-h-[620px] object-cover rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-cyan-400/60 ring-2 sm:ring-4 ring-white/20 shadow-2xl shadow-blue-950/80 transition-transform duration-300 hover:scale-[1.01]"
-                    referrerPolicy="no-referrer"
-                    loading="eager"
-                  />
+            {/* Right Column: Hero Content */}
+            <div className="lg:col-span-7 xl:col-span-7 space-y-6 text-center lg:text-left order-1 lg:order-2">
+              {/* Main Headline */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.65rem] xl:text-[3.15rem] font-black tracking-tight text-[#1c1248] leading-[1.14]">
+                Professional <br className="hidden sm:inline" />
+                <span className="text-[#ff5268]">Web Design</span> Company <br className="hidden sm:inline" />
+                in Pakistan
+              </h1>
+
+              {/* Supporting Description */}
+              <p className="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                Webwizia is a leading web design company in Pakistan providing professional website development, custom WordPress website design, e-commerce solutions, and results-driven SEO services to help businesses attract qualified inquiries and scale digital revenue.
+              </p>
+
+              {/* Action Buttons (Matching Template) */}
+              <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-5 sm:gap-7">
+                <button
+                  id="hero-get-started-btn"
+                  onClick={() => onNavigate('/contact')}
+                  className="px-8 sm:px-9 py-3.5 sm:py-4 bg-[#6534ff] hover:bg-[#5221eb] active:scale-95 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-xl shadow-purple-600/30 hover:shadow-purple-600/40 transition-all duration-200"
+                >
+                  GET STARTED
+                </button>
+
+                <button
+                  id="hero-how-we-work-btn"
+                  onClick={() => onNavigate('/services')}
+                  className="inline-flex items-center space-x-3 group cursor-pointer text-left transition-all duration-200"
+                >
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-[#6534ff] group-hover:bg-[#6534ff] group-hover:text-white flex items-center justify-center text-[#6534ff] transition-all duration-200 shadow-sm">
+                    <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
+                  </div>
+                  <span className="font-extrabold text-xs sm:text-sm text-[#1c1248] group-hover:text-[#6534ff] tracking-wider uppercase transition-colors">
+                    HOW WE WORK !
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ========================================================
+            BOTTOM DARK CURVED WAVE WITH 3 STATS (FROM TEMPLATE)
+            ======================================================== */}
+        <div className="relative w-full mt-6 lg:mt-8 z-20">
+          {/* Organic Curved Wave Divider */}
+          <svg
+            className="w-full h-12 sm:h-16 lg:h-20 text-[#1d1246] block preserve-3d"
+            viewBox="0 0 1440 90"
+            fill="none"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,60 C320,95 640,15 1060,45 C1240,58 1360,54 1440,50 L1440,90 L0,90 Z"
+              fill="currentColor"
+            />
+          </svg>
+
+          {/* Deep Navy/Purple Stats Bar */}
+          <div className="bg-[#1d1246] pt-1 pb-10 sm:pb-12 text-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                {/* Spacer for woman image alignment on large screens */}
+                <div className="hidden lg:block lg:col-span-5" />
+
+                {/* 3 Metrics on Dark Surface (Matching Template) */}
+                <div className="lg:col-span-7 flex flex-wrap items-center justify-center lg:justify-start gap-8 sm:gap-14">
+                  <div className="text-center lg:text-left">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#ff5268] tracking-tight">
+                      49k+
+                    </div>
+                    <div className="text-white/80 text-[10px] sm:text-xs font-bold tracking-widest uppercase mt-1">
+                      PROJECT DONE
+                    </div>
+                  </div>
+
+                  <div className="text-center lg:text-left">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#ff5268] tracking-tight">
+                      38k+
+                    </div>
+                    <div className="text-white/80 text-[10px] sm:text-xs font-bold tracking-widest uppercase mt-1">
+                      HAPPY CLIENTS
+                    </div>
+                  </div>
+
+                  <div className="text-center lg:text-left">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#ff5268] tracking-tight">
+                      4.7
+                    </div>
+                    <div className="text-white/80 text-[10px] sm:text-xs font-bold tracking-widest uppercase mt-1">
+                      CLIENT RATING
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
