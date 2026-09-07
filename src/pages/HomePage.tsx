@@ -34,7 +34,7 @@ import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
 import britishWomanHeroImg from '../assets/images/british_woman_hero_transparent.png';
-import aboutWomanDeskImg from '../assets/images/agency_about_workspace_1787944762954.jpg';
+import aboutWomanDeskImg from '../assets/images/business_woman_about.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
 
 interface HomePageProps {
@@ -330,12 +330,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             {/* Right Visual Column with Curved Frame & Floating Stats Badges */}
             <div className="lg:col-span-6 relative flex justify-center lg:justify-end mt-8 lg:mt-0">
               <div className="relative w-full max-w-lg">
-                {/* Main Curved Image Container */}
-                <div className="relative z-10 rounded-2xl lg:rounded-l-3xl lg:rounded-tr-[110px] lg:rounded-br-[110px] overflow-hidden shadow-2xl shadow-slate-200 border-4 border-white bg-slate-100">
+                {/* Main Image Container */}
+                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 border-4 border-white bg-slate-100">
                   <img
                     src={aboutWomanDeskImg}
-                    alt="Webwizia web development and strategy team at work in Lahore"
-                    className="w-full h-80 sm:h-[420px] object-cover"
+                    alt="Webwizia digital marketing and web development specialist in Lahore"
+                    className="w-full h-auto object-cover aspect-[3/2]"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
 

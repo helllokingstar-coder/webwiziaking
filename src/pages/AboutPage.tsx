@@ -15,7 +15,7 @@ import {
 import { Breadcrumb } from '../components/Breadcrumb';
 import { SeoHead } from '../components/SeoHead';
 import { siteConfig } from '../data/siteConfig';
-import aboutWomanDeskImg from '../assets/images/about_woman_desk_1787866890918.jpg';
+import aboutWomanDeskImg from '../assets/images/business_woman_about.jpg';
 
 interface AboutPageProps {
   onNavigate: (path: string) => void;
@@ -69,7 +69,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
                 <img
                   src={aboutWomanDeskImg}
                   alt="Webwizia digital marketing and web design agency team in Lahore"
-                  className="w-full h-80 sm:h-[460px] object-cover"
+                  className="w-full h-auto object-cover aspect-[3/2]"
                 />
               </div>
 
