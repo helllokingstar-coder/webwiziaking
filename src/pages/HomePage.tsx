@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { 
   ArrowRight, 
   CheckCircle2, 
@@ -35,6 +35,7 @@ import { SeoHead } from '../components/SeoHead';
 import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
+import { saveImageToStorage, getImageFromStorage, clearImageFromStorage } from '../utils/imageStorage';
 import britishWomanHeroImg from '../assets/images/british_woman_hero_transparent.png';
 import aboutWomanDeskImg from '../assets/images/agency_about_workspace_1787944762954.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
@@ -53,22 +54,47 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       return null;
     }
   });
+  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved'>(() => {
+    try {
+      return localStorage.getItem('webwizia_hero_custom_image') ? 'saved' : 'idle';
+    } catch {
+      return 'idle';
+    }
+  });
+
+  // Auto-load permanently saved image on page mount from persistent storage
+  useEffect(() => {
+    let isMounted = true;
+    getImageFromStorage().then((storedImg) => {
+      if (isMounted && storedImg) {
+        setCustomHeroImg(storedImg);
+        setSaveStatus('saved');
+      }
+    });
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const handleHeroImageChange = (file: File) => {
     if (!file.type.startsWith('image/')) return;
+    setSaveStatus('saving');
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = async (e) => {
       const result = e.target?.result as string;
       if (result) {
         setCustomHeroImg(result);
-        try {
-          localStorage.setItem('webwizia_hero_custom_image', result);
-        } catch (err) {
-          console.warn('Could not save custom image to localStorage', err);
-        }
+        await saveImageToStorage(result);
+        setSaveStatus('saved');
       }
     };
     reader.readAsDataURL(file);
+  };
+
+  const handleResetHeroImage = async () => {
+    setCustomHeroImg(null);
+    setSaveStatus('idle');
+    await clearImageFromStorage();
   };
 
   const [selectedPortfolioCategory, setSelectedPortfolioCategory] = useState<string>('All');
@@ -199,8 +225,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   title="Click to choose your exact original british woman.png file from your device"
                 />
 
-                {/* Quick File Select Control Badge */}
+                {/* Quick File Select Control Badge & Auto-Save Indicator */}
                 <div className="absolute top-2 right-2 sm:right-4 z-20 flex items-center gap-1.5">
+                  {saveStatus === 'saved' && (
+                    <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-600/90 text-white text-[11px] font-medium rounded-full shadow-md backdrop-blur-sm">
+                      <CheckCircle2 className="w-3 h-3 text-emerald-200" />
+                      <span>Auto-Saved</span>
+                    </span>
+                  )}
+                  {saveStatus === 'saving' && (
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-amber-500/90 text-white text-[11px] font-medium rounded-full shadow-md backdrop-blur-sm animate-pulse">
+                      <span>Saving...</span>
+                    </span>
+                  )}
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
@@ -213,12 +250,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   {customHeroImg && (
                     <button
                       type="button"
-                      onClick={() => {
-                        setCustomHeroImg(null);
-                        try {
-                          localStorage.removeItem('webwizia_hero_custom_image');
-                        } catch {}
-                      }}
+                      onClick={handleResetHeroImage}
                       className="p-2 bg-white/95 backdrop-blur-sm text-slate-600 hover:text-red-600 rounded-full shadow-lg hover:bg-white transition-all border border-slate-200/80 cursor-pointer"
                       title="Reset image to default"
                     >
