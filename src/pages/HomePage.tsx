@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   ArrowRight, 
   CheckCircle2, 
@@ -22,9 +22,7 @@ import {
   Globe2,
   Users,
   Award,
-  Play,
-  Upload,
-  RotateCcw
+  Play
 } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { servicesData } from '../data/servicesData';
@@ -35,7 +33,6 @@ import { SeoHead } from '../components/SeoHead';
 import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
-import { saveImageToStorage, getImageFromStorage, clearImageFromStorage } from '../utils/imageStorage';
 import britishWomanHeroImg from '../assets/images/british_woman_hero_transparent.png';
 import aboutWomanDeskImg from '../assets/images/agency_about_workspace_1787944762954.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
@@ -46,57 +43,6 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) => {
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const [customHeroImg, setCustomHeroImg] = useState<string | null>(() => {
-    try {
-      return localStorage.getItem('webwizia_hero_custom_image');
-    } catch {
-      return null;
-    }
-  });
-  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved'>(() => {
-    try {
-      return localStorage.getItem('webwizia_hero_custom_image') ? 'saved' : 'idle';
-    } catch {
-      return 'idle';
-    }
-  });
-
-  // Auto-load permanently saved image on page mount from persistent storage
-  useEffect(() => {
-    let isMounted = true;
-    getImageFromStorage().then((storedImg) => {
-      if (isMounted && storedImg) {
-        setCustomHeroImg(storedImg);
-        setSaveStatus('saved');
-      }
-    });
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  const handleHeroImageChange = (file: File) => {
-    if (!file.type.startsWith('image/')) return;
-    setSaveStatus('saving');
-    const reader = new FileReader();
-    reader.onload = async (e) => {
-      const result = e.target?.result as string;
-      if (result) {
-        setCustomHeroImg(result);
-        await saveImageToStorage(result);
-        setSaveStatus('saved');
-      }
-    };
-    reader.readAsDataURL(file);
-  };
-
-  const handleResetHeroImage = async () => {
-    setCustomHeroImg(null);
-    setSaveStatus('idle');
-    await clearImageFromStorage();
-  };
-
   const [selectedPortfolioCategory, setSelectedPortfolioCategory] = useState<string>('All');
   const [activePortfolioModal, setActivePortfolioModal] = useState<PortfolioItem | null>(null);
 
@@ -187,77 +133,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* Left Column: Consultant with Laptop & Lavender Circular Backdrop */}
             <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-end order-2 lg:order-1 pt-4 lg:pt-0">
-              <div 
-                className="relative w-full max-w-sm sm:max-w-md flex justify-center items-end group"
-                onDragOver={(e) => e.preventDefault()}
-                onDrop={(e) => {
-                  e.preventDefault();
-                  if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-                    handleHeroImageChange(e.dataTransfer.files[0]);
-                  }
-                }}
-              >
+              <div className="relative w-full max-w-sm sm:max-w-md flex justify-center items-end">
                 {/* Lavender circular backdrop (from template) */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[290px] h-[290px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full bg-[#ded6f8] -z-10 shadow-sm" />
 
-                {/* Hidden File Input for 100% exact original file selection */}
-                <input
-                  type="file"
-                  ref={fileInputRef}
-                  accept="image/*"
-                  className="hidden"
-                  onChange={(e) => {
-                    if (e.target.files && e.target.files[0]) {
-                      handleHeroImageChange(e.target.files[0]);
-                    }
-                  }}
-                />
-
-                {/* British Woman Consultant with Laptop (Direct file support) */}
+                {/* British Woman Consultant with Laptop */}
                 <img
                   id="hero-businesswoman-image"
-                  src={customHeroImg || britishWomanHeroImg}
+                  src={britishWomanHeroImg}
                   alt="Professional Web Design Consultant with Laptop"
-                  className="relative z-10 w-auto max-h-[460px] sm:max-h-[520px] lg:max-h-[580px] object-contain drop-shadow-2xl translate-y-3 sm:translate-y-4 lg:translate-y-6 select-none cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
+                  className="relative z-10 w-auto max-h-[460px] sm:max-h-[520px] lg:max-h-[580px] object-contain drop-shadow-2xl translate-y-3 sm:translate-y-4 lg:translate-y-6 select-none"
                   referrerPolicy="no-referrer"
                   loading="eager"
-                  onClick={() => fileInputRef.current?.click()}
-                  title="Click to choose your exact original british woman.png file from your device"
                 />
-
-                {/* Quick File Select Control Badge & Auto-Save Indicator */}
-                <div className="absolute top-2 right-2 sm:right-4 z-20 flex items-center gap-1.5">
-                  {saveStatus === 'saved' && (
-                    <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-600/90 text-white text-[11px] font-medium rounded-full shadow-md backdrop-blur-sm">
-                      <CheckCircle2 className="w-3 h-3 text-emerald-200" />
-                      <span>Auto-Saved</span>
-                    </span>
-                  )}
-                  {saveStatus === 'saving' && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-amber-500/90 text-white text-[11px] font-medium rounded-full shadow-md backdrop-blur-sm animate-pulse">
-                      <span>Saving...</span>
-                    </span>
-                  )}
-                  <button
-                    type="button"
-                    onClick={() => fileInputRef.current?.click()}
-                    className="flex items-center gap-2 px-3.5 py-2 bg-[#1c1248] hover:bg-[#2c1d6e] text-white rounded-full text-xs font-semibold shadow-xl transition-all hover:scale-105 active:scale-95 border border-indigo-300/40 cursor-pointer"
-                    title="Upload original image directly without any AI crop or edit"
-                  >
-                    <Upload className="w-3.5 h-3.5 text-[#ff5268]" />
-                    <span>{customHeroImg ? "Change Photo" : "Upload Your Exact Image"}</span>
-                  </button>
-                  {customHeroImg && (
-                    <button
-                      type="button"
-                      onClick={handleResetHeroImage}
-                      className="p-2 bg-white/95 backdrop-blur-sm text-slate-600 hover:text-red-600 rounded-full shadow-lg hover:bg-white transition-all border border-slate-200/80 cursor-pointer"
-                      title="Reset image to default"
-                    >
-                      <RotateCcw className="w-3.5 h-3.5" />
-                    </button>
-                  )}
-                </div>
               </div>
             </div>
 
