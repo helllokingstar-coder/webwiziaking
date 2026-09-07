@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { 
   ArrowRight, 
   CheckCircle2, 
@@ -22,7 +22,9 @@ import {
   Globe2,
   Users,
   Award,
-  Play
+  Play,
+  Upload,
+  RotateCcw
 } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { servicesData } from '../data/servicesData';
@@ -33,7 +35,7 @@ import { SeoHead } from '../components/SeoHead';
 import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
-import heroWomanLaptopOfficeCutout from '../assets/images/hero_woman_laptop_office_cutout.png';
+import britishWomanHeroImg from '../assets/images/british_woman_hero_transparent.png';
 import aboutWomanDeskImg from '../assets/images/agency_about_workspace_1787944762954.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
 
@@ -43,6 +45,32 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) => {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [customHeroImg, setCustomHeroImg] = useState<string | null>(() => {
+    try {
+      return localStorage.getItem('webwizia_hero_custom_image');
+    } catch {
+      return null;
+    }
+  });
+
+  const handleHeroImageChange = (file: File) => {
+    if (!file.type.startsWith('image/')) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const result = e.target?.result as string;
+      if (result) {
+        setCustomHeroImg(result);
+        try {
+          localStorage.setItem('webwizia_hero_custom_image', result);
+        } catch (err) {
+          console.warn('Could not save custom image to localStorage', err);
+        }
+      }
+    };
+    reader.readAsDataURL(file);
+  };
+
   const [selectedPortfolioCategory, setSelectedPortfolioCategory] = useState<string>('All');
   const [activePortfolioModal, setActivePortfolioModal] = useState<PortfolioItem | null>(null);
 
@@ -133,18 +161,71 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* Left Column: Consultant with Laptop & Lavender Circular Backdrop */}
             <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-end order-2 lg:order-1 pt-4 lg:pt-0">
-              <div className="relative w-full max-w-sm sm:max-w-md flex justify-center items-end">
+              <div 
+                className="relative w-full max-w-sm sm:max-w-md flex justify-center items-end group"
+                onDragOver={(e) => e.preventDefault()}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                    handleHeroImageChange(e.dataTransfer.files[0]);
+                  }
+                }}
+              >
                 {/* Lavender circular backdrop (from template) */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[290px] h-[290px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full bg-[#ded6f8] -z-10 shadow-sm" />
 
-                {/* Professional Consultant with Laptop (Cutout from uploaded photo) */}
+                {/* Hidden File Input for 100% exact original file selection */}
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  accept="image/*"
+                  className="hidden"
+                  onChange={(e) => {
+                    if (e.target.files && e.target.files[0]) {
+                      handleHeroImageChange(e.target.files[0]);
+                    }
+                  }}
+                />
+
+                {/* British Woman Consultant with Laptop (Direct file support) */}
                 <img
-                  src={heroWomanLaptopOfficeCutout}
-                  alt="Professional Web Design Specialist"
-                  className="relative z-10 w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[460px] max-h-[440px] sm:max-h-[500px] lg:max-h-[540px] object-contain drop-shadow-2xl translate-y-3 sm:translate-y-4 lg:translate-y-5 select-none"
+                  id="hero-businesswoman-image"
+                  src={customHeroImg || britishWomanHeroImg}
+                  alt="Professional Web Design Consultant with Laptop"
+                  className="relative z-10 w-auto max-h-[460px] sm:max-h-[520px] lg:max-h-[580px] object-contain drop-shadow-2xl translate-y-3 sm:translate-y-4 lg:translate-y-6 select-none cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
                   referrerPolicy="no-referrer"
                   loading="eager"
+                  onClick={() => fileInputRef.current?.click()}
+                  title="Click to choose your exact original british woman.png file from your device"
                 />
+
+                {/* Quick File Select Control Badge */}
+                <div className="absolute top-2 right-2 sm:right-4 z-20 flex items-center gap-1.5">
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="flex items-center gap-1.5 px-3 py-1.5 bg-white/95 backdrop-blur-sm text-slate-800 rounded-full text-xs font-semibold shadow-md hover:bg-white transition-all border border-slate-200/80 hover:shadow-lg hover:scale-105 active:scale-95"
+                    title="Upload original image directly without any AI crop or edit"
+                  >
+                    <Upload className="w-3.5 h-3.5 text-indigo-600" />
+                    <span>{customHeroImg ? "Change Image" : "Upload File"}</span>
+                  </button>
+                  {customHeroImg && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setCustomHeroImg(null);
+                        try {
+                          localStorage.removeItem('webwizia_hero_custom_image');
+                        } catch {}
+                      }}
+                      className="p-1.5 bg-white/95 backdrop-blur-sm text-slate-600 hover:text-red-600 rounded-full shadow-md hover:bg-white transition-all border border-slate-200/80"
+                      title="Reset image"
+                    >
+                      <RotateCcw className="w-3.5 h-3.5" />
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
 
