@@ -204,11 +204,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
-                    className="flex items-center gap-1.5 px-3 py-1.5 bg-white/95 backdrop-blur-sm text-slate-800 rounded-full text-xs font-semibold shadow-md hover:bg-white transition-all border border-slate-200/80 hover:shadow-lg hover:scale-105 active:scale-95"
+                    className="flex items-center gap-2 px-3.5 py-2 bg-[#1c1248] hover:bg-[#2c1d6e] text-white rounded-full text-xs font-semibold shadow-xl transition-all hover:scale-105 active:scale-95 border border-indigo-300/40 cursor-pointer"
                     title="Upload original image directly without any AI crop or edit"
                   >
-                    <Upload className="w-3.5 h-3.5 text-indigo-600" />
-                    <span>{customHeroImg ? "Change Image" : "Upload File"}</span>
+                    <Upload className="w-3.5 h-3.5 text-[#ff5268]" />
+                    <span>{customHeroImg ? "Change Photo" : "Upload Your Exact Image"}</span>
                   </button>
                   {customHeroImg && (
                     <button
@@ -219,8 +219,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                           localStorage.removeItem('webwizia_hero_custom_image');
                         } catch {}
                       }}
-                      className="p-1.5 bg-white/95 backdrop-blur-sm text-slate-600 hover:text-red-600 rounded-full shadow-md hover:bg-white transition-all border border-slate-200/80"
-                      title="Reset image"
+                      className="p-2 bg-white/95 backdrop-blur-sm text-slate-600 hover:text-red-600 rounded-full shadow-lg hover:bg-white transition-all border border-slate-200/80 cursor-pointer"
+                      title="Reset image to default"
                     >
                       <RotateCcw className="w-3.5 h-3.5" />
                     </button>
