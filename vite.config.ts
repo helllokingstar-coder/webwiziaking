@@ -18,10 +18,12 @@ function imageSaverPlugin(): Plugin {
               if (dataUrl && typeof dataUrl === 'string' && dataUrl.startsWith('data:image/')) {
                 const base64Data = dataUrl.replace(/^data:image\/\w+;base64,/, '');
                 const buffer = Buffer.from(base64Data, 'base64');
-                const filePath = path.resolve(__dirname, 'src/assets/images/british_woman_user.png');
-                fs.writeFileSync(filePath, buffer);
+                const targetPath1 = path.resolve(__dirname, 'src/assets/images/british_woman_hero_transparent.png');
+                const targetPath2 = path.resolve(__dirname, 'src/assets/images/british_woman_user.png');
+                fs.writeFileSync(targetPath1, buffer);
+                fs.writeFileSync(targetPath2, buffer);
                 res.writeHead(200, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ success: true, path: filePath }));
+                res.end(JSON.stringify({ success: true, path: targetPath1 }));
                 return;
               }
             } catch (err: any) {
