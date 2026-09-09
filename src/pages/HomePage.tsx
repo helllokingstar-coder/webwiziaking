@@ -35,7 +35,7 @@ import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
 import heroWomanImg from '../assets/images/Hero section british girl image.png';
 import heroBgImg from '../assets/images/Hero BG.png';
-import aboutWomanDeskImg from '../assets/images/business_woman_about.jpg';
+import aboutWomanDeskImg from '../assets/images/Home page About us Section image.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
 
 interface HomePageProps {
@@ -264,20 +264,27 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       </section>
 
       {/* ========================================================
-          ABOUT US SECTION (MATCHING REFERENCE DESIGN)
+          ABOUT US SECTION (EXACT TEMPLATE MATCH)
           ======================================================== */}
       <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             {/* Left Content Column */}
-            <div className="lg:col-span-6 space-y-6 text-left">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1e1b4b] leading-[1.15] tracking-tight">
-                Web Design & SEO <br />
-                Agency in <span className="text-[#f43f5e]">Lahore</span>
+            <div className="lg:col-span-6 space-y-5 text-left">
+              {/* Subheading */}
+              <div className="inline-block text-xs sm:text-sm font-black tracking-widest uppercase text-[#ff5268]">
+                About Us
+              </div>
+
+              {/* Main Heading matching template typography */}
+              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-[#1c1248] leading-[1.16] tracking-tight">
+                Web Design & SEO <br className="hidden sm:inline" />
+                Agency in <span className="text-[#ff5268]">Lahore</span>
               </h2>
 
-              <div className="space-y-4 text-[#1e1b4b] text-sm sm:text-base leading-relaxed max-w-xl font-normal">
+              {/* Description Paragraphs */}
+              <div className="space-y-4 text-slate-500 text-sm sm:text-[15px] leading-relaxed max-w-xl font-normal">
                 <p>
                   Webwizia is a full-service web design agency in Lahore and digital marketing company specializing in website development Lahore, custom WordPress website design in Lahore, and local SEO services Lahore. We work closely with commercial enterprises, healthcare providers, retail stores, and emerging brands across Pakistan.
                 </p>
@@ -286,43 +293,50 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 </p>
               </div>
 
-              {/* 4 Feature Items with Colored Check Icon Badges */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 pt-2 max-w-xl">
-                <div className="flex items-center space-x-3">
-                  <div className="w-7 h-7 rounded-full bg-[#1e1b4b] text-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Check className="w-4 h-4 stroke-[3]" />
+              {/* Thin gray divider line above feature checklist (matching template) */}
+              <div className="border-t border-slate-200/70 pt-6 max-w-xl">
+                {/* 4 Feature Items with Exact Template Colored Badges */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-6">
+                  {/* Left Col - Item 1: Dark Circle */}
+                  <div className="flex items-center space-x-3.5">
+                    <div className="w-7 h-7 rounded-full bg-[#1c1248] text-white flex items-center justify-center shrink-0 shadow-sm">
+                      <Check className="w-3.5 h-3.5 stroke-[3]" />
+                    </div>
+                    <span className="text-sm sm:text-[15px] font-bold text-[#1c1248]">Custom Website Design</span>
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Custom Website Design Lahore</span>
-                </div>
 
-                <div className="flex items-center space-x-3">
-                  <div className="w-7 h-7 rounded-full bg-[#6366f1] text-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Check className="w-4 h-4 stroke-[3]" />
+                  {/* Right Col - Item 2: Purple Circle */}
+                  <div className="flex items-center space-x-3.5">
+                    <div className="w-7 h-7 rounded-full bg-[#6534ff] text-white flex items-center justify-center shrink-0 shadow-sm">
+                      <Check className="w-3.5 h-3.5 stroke-[3]" />
+                    </div>
+                    <span className="text-sm sm:text-[15px] font-bold text-[#1c1248]">SEO-Friendly Websites</span>
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Professional Website Development</span>
-                </div>
 
-                <div className="flex items-center space-x-3">
-                  <div className="w-7 h-7 rounded-full bg-[#f43f5e] text-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Check className="w-4 h-4 stroke-[3]" />
+                  {/* Left Col - Item 3: Coral/Red Circle */}
+                  <div className="flex items-center space-x-3.5">
+                    <div className="w-7 h-7 rounded-full bg-[#ff5268] text-white flex items-center justify-center shrink-0 shadow-sm">
+                      <Check className="w-3.5 h-3.5 stroke-[3]" />
+                    </div>
+                    <span className="text-sm sm:text-[15px] font-bold text-[#1c1248]">Responsive Web Design</span>
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Responsive Website Design</span>
-                </div>
 
-                <div className="flex items-center space-x-3">
-                  <div className="w-7 h-7 rounded-full bg-[#1e293b] text-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Check className="w-4 h-4 stroke-[3]" />
+                  {/* Right Col - Item 4: Dark Circle */}
+                  <div className="flex items-center space-x-3.5">
+                    <div className="w-7 h-7 rounded-full bg-[#1c1248] text-white flex items-center justify-center shrink-0 shadow-sm">
+                      <Check className="w-3.5 h-3.5 stroke-[3]" />
+                    </div>
+                    <span className="text-sm sm:text-[15px] font-bold text-[#1c1248]">Digital Marketing</span>
                   </div>
-                  <span className="text-sm sm:text-base font-bold text-[#1e1b4b]">Local SEO Services Lahore</span>
                 </div>
               </div>
 
-              {/* Bottom Row: Read More Button + Director Profile */}
-              <div className="pt-6 flex flex-wrap items-center gap-8">
+              {/* Bottom Row: Read More Button + Director Profile matching template */}
+              <div className="pt-6 flex flex-wrap items-center gap-7 sm:gap-10">
                 <button
                   id="about-read-more-btn"
                   onClick={() => onNavigate('/about')}
-                  className="px-8 py-3.5 bg-blue-600 hover:bg-blue-400 active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-lg shadow-blue-600/25 transition-all"
+                  className="px-7 py-3.5 bg-[#6534ff] hover:bg-[#5223e6] active:scale-95 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase rounded-[14px] shadow-lg shadow-purple-600/25 transition-all"
                 >
                   READ MORE
                 </button>
@@ -334,63 +348,67 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                     className="w-12 h-12 rounded-full object-cover border-2 border-slate-100 shadow-sm"
                   />
                   <div>
-                    <h4 className="text-base font-black text-[#1e1b4b] leading-tight">Meggie Wilson</h4>
-                    <p className="text-[11px] font-bold text-slate-400 tracking-wider uppercase">CEO & CREATIVE DIRECTOR</p>
+                    <h4 className="text-base font-black text-[#1c1248] leading-tight">Meggie Wilson</h4>
+                    <p className="text-[11px] font-bold text-slate-400 tracking-wider uppercase mt-0.5">CEO, HEAD DIRECTOR</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Visual Column with Curved Frame & Floating Stats Badges */}
-            <div className="lg:col-span-6 relative flex justify-center lg:justify-end mt-8 lg:mt-0">
-              <div className="relative w-full max-w-lg">
-                {/* Main Image Container */}
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 border-4 border-white bg-slate-100">
+            <div className="lg:col-span-6 relative flex justify-center lg:justify-end mt-12 lg:mt-0">
+              <div className="relative w-full max-w-lg lg:max-w-xl">
+                {/* Main Image Container with Asymmetric Rounded Corners (Matching template without border) */}
+                <div className="relative z-10 rounded-tl-2xl rounded-tr-[70px] sm:rounded-tr-[100px] rounded-bl-2xl rounded-br-[50px] sm:rounded-br-[70px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)] bg-slate-100">
                   <img
                     src={aboutWomanDeskImg}
-                    alt="Webwizia digital marketing and web development specialist in Lahore"
-                    className="w-full h-auto object-cover aspect-[3/2]"
+                    alt="Webwizia digital marketing and web development specialist"
+                    className="w-full h-auto object-cover aspect-[4/3] sm:aspect-[1.15/1]"
                     referrerPolicy="no-referrer"
                   />
                 </div>
 
-                {/* Floating Badge 1: 120% Engagement */}
-                <div className="absolute -top-5 sm:-top-7 -left-3 sm:-left-8 z-20 bg-white/95 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-xl shadow-slate-300/60 border border-slate-100 flex items-center space-x-3.5">
-                  <div className="w-11 h-11 rounded-xl bg-[#f43f5e] text-white flex items-center justify-center shadow-md shadow-rose-500/30">
-                    <BarChart3 className="w-5 h-5" />
+                {/* Floating Badge 1: 120% Engagement Pill (Matching template: capsule shape overlapping left) */}
+                <div className="absolute top-10 sm:top-12 -left-4 sm:-left-10 lg:-left-14 z-20 bg-white/95 backdrop-blur-md pl-3 pr-6 sm:pl-3.5 sm:pr-7 py-2.5 sm:py-3 rounded-full shadow-[0_12px_32px_rgba(0,0,0,0.08)] border border-slate-100/90 flex items-center gap-3.5">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#ff5268] text-white flex items-center justify-center shrink-0 shadow-md shadow-rose-500/30">
+                    <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                   </div>
                   <div>
-                    <div className="text-xl font-black text-[#1e1b4b] leading-none">120%</div>
-                    <div className="text-[10px] font-extrabold text-slate-400 tracking-wider uppercase mt-1">ENGAGEMENT</div>
+                    <div className="text-xl sm:text-2xl font-black text-[#1c1248] leading-none">120%</div>
+                    <div className="text-[10px] sm:text-[11px] font-extrabold text-slate-400 tracking-wider uppercase mt-1">ENGAGEMENT</div>
                   </div>
                 </div>
 
-                {/* Floating Badge 2: Increase Sales Chart */}
-                <div className="absolute -bottom-5 sm:-bottom-7 -left-3 sm:-left-6 z-20 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl shadow-slate-300/60 border border-slate-100 w-44 sm:w-52">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs font-bold text-[#1e1b4b]">Increase Sales</span>
-                    <span className="text-[11px] font-black text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">+65,4%</span>
+                {/* Floating Badge 2: Increase Sales Chart (Matching template: 2-line title + curve chart) */}
+                <div className="absolute bottom-8 sm:bottom-10 -left-3 sm:-left-8 lg:-left-12 z-20 bg-white rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-slate-100/90 p-4 sm:p-5 w-48 sm:w-56">
+                  <div className="flex items-start justify-between mb-2">
+                    <div className="text-xs sm:text-sm font-bold text-[#1c1248] leading-tight">
+                      Increase<br />Sales
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-black text-[#10b981] bg-emerald-50 px-2 py-0.5 rounded-md">
+                      +65,4%
+                    </span>
                   </div>
-                  {/* Smooth Green SVG Line Chart */}
-                  <svg viewBox="0 0 100 35" className="w-full h-10 overflow-visible">
+                  {/* Smooth Green SVG Line Chart matching template */}
+                  <svg viewBox="0 0 110 38" className="w-full h-11 overflow-visible">
                     <defs>
-                      <linearGradient id="salesGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#10b981" stopOpacity="0.25" />
+                      <linearGradient id="salesTrendGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#10b981" stopOpacity="0.28" />
                         <stop offset="100%" stopColor="#10b981" stopOpacity="0.0" />
                       </linearGradient>
                     </defs>
                     <path
-                      d="M0,28 Q15,10 30,22 T60,12 T85,20 T100,5 L100,35 L0,35 Z"
-                      fill="url(#salesGrad)"
+                      d="M0,30 Q12,12 25,24 T55,14 T85,22 T108,6 L108,38 L0,38 Z"
+                      fill="url(#salesTrendGrad)"
                     />
                     <path
-                      d="M0,28 Q15,10 30,22 T60,12 T85,20 T100,5"
+                      d="M0,30 Q12,12 25,24 T55,14 T85,22 T108,6"
                       fill="none"
                       stroke="#10b981"
                       strokeWidth="2.5"
                       strokeLinecap="round"
                     />
-                    <circle cx="100" cy="5" r="3" fill="#10b981" />
+                    <circle cx="108" cy="6" r="3" fill="#10b981" />
                   </svg>
                 </div>
               </div>
