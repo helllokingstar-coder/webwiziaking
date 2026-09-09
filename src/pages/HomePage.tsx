@@ -272,9 +272,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             
             {/* Left Content Column */}
             <div className="lg:col-span-6 space-y-5 text-left">
-              {/* Subheading */}
-              <div className="inline-block text-xs sm:text-sm font-black tracking-widest uppercase text-blue-600">
-                About Us
+              {/* Subheading Badge matching other subheadings */}
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-black uppercase tracking-wider shadow-2xs">
+                <Sparkles className="w-3.5 h-3.5 fill-current text-blue-600" />
+                <span>About Us</span>
               </div>
 
               {/* Main Heading matching template typography */}
