@@ -8,7 +8,9 @@ import {
   ExternalLink,
   Navigation,
   CheckCircle2, 
-  Send
+  Send,
+  AlertCircle,
+  Loader2
 } from 'lucide-react';
 import { SeoHead } from '../components/SeoHead';
 import { siteConfig } from '../data/siteConfig';
@@ -31,6 +33,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const validate = () => {
     const newErrors: Partial<Record<keyof ContactFormData, string>> = {};
@@ -50,19 +53,51 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
-    setTimeout(() => {
+    setSubmitError(null);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mljealja', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          serviceInterest: formData.serviceInterest || 'General Inquiry',
+          message: formData.message,
+          _subject: `New Contact Inquiry from ${formData.fullName} (Webwizia)`,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+      } else {
+        const data = await response.json().catch(() => null);
+        if (data && data.errors && data.errors.length > 0) {
+          setSubmitError(data.errors.map((item: { message: string }) => item.message).join(', '));
+        } else {
+          setSubmitError('Failed to send message. Please try again or contact us directly via phone or WhatsApp.');
+        }
+      }
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setSubmitError('Network error: Unable to submit. Please check your connection or contact us directly.');
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-    }, 600);
+    }
   };
 
   const handleReset = () => {
     setIsSuccess(false);
+    setSubmitError(null);
     setFormData({
       fullName: '',
       email: '',
@@ -215,7 +250,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form 
+                  action="https://formspree.io/f/mljealja"
+                  method="POST"
+                  onSubmit={handleSubmit} 
+                  className="space-y-5"
+                >
                   <h2 className="text-2xl sm:text-3xl font-black text-[#1e1b4b] tracking-tight">
                     Send us a Message
                   </h2>
@@ -228,6 +268,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       </label>
                       <input
                         id="contact-full-name"
+                        name="name"
                         type="text"
                         placeholder="John Doe"
                         value={formData.fullName}
@@ -245,6 +286,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       </label>
                       <input
                         id="contact-email-addr"
+                        name="email"
                         type="email"
                         placeholder="john@example.com"
                         value={formData.email}
@@ -265,6 +307,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       </label>
                       <input
                         id="contact-phone-num"
+                        name="phone"
                         type="tel"
                         placeholder="+92 300 0000000"
                         value={formData.phone}
@@ -282,6 +325,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       </label>
                       <select
                         id="contact-service-select"
+                        name="serviceInterest"
                         value={formData.serviceInterest}
                         onChange={(e) => setFormData({ ...formData, serviceInterest: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-[#f0f4fc] border border-transparent focus:border-blue-500 focus:bg-white text-sm text-[#1e1b4b] focus:outline-none transition-all cursor-pointer"
@@ -302,6 +346,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     </label>
                     <textarea
                       id="contact-project-details"
+                      name="message"
                       rows={4}
                       placeholder="Tell us about your project, goals, and timeline..."
                       value={formData.message}
@@ -313,18 +358,32 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     {errors.message && <p className="text-xs text-red-500 mt-1">{errors.message}</p>}
                   </div>
 
+                  {/* Formspree Submission Error Alert */}
+                  {submitError && (
+                    <div className="p-3.5 bg-red-50 border border-red-200 rounded-xl text-red-700 text-xs sm:text-sm flex items-start space-x-2.5">
+                      <AlertCircle className="w-5 h-5 shrink-0 mt-0.5 text-red-600" />
+                      <span>{submitError}</span>
+                    </div>
+                  )}
+
                   {/* Submit Button */}
                   <div className="pt-2">
                     <button
                       id="contact-submit-btn"
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-3.5 sm:py-4 bg-[#155DFC] hover:bg-blue-700 active:scale-[0.99] text-white font-bold text-sm sm:text-base rounded-xl shadow-lg shadow-blue-600/25 transition-all flex items-center justify-center space-x-2 disabled:opacity-70"
+                      className="w-full py-3.5 sm:py-4 bg-[#155DFC] hover:bg-blue-700 active:scale-[0.99] text-white font-bold text-sm sm:text-base rounded-xl shadow-lg shadow-blue-600/25 transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? (
-                        <span>Sending...</span>
+                        <>
+                          <Loader2 className="w-5 h-5 animate-spin" />
+                          <span>Sending to Webwizia...</span>
+                        </>
                       ) : (
-                        <span>Send Message</span>
+                        <>
+                          <span>Send Message</span>
+                          <Send className="w-4 h-4 ml-1" />
+                        </>
                       )}
                     </button>
                   </div>

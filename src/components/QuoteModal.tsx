@@ -31,6 +31,8 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
 
   if (!isOpen) return null;
 
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
   const validate = () => {
     const newErrors: Partial<Record<keyof QuoteFormData, string>> = {};
     if (!formData.fullName.trim()) newErrors.fullName = 'Please enter your full name';
@@ -49,20 +51,54 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate high reliability agency intake processing
-    setTimeout(() => {
+    setSubmitError(null);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mljealja', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.companyName || 'Not specified',
+          serviceType: formData.serviceType,
+          budgetRange: formData.budgetRange,
+          timeline: formData.timeline,
+          projectDetails: formData.projectDetails,
+          _subject: `New Quote Request from ${formData.fullName} - ${formData.serviceType} (Webwizia)`,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+      } else {
+        const data = await response.json().catch(() => null);
+        if (data && data.errors && data.errors.length > 0) {
+          setSubmitError(data.errors.map((item: { message: string }) => item.message).join(', '));
+        } else {
+          setSubmitError('Failed to submit quote request. Please try again or contact us directly.');
+        }
+      }
+    } catch (err) {
+      console.error('Quote submission error:', err);
+      setSubmitError('Network error: Unable to submit. Please check your connection or contact us directly.');
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-    }, 800);
+    }
   };
 
   const handleReset = () => {
     setIsSuccess(false);
+    setSubmitError(null);
     setFormData({
       fullName: '',
       email: '',
@@ -288,6 +324,13 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 />
                 {errors.projectDetails && <p className="text-xs text-red-500 mt-1">{errors.projectDetails}</p>}
               </div>
+
+              {submitError && (
+                <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-red-700 text-xs flex items-start space-x-2">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-red-600" />
+                  <span>{submitError}</span>
+                </div>
+              )}
 
               {/* Submit CTA */}
               <div className="pt-2 flex items-center justify-between">
