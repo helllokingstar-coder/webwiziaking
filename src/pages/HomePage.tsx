@@ -273,7 +273,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             {/* Left Content Column */}
             <div className="lg:col-span-6 space-y-5 text-left">
               {/* Subheading */}
-              <div className="inline-block text-xs sm:text-sm font-black tracking-widest uppercase text-[#ff5268]">
+              <div className="inline-block text-xs sm:text-sm font-black tracking-widest uppercase text-blue-600">
                 About Us
               </div>
 
@@ -420,7 +420,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       <section className="py-20 lg:py-28 bg-[#f5f8fc] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
               <span>Our Core Capabilities</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
@@ -497,7 +497,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       <section className="py-20 lg:py-28 bg-slate-50 border-t border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-12">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
               <span>Our Work</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
@@ -589,7 +589,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       <section className="py-20 lg:py-28 bg-slate-50 border-t border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
               <span>Client Feedback</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">

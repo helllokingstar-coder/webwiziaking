@@ -84,8 +84,8 @@ export const SeoReadySection: React.FC<SeoReadySectionProps> = ({ onNavigate }) 
           <div className="lg:col-span-6 text-left space-y-5 order-1 lg:order-2">
             
             {/* Eyebrow Badge */}
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-rose-50 border border-rose-100 text-[#ff5268] text-xs font-black uppercase tracking-wider">
-              <Zap className="w-3.5 h-3.5 fill-current" />
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-black uppercase tracking-wider">
+              <Zap className="w-3.5 h-3.5 fill-current text-blue-600" />
               <span>SEARCH-READY WEBSITES</span>
             </div>
 

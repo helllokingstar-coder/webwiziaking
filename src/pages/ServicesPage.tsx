@@ -78,7 +78,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenQu
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
               <span>Core Capabilities</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
