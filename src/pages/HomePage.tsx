@@ -34,8 +34,18 @@ import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
 import britishWomanHeroImg from '../assets/images/british_woman_hero_transparent.png';
+import heroBgImg from '../assets/images/Hero BG.png';
 import aboutWomanDeskImg from '../assets/images/business_woman_about.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
+
+// Dynamic resolver for uploaded hero section image with priority
+const uploadedHeroImages = import.meta.glob<{ default: string }>('../assets/images/*.{png,jpg,jpeg,webp}', { eager: true });
+const heroWomanImg = 
+  uploadedHeroImages['../assets/images/Hero Section image.png']?.default ||
+  uploadedHeroImages['../assets/images/hero_section_image.png']?.default ||
+  uploadedHeroImages['../assets/images/Hero section image.png']?.default ||
+  uploadedHeroImages['../assets/images/british_woman_hero_transparent.png']?.default ||
+  britishWomanHeroImg;
 
 interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -116,6 +126,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
           HERO SECTION (MATCHING REFERENCE TEMPLATE DESIGN)
           ======================================================== */}
       <section className="relative pt-10 sm:pt-14 lg:pt-16 pb-0 overflow-hidden bg-gradient-to-b from-[#f8f9fe] via-[#f1f3fd] to-[#f9f7ff]">
+        {/* Ambient Hero BG Image uploaded by user */}
+        {heroBgImg && (
+          <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+            <img
+              src={heroBgImg}
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover object-top opacity-30 mix-blend-multiply select-none"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+        )}
+
         {/* Floating Geometric Decorative Elements (Matching Template) */}
         <div className="absolute top-10 left-8 sm:left-16 w-8 h-8 sm:w-10 sm:h-10 border-2 sm:border-[2.5px] border-blue-400/40 rounded-[3px] rotate-12 pointer-events-none" />
         <div className="absolute top-44 left-6 sm:left-24 w-4 h-4 rounded-full bg-orange-300/60 pointer-events-none" />
@@ -129,20 +152,20 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
         <div className="absolute top-44 right-6 sm:right-10 w-14 h-14 sm:w-18 sm:h-18 rounded-full border-2 border-purple-300/50 pointer-events-none" />
         <div className="absolute bottom-56 right-36 w-3 h-3 bg-amber-300/70 rotate-45 pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* Left Column: Consultant with Laptop & Lavender Circular Backdrop */}
-            <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-end order-2 lg:order-1 pt-4 lg:pt-0">
-              <div className="relative w-full max-w-sm sm:max-w-md flex justify-center items-end">
+            <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-end order-2 lg:order-1 pt-4 lg:pt-0 z-30">
+              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg flex justify-center items-end">
                 {/* Lavender circular backdrop (from template) */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[290px] h-[290px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full bg-[#ded6f8] -z-10 shadow-sm" />
+                <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] h-[290px] sm:w-[380px] sm:h-[380px] lg:w-[430px] lg:h-[430px] rounded-full bg-[#ded6f8] -z-10 shadow-sm" />
 
                 {/* British Woman Consultant with Laptop */}
                 <img
                   id="hero-businesswoman-image"
-                  src={britishWomanHeroImg}
+                  src={heroWomanImg}
                   alt="Professional Web Design Consultant with Laptop"
-                  className="relative z-10 w-auto max-h-[460px] sm:max-h-[520px] lg:max-h-[580px] object-contain drop-shadow-2xl translate-y-3 sm:translate-y-4 lg:translate-y-6 select-none"
+                  className="relative z-30 w-auto max-h-[500px] sm:max-h-[580px] lg:max-h-[660px] xl:max-h-[720px] object-contain drop-shadow-2xl translate-y-6 sm:translate-y-8 lg:translate-y-20 xl:translate-y-26 lg:-mb-20 xl:-mb-24 select-none"
                   referrerPolicy="no-referrer"
                   loading="eager"
                 />
@@ -193,7 +216,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
         {/* ========================================================
             BOTTOM DARK CURVED WAVE WITH 3 STATS (FROM TEMPLATE)
             ======================================================== */}
-        <div className="relative w-full mt-6 lg:mt-8 z-20">
+        <div className="relative w-full mt-4 lg:mt-0 z-20">
           {/* Organic Curved Wave Divider */}
           <svg
             className="w-full h-12 sm:h-16 lg:h-20 text-[#1d1246] block preserve-3d"

@@ -15,6 +15,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { siteConfig, mainNavItems } from '../data/siteConfig';
+import webwiziaLogo from '../assets/images/Webwizia_logo.png';
 
 interface HeaderProps {
   currentPath: string;
@@ -109,17 +110,12 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => handleLinkClick('/')}
             className="flex items-center space-x-3 group text-left focus:outline-none"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-700 via-blue-600 to-sky-400 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
-              <span className="font-extrabold text-xl tracking-tighter">W</span>
-            </div>
-            <div>
-              <span className="text-2xl font-black tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">
-                Web<span className="text-blue-600">wizia</span>
-              </span>
-              <span className="block text-[10px] font-semibold tracking-wider uppercase text-slate-400 -mt-1">
-                Digital Agency
-              </span>
-            </div>
+            <img 
+              src={webwiziaLogo} 
+              alt="Webwizia" 
+              className="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105"
+              referrerPolicy="no-referrer"
+            />
           </button>
 
           {/* Desktop Navigation Links */}
