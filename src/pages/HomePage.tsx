@@ -33,19 +33,10 @@ import { SeoHead } from '../components/SeoHead';
 import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
-import britishWomanHeroImg from '../assets/images/british_woman_hero_transparent.png';
+import heroWomanImg from '../assets/images/Hero section british girl image.png';
 import heroBgImg from '../assets/images/Hero BG.png';
 import aboutWomanDeskImg from '../assets/images/business_woman_about.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
-
-// Dynamic resolver for uploaded hero section image with priority
-const uploadedHeroImages = import.meta.glob<{ default: string }>('../assets/images/*.{png,jpg,jpeg,webp}', { eager: true });
-const heroWomanImg = 
-  uploadedHeroImages['../assets/images/Hero Section image.png']?.default ||
-  uploadedHeroImages['../assets/images/hero_section_image.png']?.default ||
-  uploadedHeroImages['../assets/images/Hero section image.png']?.default ||
-  uploadedHeroImages['../assets/images/british_woman_hero_transparent.png']?.default ||
-  britishWomanHeroImg;
 
 interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -158,14 +149,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-end order-2 lg:order-1 pt-4 lg:pt-0 z-30">
               <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg flex justify-center items-end">
                 {/* Lavender circular backdrop (from template) */}
-                <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] h-[290px] sm:w-[380px] sm:h-[380px] lg:w-[430px] lg:h-[430px] rounded-full bg-[#ded6f8] -z-10 shadow-sm" />
+                <div className="absolute top-[38%] sm:top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full bg-[#ded6f8] -z-10 shadow-sm" />
 
-                {/* British Woman Consultant with Laptop */}
+                {/* British Woman Consultant with Laptop - Full body visible on desktop, tablet, and mobile */}
                 <img
                   id="hero-businesswoman-image"
                   src={heroWomanImg}
                   alt="Professional Web Design Consultant with Laptop"
-                  className="relative z-30 w-auto max-h-[500px] sm:max-h-[580px] lg:max-h-[660px] xl:max-h-[720px] object-contain drop-shadow-2xl translate-y-6 sm:translate-y-8 lg:translate-y-20 xl:translate-y-26 lg:-mb-20 xl:-mb-24 select-none"
+                  className="relative z-30 w-auto h-auto max-h-[380px] xs:max-h-[420px] sm:max-h-[480px] md:max-h-[540px] lg:max-h-[620px] xl:max-h-[680px] object-contain drop-shadow-2xl translate-y-1 sm:translate-y-2 lg:translate-y-2.5 select-none"
                   referrerPolicy="no-referrer"
                   loading="eager"
                 />
