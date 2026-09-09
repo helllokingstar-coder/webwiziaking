@@ -12,6 +12,7 @@ import {
   Clock
 } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
+import siteIcon from '../assets/images/site icon webwizia.png';
 
 interface FooterProps {
   onNavigate: (path: string) => void;
@@ -35,8 +36,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Column 1 — Webwizia Brand */}
           <div className="space-y-5">
             <div className="flex items-center space-x-3 group cursor-pointer" onClick={(e) => handleLink(e, '/')}>
-              <div className="w-10 h-10 rounded-xl bg-white text-[#155DFC] flex items-center justify-center shadow-lg shadow-blue-950/20">
-                <span className="font-extrabold text-xl tracking-tighter">W</span>
+              <div className="w-11 h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-lg shadow-blue-950/20 overflow-hidden">
+                <img src={siteIcon} alt="Webwizia Site Icon" className="w-full h-full object-contain" />
               </div>
               <div>
                 <span className="text-2xl font-black tracking-tight text-white">
