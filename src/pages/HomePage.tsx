@@ -33,7 +33,7 @@ import { SeoHead } from '../components/SeoHead';
 import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
-import heroWomanImg from '../assets/images/Hero section british girl image.png';
+import heroOfficeImg from '../assets/images/office work man and woman.png';
 import heroBgImg from '../assets/images/Hero BG.png';
 import aboutWomanDeskImg from '../assets/images/Home page About us Section image.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
@@ -145,18 +145,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            {/* Left Column: Consultant with Laptop & Lavender Circular Backdrop */}
-            <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-end order-2 lg:order-1 pt-4 lg:pt-0 z-30">
-              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg flex justify-center items-end">
-                {/* Lavender circular backdrop (from template) */}
-                <div className="absolute top-[38%] sm:top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full bg-[#ded6f8] -z-10 shadow-sm" />
-
-                {/* British Woman Consultant with Laptop - Full body visible on desktop, tablet, and mobile */}
+            {/* Left Column: Office Team Working on Laptop */}
+            <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-center order-2 lg:order-1 pt-4 lg:pt-0 z-30">
+              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg flex justify-center items-center">
+                {/* Office Team Collaborating with Laptop */}
                 <img
                   id="hero-businesswoman-image"
-                  src={heroWomanImg}
-                  alt="Professional Web Design Consultant with Laptop"
-                  className="relative z-30 w-auto h-auto max-h-[380px] xs:max-h-[420px] sm:max-h-[480px] md:max-h-[540px] lg:max-h-[620px] xl:max-h-[680px] object-contain drop-shadow-2xl translate-y-1 sm:translate-y-2 lg:translate-y-2.5 select-none"
+                  src={heroOfficeImg}
+                  alt="Webwizia Web Design and Development Team"
+                  className="relative z-30 w-full h-auto max-h-[380px] xs:max-h-[420px] sm:max-h-[460px] md:max-h-[500px] lg:max-h-[540px] object-cover rounded-2xl sm:rounded-3xl shadow-2xl shadow-indigo-950/15 border-4 border-white select-none"
                   referrerPolicy="no-referrer"
                   loading="eager"
                 />
