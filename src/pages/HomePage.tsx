@@ -33,7 +33,7 @@ import { SeoHead } from '../components/SeoHead';
 import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
-import heroOfficeImg from '../assets/images/office work man and woman.png';
+import heroOfficeImg from '../assets/images/hero_office_team.jpg';
 import heroBgImg from '../assets/images/Hero BG.png';
 import aboutWomanDeskImg from '../assets/images/Home page About us Section image.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
@@ -144,24 +144,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
         <div className="absolute bottom-56 right-36 w-3 h-3 bg-amber-300/70 rotate-45 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            {/* Left Column: Office Team Working on Laptop */}
-            <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-center order-2 lg:order-1 pt-4 lg:pt-0 z-30">
-              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg flex justify-center items-center">
-                {/* Office Team Collaborating with Laptop */}
-                <img
-                  id="hero-businesswoman-image"
-                  src={heroOfficeImg}
-                  alt="Webwizia Web Design and Development Team"
-                  className="relative z-30 w-full h-auto max-h-[380px] xs:max-h-[420px] sm:max-h-[460px] md:max-h-[500px] lg:max-h-[540px] object-cover rounded-2xl sm:rounded-3xl shadow-2xl shadow-indigo-950/15 border-4 border-white select-none"
-                  referrerPolicy="no-referrer"
-                  loading="eager"
-                />
-              </div>
-            </div>
-
-            {/* Right Column: Hero Content */}
-            <div className="lg:col-span-7 xl:col-span-7 space-y-6 text-center lg:text-left order-1 lg:order-2">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Left Column: Hero Content (Heading, Paragraph, Buttons) */}
+            <div className="lg:col-span-7 xl:col-span-7 space-y-6 text-center lg:text-left order-1">
               {/* Main Headline */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.65rem] xl:text-[3.15rem] font-black tracking-tight text-[#1c1248] leading-[1.14]">
                 Professional <br className="hidden sm:inline" />
@@ -198,13 +183,27 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 </button>
               </div>
             </div>
+
+            {/* Right Column: Office Team Working on Laptop */}
+            <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-center order-2 pt-4 lg:pt-0 z-30">
+              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg flex justify-center items-center">
+                <img
+                  id="hero-businesswoman-image"
+                  src={heroOfficeImg}
+                  alt="Webwizia Web Design and Development Team"
+                  className="relative z-30 w-full h-auto max-h-[400px] xs:max-h-[440px] sm:max-h-[480px] md:max-h-[520px] lg:max-h-[560px] object-cover rounded-2xl sm:rounded-3xl shadow-2xl shadow-indigo-950/15 border-4 border-white select-none"
+                  referrerPolicy="no-referrer"
+                  loading="eager"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* ========================================================
             BOTTOM DARK CURVED WAVE WITH 3 STATS (FROM TEMPLATE)
             ======================================================== */}
-        <div className="relative w-full mt-4 lg:mt-0 z-20">
+        <div className="relative w-full mt-6 lg:mt-4 z-20">
           {/* Organic Curved Wave Divider */}
           <svg
             className="w-full h-12 sm:h-16 lg:h-20 text-[#1d1246] block preserve-3d"
@@ -222,10 +221,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
           <div className="bg-[#1d1246] pt-1 pb-10 sm:pb-12 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                {/* Spacer for woman image alignment on large screens */}
-                <div className="hidden lg:block lg:col-span-5" />
-
-                {/* 3 Metrics on Dark Surface (Matching Template) */}
+                {/* 3 Metrics on Dark Surface (Aligned under Hero text on large screens) */}
                 <div className="lg:col-span-7 flex flex-wrap items-center justify-center lg:justify-start gap-8 sm:gap-14">
                   <div className="text-center lg:text-left">
                     <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#ff5268] tracking-tight">
@@ -254,6 +250,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                     </div>
                   </div>
                 </div>
+
+                {/* Spacer on right for image column */}
+                <div className="hidden lg:block lg:col-span-5" />
               </div>
             </div>
           </div>
