@@ -108,12 +108,12 @@ export const Header: React.FC<HeaderProps> = ({
           <button 
             id="brand-logo-btn"
             onClick={() => handleLinkClick('/')}
-            className="flex items-center space-x-3 group text-left focus:outline-none"
+            className="flex items-center group text-left focus:outline-none"
           >
             <img 
               src={webwiziaLogo} 
               alt="Webwizia" 
-              className="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-10 sm:h-11 md:h-12 w-auto object-contain transition-transform group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
           </button>
