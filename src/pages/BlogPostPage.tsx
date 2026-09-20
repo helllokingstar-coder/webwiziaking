@@ -8,10 +8,12 @@ import {
   Share2, 
   CheckCircle2, 
   ChevronDown, 
+  ChevronRight,
   Sparkles,
   HelpCircle,
   Tag,
-  BookOpen
+  BookOpen,
+  Search
 } from 'lucide-react';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { SeoHead } from '../components/SeoHead';
@@ -28,6 +30,13 @@ interface BlogPostPageProps {
 export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, onOpenQuote }) => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [copied, setCopied] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const categories = ['All', 'E-Commerce', 'WordPress', 'Web Design', 'SEO', 'Digital Strategy'];
+  const sidebarCategories = ['E-Commerce', 'WordPress', 'Web Design', 'SEO', 'Digital Strategy'];
+
+  // Recent posts for sidebar widget
+  const recentPosts = blogPosts.slice(0, 4);
 
   // Find previous and next posts
   const currentIndex = blogPosts.findIndex(p => p.id === post.id);
@@ -109,16 +118,66 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
       </section>
 
       {/* Article Content Layout */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Featured Image */}
-          <div className="rounded-3xl overflow-hidden shadow-xl mb-12 aspect-[16/9] bg-slate-100">
-            <img
-              src={post.featuredImage}
-              alt={post.altText}
-              className="w-full h-full object-cover"
-            />
+      <section className="py-12 sm:py-16 bg-[#f2f9fd]/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Top Category Filter & Search Bar matching blog category.JPG */}
+          <div className="mb-10 pb-6 border-b border-sky-100 flex flex-col md:flex-row items-center justify-between gap-4">
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    onNavigate(cat === 'All' ? '/blog' : `/blog?category=${encodeURIComponent(cat)}`);
+                  }}
+                  className={`px-4 py-2 text-xs font-bold rounded-xl transition-all ${
+                    post.category === cat
+                      ? 'bg-gradient-to-r from-[#046BD2] to-[#15ace6] text-white shadow-sm'
+                      : 'bg-white text-[#031b4e] hover:bg-sky-50 border border-sky-100 shadow-xs'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            {/* Search Input */}
+            <div className="relative w-full md:w-72">
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && searchQuery.trim()) {
+                    onNavigate(`/blog?search=${encodeURIComponent(searchQuery.trim())}`);
+                  }
+                }}
+                className="w-full pl-9 pr-4 py-2 text-xs bg-white text-[#031b4e] placeholder:text-slate-400 border border-sky-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#046BD2] shadow-xs"
+              />
+              <Search 
+                className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer hover:text-[#046BD2]" 
+                onClick={() => {
+                  if (searchQuery.trim()) {
+                    onNavigate(`/blog?search=${encodeURIComponent(searchQuery.trim())}`);
+                  }
+                }}
+              />
+            </div>
           </div>
+
+          {/* 2-Column Grid Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+            {/* Left Column (8 cols): Article Content */}
+            <article className="lg:col-span-8 space-y-10">
+              {/* Featured Image */}
+              <div className="rounded-3xl overflow-hidden shadow-xl mb-12 aspect-[16/9] bg-slate-100">
+                <img
+                  src={post.featuredImage}
+                  alt={post.altText}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
           {/* Key Takeaways Box */}
           <div className="bg-[#f2f9fd] border border-sky-100 rounded-3xl p-6 sm:p-8 mb-12 text-left space-y-4">
@@ -327,8 +386,86 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onNavigate, on
               </button>
             </div>
           </div>
-        </div>
-      </section>
+        </article>
+
+        {/* Right Column (4 cols): Sticky Sidebar matching seprate blog.JPG */}
+        <aside className="lg:col-span-4 space-y-8 lg:sticky lg:top-24">
+          {/* Widget 1: Recent Articles */}
+          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-sky-100 shadow-sm space-y-5 text-left">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+              <h3 className="text-lg font-black text-[#031b4e] tracking-tight">Recent Articles</h3>
+              <Sparkles className="w-4 h-4 text-[#15ace6]" />
+            </div>
+            <div className="space-y-4">
+              {recentPosts.map((rPost) => (
+                <div
+                  key={rPost.id}
+                  onClick={() => onNavigate(`/blog/${rPost.slug}`)}
+                  className="flex items-center space-x-3.5 group cursor-pointer"
+                >
+                  <img
+                    src={rPost.featuredImage}
+                    alt={rPost.title}
+                    className="w-16 h-14 rounded-xl object-cover shrink-0 border border-sky-100 group-hover:border-[#15ace6] transition-all"
+                  />
+                  <div className="min-w-0 flex-1">
+                    <h4 className="text-xs sm:text-[13px] font-bold text-[#031b4e] group-hover:text-[#046BD2] line-clamp-2 leading-snug transition-colors">
+                      {rPost.title}
+                    </h4>
+                    <p className="text-[11px] text-slate-400 font-semibold mt-1">
+                      {rPost.publishedDate}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Widget 2: Categories */}
+          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-sky-100 shadow-sm text-left">
+            <h3 className="text-lg font-black text-[#031b4e] tracking-tight mb-4">Categories</h3>
+            <div className="divide-y divide-slate-100">
+              {sidebarCategories.map((cat) => (
+                <div
+                  key={cat}
+                  onClick={() => onNavigate(`/blog?category=${encodeURIComponent(cat)}`)}
+                  className="py-3.5 flex items-center justify-between group cursor-pointer transition-colors"
+                >
+                  <span className={`text-xs sm:text-sm font-semibold transition-colors ${
+                    post.category === cat ? 'text-[#046BD2] font-bold' : 'text-slate-700 group-hover:text-[#046BD2]'
+                  }`}>
+                    {cat}
+                  </span>
+                  <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-[#046BD2] group-hover:translate-x-0.5 transition-all" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Widget 3: READY TO GROW? CTA Card */}
+          <div className="bg-[#031b4e] rounded-3xl p-6 sm:p-7 text-white shadow-xl relative overflow-hidden text-left">
+            <div className="relative z-10">
+              <span className="text-[#15ace6] text-[11px] font-black tracking-widest uppercase block mb-2">
+                READY TO GROW?
+              </span>
+              <h3 className="text-xl font-black text-white leading-tight">
+                Transform Your Online Presence Today
+              </h3>
+              <p className="text-sky-100/80 text-xs leading-relaxed mt-3 font-normal">
+                Get a free technical audit and strategy roadmap for your business website.
+              </p>
+              <button
+                onClick={() => onNavigate('/contact')}
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#046BD2] to-[#15ace6] hover:from-[#0353a4] hover:to-[#0d99d1] text-white font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-sky-500/25 transition-all mt-6 text-center block active:scale-95"
+              >
+                CONTACT US
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
     </>
   );
 };

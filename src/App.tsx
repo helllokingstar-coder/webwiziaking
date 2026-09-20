@@ -62,7 +62,7 @@ export default function App() {
 
   // Route matching logic
   const renderCurrentPage = () => {
-    const cleanPath = currentPath.replace(/\/$/, '') || '/';
+    const cleanPath = currentPath.split('?')[0].replace(/\/$/, '') || '/';
 
     if (cleanPath === '/') {
       return (

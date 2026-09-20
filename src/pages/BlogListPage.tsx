@@ -26,6 +26,22 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
 
   const categories = ['All', 'E-Commerce', 'WordPress', 'Web Design', 'SEO', 'Digital Strategy'];
 
+  React.useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get('category');
+      const searchParam = params.get('search');
+      if (catParam && categories.includes(catParam)) {
+        setSelectedCategory(catParam);
+      }
+      if (searchParam) {
+        setSearchQuery(searchParam);
+      }
+    } catch {
+      // Fallback
+    }
+  }, []);
+
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
     const matchesSearch = 
