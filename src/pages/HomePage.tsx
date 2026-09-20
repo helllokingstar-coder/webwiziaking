@@ -38,6 +38,10 @@ import heroBannerImg from '../assets/images/hero_banner.jpg';
 import heroBgImg from '../assets/images/Hero BG.png';
 import aboutWomanDeskImg from '../assets/images/Home page About us Section image.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
+import serviceWebDesignImg from '../assets/images/service_web_design.jpg';
+import serviceEcommerceImg from '../assets/images/service_ecommerce.jpg';
+import serviceWordpressImg from '../assets/images/service_wordpress.jpg';
+import serviceSeoImg from '../assets/images/service_seo.jpg';
 
 interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -65,6 +69,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       default:
         return <Sparkles className="w-8 h-8 transition-colors" />;
     }
+  };
+
+  const getServiceImage = (slug: string, number?: string) => {
+    if (slug === 'web-designing' || number === '01') return serviceWebDesignImg;
+    if (slug === 'e-commerce-website' || number === '02') return serviceEcommerceImg;
+    if (slug === 'wordpress-website-design' || number === '03') return serviceWordpressImg;
+    if (slug === 'seo-services' || number === '04') return serviceSeoImg;
+    return serviceWebDesignImg;
   };
 
   const getFeatureIcon = (icon: string) => {
@@ -439,9 +451,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 className="group relative bg-white hover:bg-[#031b4e] rounded-2xl sm:rounded-3xl p-8 sm:p-10 shadow-md shadow-[#031b4e]/5 hover:shadow-2xl hover:shadow-[#046BD2]/25 border border-sky-100 hover:border-transparent transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full"
               >
                 <div>
-                  {/* Top-left Rounded Icon Badge */}
-                  <div className="w-16 h-16 rounded-full bg-[#f2f9fd] text-[#046BD2] group-hover:bg-[#15ace6] group-hover:text-[#031b4e] flex items-center justify-center transition-all duration-300 shadow-sm mb-6">
-                    {getServiceIcon(service.number)}
+                  {/* Top-left Service Image Badge (Fitted in circle) */}
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 aspect-square rounded-full overflow-hidden bg-white border-2 border-sky-100 group-hover:border-[#15ace6] flex items-center justify-center p-1 transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:shadow-[#15ace6]/20 mb-6 shrink-0">
+                    <img
+                      src={getServiceImage(service.slug, service.number)}
+                      alt={service.title}
+                      className="w-full h-full object-contain object-center rounded-full select-none transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
                   </div>
 
                   {/* Title */}
