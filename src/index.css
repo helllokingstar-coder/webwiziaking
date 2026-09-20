@@ -9,15 +9,19 @@
   }
 }
 
-/* Custom glow and subtle patterns */
+/* Custom glow and subtle patterns inspired by ODL Dental Clinic & SmileOn.pk */
 .hero-gradient {
-  background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.25) 0%, transparent 60%),
-              radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.2) 0%, transparent 50%),
-              #0b192e;
+  background: radial-gradient(circle at 80% 20%, rgba(4, 107, 210, 0.25) 0%, transparent 60%),
+              radial-gradient(circle at 20% 80%, rgba(21, 172, 230, 0.2) 0%, transparent 50%),
+              #031b4e;
 }
 
 .footer-gradient {
-  background: linear-gradient(180deg, #0f1f38 0%, #091322 100%);
+  background: linear-gradient(180deg, #031b4e 0%, #021235 100%);
+}
+
+.brand-gradient {
+  background: linear-gradient(135deg, #046BD2 0%, #15ace6 100%);
 }
 
 .card-hover-effect {
@@ -26,5 +30,5 @@
 
 .card-hover-effect:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 30px -10px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 20px 30px -10px rgba(4, 107, 210, 0.15);
 }

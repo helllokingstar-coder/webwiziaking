@@ -176,7 +176,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans antialiased selection:bg-[#046BD2] selection:text-white">
       {/* Top Bar + Main Navigation */}
       <Header
         currentPath={currentPath}

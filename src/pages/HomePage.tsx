@@ -33,7 +33,7 @@ import { SeoHead } from '../components/SeoHead';
 import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
-import heroOfficeImg from '../assets/images/hero_office_team.jpg';
+import heroSectionImg from '../assets/images/Hero Section image.png';
 import heroBgImg from '../assets/images/Hero BG.png';
 import aboutWomanDeskImg from '../assets/images/Home page About us Section image.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
@@ -148,9 +148,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             {/* Left Column: Hero Content (Heading, Paragraph, Buttons) */}
             <div className="lg:col-span-7 xl:col-span-7 space-y-6 text-center lg:text-left order-1">
               {/* Main Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.65rem] xl:text-[3.15rem] font-black tracking-tight text-[#1c1248] leading-[1.14]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.65rem] xl:text-[3.15rem] font-black tracking-tight text-[#031b4e] leading-[1.14]">
                 Professional <br className="hidden sm:inline" />
-                <span className="text-[#ff5268]">Web Design</span> Company <br className="hidden sm:inline" />
+                <span className="text-[#15ace6]">Web Design</span> Company <br className="hidden sm:inline" />
                 in Pakistan
               </h1>
 
@@ -164,7 +164,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <button
                   id="hero-get-started-btn"
                   onClick={() => onNavigate('/contact')}
-                  className="px-8 sm:px-9 py-3.5 sm:py-4 bg-[#6534ff] hover:bg-[#5221eb] active:scale-95 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-xl shadow-purple-600/30 hover:shadow-purple-600/40 transition-all duration-200"
+                  className="px-8 sm:px-9 py-3.5 sm:py-4 bg-gradient-to-r from-[#046BD2] to-[#15ace6] hover:from-[#0353a4] hover:to-[#0d99d1] active:scale-95 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-xl shadow-sky-500/25 hover:shadow-sky-500/35 transition-all duration-200"
                 >
                   GET STARTED
                 </button>
@@ -174,24 +174,24 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   onClick={() => onNavigate('/services')}
                   className="inline-flex items-center space-x-3 group cursor-pointer text-left transition-all duration-200"
                 >
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-[#6534ff] group-hover:bg-[#6534ff] group-hover:text-white flex items-center justify-center text-[#6534ff] transition-all duration-200 shadow-sm">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-[#15ace6] group-hover:bg-[#15ace6] group-hover:text-white flex items-center justify-center text-[#15ace6] transition-all duration-200 shadow-sm">
                     <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
                   </div>
-                  <span className="font-extrabold text-xs sm:text-sm text-[#1c1248] group-hover:text-[#6534ff] tracking-wider uppercase transition-colors">
+                  <span className="font-extrabold text-xs sm:text-sm text-[#031b4e] group-hover:text-[#046BD2] tracking-wider uppercase transition-colors">
                     HOW WE WORK !
                   </span>
                 </button>
               </div>
             </div>
 
-            {/* Right Column: Office Team Working on Laptop */}
-            <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-center order-2 pt-4 lg:pt-0 z-30">
-              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg flex justify-center items-center">
+            {/* Right Column: Hero Cutout Model Image */}
+            <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-end order-2 pt-4 lg:pt-0 z-30">
+              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg flex justify-center items-end">
                 <img
                   id="hero-businesswoman-image"
-                  src={heroOfficeImg}
-                  alt="Webwizia Web Design and Development Team"
-                  className="relative z-30 w-full h-auto max-h-[400px] xs:max-h-[440px] sm:max-h-[480px] md:max-h-[520px] lg:max-h-[560px] object-cover rounded-2xl sm:rounded-3xl shadow-2xl shadow-indigo-950/15 border-4 border-white select-none"
+                  src={heroSectionImg}
+                  alt="Webwizia Web Design and Digital Marketing Lahore Specialist"
+                  className="relative z-30 w-full h-auto max-h-[460px] sm:max-h-[520px] lg:max-h-[580px] object-contain drop-shadow-[0_20px_40px_rgba(3,27,78,0.22)] select-none"
                   referrerPolicy="no-referrer"
                   loading="eager"
                 />
@@ -206,7 +206,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
         <div className="relative w-full mt-6 lg:mt-4 z-20">
           {/* Organic Curved Wave Divider */}
           <svg
-            className="w-full h-12 sm:h-16 lg:h-20 text-[#1d1246] block preserve-3d"
+            className="w-full h-12 sm:h-16 lg:h-20 text-[#031b4e] block preserve-3d"
             viewBox="0 0 1440 90"
             fill="none"
             preserveAspectRatio="none"
@@ -218,34 +218,34 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
           </svg>
 
           {/* Deep Navy/Purple Stats Bar */}
-          <div className="bg-[#1d1246] pt-1 pb-10 sm:pb-12 text-white">
+          <div className="bg-[#031b4e] pt-1 pb-10 sm:pb-12 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
                 {/* 3 Metrics on Dark Surface (Aligned under Hero text on large screens) */}
                 <div className="lg:col-span-7 flex flex-wrap items-center justify-center lg:justify-start gap-8 sm:gap-14">
                   <div className="text-center lg:text-left">
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#ff5268] tracking-tight">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#15ace6] tracking-tight">
                       49k+
                     </div>
-                    <div className="text-white/80 text-[10px] sm:text-xs font-bold tracking-widest uppercase mt-1">
+                    <div className="text-sky-200/90 text-[10px] sm:text-xs font-bold tracking-widest uppercase mt-1">
                       PROJECT DONE
                     </div>
                   </div>
 
                   <div className="text-center lg:text-left">
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#ff5268] tracking-tight">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#15ace6] tracking-tight">
                       38k+
                     </div>
-                    <div className="text-white/80 text-[10px] sm:text-xs font-bold tracking-widest uppercase mt-1">
+                    <div className="text-sky-200/90 text-[10px] sm:text-xs font-bold tracking-widest uppercase mt-1">
                       HAPPY CLIENTS
                     </div>
                   </div>
 
                   <div className="text-center lg:text-left">
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#ff5268] tracking-tight">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#15ace6] tracking-tight">
                       4.7
                     </div>
-                    <div className="text-white/80 text-[10px] sm:text-xs font-bold tracking-widest uppercase mt-1">
+                    <div className="text-sky-200/90 text-[10px] sm:text-xs font-bold tracking-widest uppercase mt-1">
                       CLIENT RATING
                     </div>
                   </div>
@@ -269,19 +269,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             {/* Left Content Column */}
             <div className="lg:col-span-6 space-y-5 text-left">
               {/* Subheading Badge matching other subheadings */}
-              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-black uppercase tracking-wider shadow-2xs">
-                <Sparkles className="w-3.5 h-3.5 fill-current text-blue-600" />
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-[#046BD2] text-xs font-black uppercase tracking-wider shadow-2xs">
+                <Sparkles className="w-3.5 h-3.5 fill-current text-[#15ace6]" />
                 <span>About Us</span>
               </div>
 
               {/* Main Heading matching template typography */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-[#1c1248] leading-[1.16] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-[#031b4e] leading-[1.16] tracking-tight">
                 Web Design & SEO <br className="hidden sm:inline" />
-                Agency in <span className="text-[#ff5268]">Lahore</span>
+                Agency in <span className="text-[#15ace6]">Lahore</span>
               </h2>
 
               {/* Description Paragraphs */}
-              <div className="space-y-4 text-slate-500 text-sm sm:text-[15px] leading-relaxed max-w-xl font-normal">
+              <div className="space-y-4 text-slate-600 text-sm sm:text-[15px] leading-relaxed max-w-xl font-normal">
                 <p>
                   Webwizia is a full-service web design agency in Lahore and digital marketing company specializing in website development Lahore, custom WordPress website design in Lahore, and local SEO services Lahore. We work closely with commercial enterprises, healthcare providers, retail stores, and emerging brands across Pakistan.
                 </p>
@@ -294,36 +294,36 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               <div className="border-t border-slate-200/70 pt-6 max-w-xl">
                 {/* 4 Feature Items with Exact Template Colored Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-6">
-                  {/* Left Col - Item 1: Dark Circle */}
+                  {/* Left Col - Item 1: Dark Navy Circle */}
                   <div className="flex items-center space-x-3.5">
-                    <div className="w-7 h-7 rounded-full bg-[#1c1248] text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <div className="w-7 h-7 rounded-full bg-[#031b4e] text-white flex items-center justify-center shrink-0 shadow-sm">
                       <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
-                    <span className="text-sm sm:text-[15px] font-bold text-[#1c1248]">Custom Website Design</span>
+                    <span className="text-sm sm:text-[15px] font-bold text-[#031b4e]">Custom Website Design</span>
                   </div>
 
-                  {/* Right Col - Item 2: Purple Circle */}
+                  {/* Right Col - Item 2: Cyan Circle */}
                   <div className="flex items-center space-x-3.5">
-                    <div className="w-7 h-7 rounded-full bg-[#6534ff] text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <div className="w-7 h-7 rounded-full bg-[#15ace6] text-white flex items-center justify-center shrink-0 shadow-sm">
                       <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
-                    <span className="text-sm sm:text-[15px] font-bold text-[#1c1248]">SEO-Friendly Websites</span>
+                    <span className="text-sm sm:text-[15px] font-bold text-[#031b4e]">SEO-Friendly Websites</span>
                   </div>
 
-                  {/* Left Col - Item 3: Coral/Red Circle */}
+                  {/* Left Col - Item 3: Royal Azure Circle */}
                   <div className="flex items-center space-x-3.5">
-                    <div className="w-7 h-7 rounded-full bg-[#ff5268] text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <div className="w-7 h-7 rounded-full bg-[#046BD2] text-white flex items-center justify-center shrink-0 shadow-sm">
                       <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
-                    <span className="text-sm sm:text-[15px] font-bold text-[#1c1248]">Responsive Web Design</span>
+                    <span className="text-sm sm:text-[15px] font-bold text-[#031b4e]">Responsive Web Design</span>
                   </div>
 
-                  {/* Right Col - Item 4: Dark Circle */}
+                  {/* Right Col - Item 4: Dark Navy Circle */}
                   <div className="flex items-center space-x-3.5">
-                    <div className="w-7 h-7 rounded-full bg-[#1c1248] text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <div className="w-7 h-7 rounded-full bg-[#031b4e] text-white flex items-center justify-center shrink-0 shadow-sm">
                       <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
-                    <span className="text-sm sm:text-[15px] font-bold text-[#1c1248]">Digital Marketing</span>
+                    <span className="text-sm sm:text-[15px] font-bold text-[#031b4e]">Digital Marketing</span>
                   </div>
                 </div>
               </div>
@@ -333,7 +333,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <button
                   id="about-read-more-btn"
                   onClick={() => onNavigate('/about')}
-                  className="px-7 py-3.5 bg-[#6534ff] hover:bg-[#5223e6] active:scale-95 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase rounded-[14px] shadow-lg shadow-purple-600/25 transition-all"
+                  className="px-7 py-3.5 bg-gradient-to-r from-[#046BD2] to-[#15ace6] hover:from-[#0353a4] hover:to-[#0d99d1] active:scale-95 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase rounded-[14px] shadow-lg shadow-sky-500/25 transition-all"
                 >
                   READ MORE
                 </button>
@@ -342,10 +342,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   <img
                     src={aboutDirectorImg}
                     alt="Meggie Wilson"
-                    className="w-12 h-12 rounded-full object-cover border-2 border-slate-100 shadow-sm"
+                    className="w-12 h-12 rounded-full object-cover border-2 border-sky-100 shadow-sm"
                   />
                   <div>
-                    <h4 className="text-base font-black text-[#1c1248] leading-tight">Meggie Wilson</h4>
+                    <h4 className="text-base font-black text-[#031b4e] leading-tight">Meggie Wilson</h4>
                     <p className="text-[11px] font-bold text-slate-400 tracking-wider uppercase mt-0.5">CEO, HEAD DIRECTOR</p>
                   </div>
                 </div>
@@ -366,20 +366,20 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 </div>
 
                 {/* Floating Badge 1: 120% Engagement Pill (Matching template: capsule shape overlapping left) */}
-                <div className="absolute top-10 sm:top-12 -left-4 sm:-left-10 lg:-left-14 z-20 bg-white/95 backdrop-blur-md pl-3 pr-6 sm:pl-3.5 sm:pr-7 py-2.5 sm:py-3 rounded-full shadow-[0_12px_32px_rgba(0,0,0,0.08)] border border-slate-100/90 flex items-center gap-3.5">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#ff5268] text-white flex items-center justify-center shrink-0 shadow-md shadow-rose-500/30">
+                <div className="absolute top-10 sm:top-12 -left-4 sm:-left-10 lg:-left-14 z-20 bg-white/95 backdrop-blur-md pl-3 pr-6 sm:pl-3.5 sm:pr-7 py-2.5 sm:py-3 rounded-full shadow-[0_12px_32px_rgba(3,27,78,0.08)] border border-sky-100/90 flex items-center gap-3.5">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#15ace6] text-white flex items-center justify-center shrink-0 shadow-md shadow-sky-400/30">
                     <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                   </div>
                   <div>
-                    <div className="text-xl sm:text-2xl font-black text-[#1c1248] leading-none">120%</div>
+                    <div className="text-xl sm:text-2xl font-black text-[#031b4e] leading-none">120%</div>
                     <div className="text-[10px] sm:text-[11px] font-extrabold text-slate-400 tracking-wider uppercase mt-1">ENGAGEMENT</div>
                   </div>
                 </div>
 
                 {/* Floating Badge 2: Increase Sales Chart (Matching template: 2-line title + curve chart) */}
-                <div className="absolute bottom-8 sm:bottom-10 -left-3 sm:-left-8 lg:-left-12 z-20 bg-white rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.1)] border border-slate-100/90 p-4 sm:p-5 w-48 sm:w-56">
+                <div className="absolute bottom-8 sm:bottom-10 -left-3 sm:-left-8 lg:-left-12 z-20 bg-white rounded-2xl shadow-[0_16px_40px_rgba(3,27,78,0.1)] border border-sky-100/90 p-4 sm:p-5 w-48 sm:w-56">
                   <div className="flex items-start justify-between mb-2">
-                    <div className="text-xs sm:text-sm font-bold text-[#1c1248] leading-tight">
+                    <div className="text-xs sm:text-sm font-bold text-[#031b4e] leading-tight">
                       Increase<br />Sales
                     </div>
                     <span className="text-[11px] sm:text-xs font-black text-[#10b981] bg-emerald-50 px-2 py-0.5 rounded-md">
@@ -414,16 +414,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
           </div>
         </div>
       </section>
-      <section className="py-20 lg:py-28 bg-[#f5f8fc] relative">
+      <section className="py-20 lg:py-28 bg-[#f2f9fd] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white border border-sky-200 text-[#046BD2] text-xs font-bold uppercase tracking-wider">
               <span>Our Core Capabilities</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#031b4e] tracking-tight">
               Services We Provide
             </h2>
-            <p className="text-[#1e1b4b] text-base sm:text-lg">
+            <p className="text-slate-600 text-base sm:text-lg">
               Professional web design Lahore, custom WordPress websites, e-commerce development, and search engine marketing for Pakistani businesses.
             </p>
           </div>
@@ -435,21 +435,21 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 key={service.id}
                 id={`service-card-${service.slug}`}
                 onClick={() => onNavigate(`/services/${service.slug}`)}
-                className="group relative bg-white hover:bg-[#0a4dad] rounded-2xl sm:rounded-3xl p-8 sm:p-10 shadow-md shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-600/30 border border-slate-100 hover:border-transparent transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full"
+                className="group relative bg-white hover:bg-[#031b4e] rounded-2xl sm:rounded-3xl p-8 sm:p-10 shadow-md shadow-[#031b4e]/5 hover:shadow-2xl hover:shadow-[#046BD2]/25 border border-sky-100 hover:border-transparent transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full"
               >
                 <div>
                   {/* Top-left Rounded Icon Badge */}
-                  <div className="w-16 h-16 rounded-full bg-[#e8f1fd] text-[#0d6efd] group-hover:bg-white group-hover:text-[#0a4dad] flex items-center justify-center transition-all duration-300 shadow-sm mb-6">
+                  <div className="w-16 h-16 rounded-full bg-[#f2f9fd] text-[#046BD2] group-hover:bg-[#15ace6] group-hover:text-[#031b4e] flex items-center justify-center transition-all duration-300 shadow-sm mb-6">
                     {getServiceIcon(service.number)}
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-[#1e1b4b] group-hover:text-white transition-colors duration-300 mb-3">
+                  <h3 className="text-2xl font-bold text-[#031b4e] group-hover:text-white transition-colors duration-300 mb-3">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[#1e1b4b] group-hover:text-blue-50 text-sm sm:text-base leading-relaxed mb-8 transition-colors duration-300 font-normal">
+                  <p className="text-slate-600 group-hover:text-sky-100 text-sm sm:text-base leading-relaxed mb-8 transition-colors duration-300 font-normal">
                     {service.shortDescription}
                   </p>
                 </div>
@@ -461,7 +461,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                       e.stopPropagation();
                       onNavigate(`/services/${service.slug}`);
                     }}
-                    className="px-7 py-3 bg-[#0a3871] group-hover:bg-white text-white group-hover:text-[#0a3871] font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 inline-flex items-center space-x-2"
+                    className="px-7 py-3 bg-[#046BD2] hover:bg-[#0353a4] group-hover:bg-[#15ace6] text-white group-hover:text-[#031b4e] font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 inline-flex items-center space-x-2"
                   >
                     <span>Learn More</span>
                   </button>
@@ -474,7 +474,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             <button
               id="view-all-services-btn"
               onClick={() => onNavigate('/services')}
-              className="px-8 py-4 bg-slate-900 hover:bg-blue-600 text-white font-bold text-sm rounded-xl shadow-lg transition-all duration-200 inline-flex items-center space-x-2"
+              className="px-8 py-4 bg-[#031b4e] hover:bg-[#046BD2] text-white font-bold text-sm rounded-xl shadow-lg shadow-[#031b4e]/20 transition-all duration-200 inline-flex items-center space-x-2"
             >
               <span>VIEW ALL SERVICES</span>
               <ArrowRight className="w-4 h-4" />
@@ -491,16 +491,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       {/* ========================================================
           PORTFOLIO SECTION
           ======================================================== */}
-      <section className="py-20 lg:py-28 bg-slate-50 border-t border-slate-200/60">
+      <section className="py-20 lg:py-28 bg-[#f2f9fd]/50 border-t border-sky-100/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-12">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-[#046BD2] text-xs font-bold uppercase tracking-wider">
               <span>Our Work</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#031b4e] tracking-tight">
               Selected Recent Projects
             </h2>
-            <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
+            <p className="text-slate-600 text-base sm:text-lg font-normal">
               A showcase of custom website design Lahore, online stores, and SEO projects built for growing businesses by Webwizia Lahore.
             </p>
           </div>
@@ -513,8 +513,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 onClick={() => setSelectedPortfolioCategory(cat)}
                 className={`px-5 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all ${
                   selectedPortfolioCategory === cat
-                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                    : 'bg-white text-[#1e1b4b] hover:bg-slate-200 border border-slate-200'
+                    ? 'bg-[#046BD2] text-white shadow-md shadow-sky-500/20'
+                    : 'bg-white text-[#031b4e] hover:bg-sky-50 border border-slate-200'
                 }`}
               >
                 {cat}
@@ -527,7 +527,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             {filteredPortfolio.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
+                className="bg-white rounded-3xl overflow-hidden border border-sky-100 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
               >
                 <div className="relative overflow-hidden aspect-[16/10] bg-slate-100">
                   <img
@@ -537,21 +537,21 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                     loading="lazy"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-bold tracking-wider uppercase">
+                    <span className="px-3 py-1 rounded-full bg-[#031b4e]/85 backdrop-blur-md text-white text-[11px] font-bold tracking-wider uppercase">
                       {item.category}
                     </span>
                   </div>
-                  <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-black text-blue-600 shadow-sm">
+                  <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-black text-[#046BD2] shadow-sm">
                     {item.impactMetric} {item.impactLabel}
                   </div>
                 </div>
 
                 <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
                   <div>
-                    <h3 className="text-xl font-bold text-[#1e1b4b] group-hover:text-blue-600 transition-colors mb-2">
+                    <h3 className="text-xl font-bold text-[#031b4e] group-hover:text-[#046BD2] transition-colors mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-[#1e1b4b] text-xs sm:text-sm leading-relaxed mb-4 font-normal">
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
                       {item.shortDescription}
                     </p>
                   </div>
@@ -562,7 +562,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                     </span>
                     <button
                       onClick={() => setActivePortfolioModal(item)}
-                      className="text-xs font-bold text-blue-600 hover:text-blue-700 inline-flex items-center space-x-1"
+                      className="text-xs font-bold text-[#046BD2] hover:text-[#15ace6] inline-flex items-center space-x-1"
                     >
                       <span>View Details</span>
                       <ArrowRight className="w-3 h-3" />
@@ -583,16 +583,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       {/* ========================================================
           TESTIMONIAL SECTION
           ======================================================== */}
-      <section className="py-20 lg:py-28 bg-slate-50 border-t border-slate-200/60">
+      <section className="py-20 lg:py-28 bg-[#f2f9fd]/50 border-t border-sky-100/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-[#046BD2] text-xs font-bold uppercase tracking-wider">
               <span>Client Feedback</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#031b4e] tracking-tight">
               What Our Clients Say
             </h2>
-            <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
+            <p className="text-slate-600 text-base sm:text-lg font-normal">
               Direct feedback from business founders who partner with Webwizia for professional web design Lahore, SEO services in Lahore, and digital marketing.
             </p>
           </div>
@@ -601,7 +601,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             {testimonialsData.map((item) => (
               <div
                 key={item.id}
-                className="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-6"
+                className="bg-white p-7 rounded-3xl border border-sky-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-6"
               >
                 <div className="space-y-3">
                   <div className="flex items-center space-x-1 text-amber-400">
@@ -609,7 +609,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <p className="text-[#1e1b4b] text-sm leading-relaxed italic font-normal">
+                  <p className="text-slate-600 text-sm leading-relaxed italic font-normal">
                     "{item.content}"
                   </p>
                 </div>
@@ -618,13 +618,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                   <img
                     src={item.avatar}
                     alt={item.name}
-                    className="w-11 h-11 rounded-full object-cover border-2 border-blue-500"
+                    className="w-11 h-11 rounded-full object-cover border-2 border-[#15ace6]"
                   />
                   <div>
-                    <h4 className="text-sm font-bold text-[#1e1b4b]">
+                    <h4 className="text-sm font-bold text-[#031b4e]">
                       {item.name}
                     </h4>
-                    <span className="block text-xs text-[#1e1b4b]/80">
+                    <span className="block text-xs text-slate-500">
                       {item.role}, {item.company}
                     </span>
                   </div>
@@ -641,13 +641,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-50 text-[#046BD2] text-xs font-bold uppercase tracking-wider">
               <span>Articles & Advice</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#031b4e] tracking-tight">
               Latest Insights & Industry Guides
             </h2>
-            <p className="text-[#1e1b4b] text-base sm:text-lg font-normal">
+            <p className="text-slate-600 text-base sm:text-lg font-normal">
               Practical guides on website design, SEO rankings, and online marketing strategies for Pakistani businesses.
             </p>
           </div>
@@ -656,7 +656,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             {blogPosts.slice(0, 3).map((post) => (
               <article
                 key={post.id}
-                className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 group flex flex-col justify-between"
+                className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-300 transition-all duration-300 group flex flex-col justify-between"
               >
                 <div>
                   <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
@@ -667,24 +667,24 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                       loading="lazy"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wider">
+                      <span className="px-3 py-1 rounded-full bg-[#046BD2] text-white text-xs font-bold uppercase tracking-wider">
                         {post.category}
                       </span>
                     </div>
                   </div>
 
                   <div className="p-6 sm:p-7">
-                    <div className="flex items-center space-x-3 text-xs text-[#1e1b4b]/70 mb-3">
+                    <div className="flex items-center space-x-3 text-xs text-slate-400 mb-3">
                       <span>{post.publishedDate}</span>
                       <span>•</span>
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-[#1e1b4b] group-hover:text-blue-600 transition-colors line-clamp-2 mb-3">
+                    <h3 className="text-xl font-bold text-[#031b4e] group-hover:text-[#046BD2] transition-colors line-clamp-2 mb-3">
                       {post.title}
                     </h3>
 
-                    <p className="text-[#1e1b4b] text-sm line-clamp-2 leading-relaxed font-normal">
+                    <p className="text-slate-600 text-sm line-clamp-2 leading-relaxed font-normal">
                       {post.excerpt}
                     </p>
                   </div>
@@ -693,7 +693,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 <div className="p-6 sm:p-7 pt-0">
                   <button
                     onClick={() => onNavigate(`/blog/${post.slug}`)}
-                    className="w-full py-2.5 px-4 bg-slate-50 hover:bg-blue-600 text-slate-700 hover:text-white font-bold text-xs rounded-xl transition-all flex items-center justify-center space-x-2"
+                    className="w-full py-2.5 px-4 bg-slate-50 hover:bg-[#046BD2] text-slate-700 hover:text-white font-bold text-xs rounded-xl transition-all flex items-center justify-center space-x-2"
                   >
                     <span>READ MORE</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -707,7 +707,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             <button
               id="view-all-blog-posts-btn"
               onClick={() => onNavigate('/blog')}
-              className="px-8 py-4 bg-slate-900 hover:bg-blue-600 text-white font-bold text-sm rounded-xl shadow-lg transition-all inline-flex items-center space-x-2"
+              className="px-8 py-4 bg-[#031b4e] hover:bg-[#046BD2] text-white font-bold text-sm rounded-xl shadow-lg shadow-[#031b4e]/20 transition-all inline-flex items-center space-x-2"
             >
               <span>VIEW ALL BLOG POSTS</span>
               <ArrowRight className="w-4 h-4" />
@@ -736,17 +736,17 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
             </div>
             <div className="p-6 sm:p-8 space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#046BD2] bg-sky-50 px-3 py-1 rounded-full">
                   {activePortfolioModal.category}
                 </span>
                 <span className="text-xs text-slate-500 font-semibold">
                   Location: {activePortfolioModal.location}
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-[#1e1b4b]">
+              <h3 className="text-2xl font-bold text-[#031b4e]">
                 {activePortfolioModal.title}
               </h3>
-              <p className="text-[#1e1b4b] text-sm leading-relaxed font-normal">
+              <p className="text-slate-600 text-sm leading-relaxed font-normal">
                 {activePortfolioModal.fullDescription}
               </p>
               <div>
@@ -755,7 +755,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {activePortfolioModal.deliverables.map((del, i) => (
-                    <span key={i} className="px-3 py-1 bg-slate-100 text-[#1e1b4b] text-xs font-semibold rounded-lg">
+                    <span key={i} className="px-3 py-1 bg-slate-100 text-[#031b4e] text-xs font-semibold rounded-lg">
                       {del}
                     </span>
                   ))}
@@ -763,14 +763,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               </div>
               <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                 <div className="text-xs">
-                  <span className="font-bold text-[#1e1b4b]">{activePortfolioModal.impactMetric}</span> <span className="text-[#1e1b4b]/80">{activePortfolioModal.impactLabel}</span>
+                  <span className="font-bold text-[#031b4e]">{activePortfolioModal.impactMetric}</span> <span className="text-slate-500">{activePortfolioModal.impactLabel}</span>
                 </div>
                 <button
                   onClick={() => {
                     setActivePortfolioModal(null);
                     onNavigate('/contact');
                   }}
-                  className="px-5 py-2 bg-blue-600 text-white text-xs font-bold rounded-xl hover:bg-blue-700 transition-colors"
+                  className="px-5 py-2 bg-[#046BD2] text-white text-xs font-bold rounded-xl hover:bg-[#0353a4] transition-colors"
                 >
                   Contact Us
                 </button>

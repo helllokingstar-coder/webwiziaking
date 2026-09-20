@@ -81,15 +81,15 @@ export const Header: React.FC<HeaderProps> = ({
   const getServiceIcon = (iconName?: string) => {
     switch (iconName) {
       case 'Layout':
-        return <Layout className="w-5 h-5 text-blue-600 group-hover:text-blue-500 transition-colors" />;
+        return <Layout className="w-5 h-5 text-[#046BD2] group-hover:text-[#15ace6] transition-colors" />;
       case 'TrendingUp':
-        return <TrendingUp className="w-5 h-5 text-blue-600 group-hover:text-blue-500 transition-colors" />;
+        return <TrendingUp className="w-5 h-5 text-[#046BD2] group-hover:text-[#15ace6] transition-colors" />;
       case 'Code':
-        return <Code className="w-5 h-5 text-blue-600 group-hover:text-blue-500 transition-colors" />;
+        return <Code className="w-5 h-5 text-[#046BD2] group-hover:text-[#15ace6] transition-colors" />;
       case 'ShoppingBag':
-        return <ShoppingBag className="w-5 h-5 text-blue-600 group-hover:text-blue-500 transition-colors" />;
+        return <ShoppingBag className="w-5 h-5 text-[#046BD2] group-hover:text-[#15ace6] transition-colors" />;
       default:
-        return <Sparkles className="w-5 h-5 text-blue-600" />;
+        return <Sparkles className="w-5 h-5 text-[#046BD2]" />;
     }
   };
 
@@ -136,15 +136,15 @@ export const Header: React.FC<HeaderProps> = ({
                       onClick={() => handleLinkClick('/services')}
                       className={`flex items-center space-x-1.5 text-sm font-semibold tracking-wide transition-colors py-2 ${
                         isServicesActive 
-                          ? 'text-blue-600 font-bold' 
-                          : 'text-slate-700 hover:text-blue-600'
+                          ? 'text-[#046BD2] font-bold' 
+                          : 'text-[#031b4e] hover:text-[#046BD2]'
                       }`}
                       aria-expanded={isServicesDropdownOpen}
                     >
                       <span>{item.label}</span>
                       <ChevronDown 
                         className={`w-4 h-4 transition-transform duration-200 ${
-                          isServicesDropdownOpen ? 'rotate-180 text-blue-600' : 'text-slate-400'
+                          isServicesDropdownOpen ? 'rotate-180 text-[#046BD2]' : 'text-slate-400'
                         }`} 
                       />
                     </button>
@@ -152,9 +152,9 @@ export const Header: React.FC<HeaderProps> = ({
                     {/* Dropdown Menu */}
                     {isServicesDropdownOpen && (
                       <div className="absolute top-full left-0 w-80 pt-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                        <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-2.5 overflow-hidden ring-1 ring-black/5">
-                          <div className="px-3.5 py-2 mb-1 border-b border-slate-100 bg-slate-50/70 rounded-xl">
-                            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                        <div className="bg-white rounded-2xl shadow-xl shadow-[#031b4e]/10 border border-sky-100 p-2.5 overflow-hidden ring-1 ring-black/5">
+                          <div className="px-3.5 py-2 mb-1 border-b border-sky-100/70 bg-[#f2f9fd] rounded-xl">
+                            <span className="text-[11px] font-bold text-[#031b4e]/60 uppercase tracking-wider">
                               Our Core Services
                             </span>
                           </div>
@@ -165,15 +165,15 @@ export const Header: React.FC<HeaderProps> = ({
                               onClick={() => handleLinkClick(subItem.href)}
                               className={`w-full flex items-start space-x-3.5 p-3 rounded-xl transition-all text-left group ${
                                 currentPath === subItem.href 
-                                  ? 'bg-blue-50/80 text-blue-700' 
-                                  : 'hover:bg-slate-50 text-slate-800'
+                                  ? 'bg-[#f2f9fd] text-[#046BD2]' 
+                                  : 'hover:bg-[#f2f9fd]/70 text-[#031b4e]'
                               }`}
                             >
-                              <div className="p-2 rounded-lg bg-blue-50 group-hover:bg-blue-100 transition-colors mt-0.5 shrink-0">
+                              <div className="p-2 rounded-lg bg-sky-50 group-hover:bg-[#15ace6]/15 transition-colors mt-0.5 shrink-0">
                                 {getServiceIcon(subItem.iconName)}
                               </div>
                               <div>
-                                <span className="block text-sm font-semibold group-hover:text-blue-600 transition-colors">
+                                <span className="block text-sm font-semibold group-hover:text-[#046BD2] transition-colors">
                                   {subItem.title}
                                 </span>
                                 <span className="block text-xs text-slate-500 font-normal mt-0.5 line-clamp-1">
@@ -182,11 +182,11 @@ export const Header: React.FC<HeaderProps> = ({
                               </div>
                             </button>
                           ))}
-                          <div className="p-2 mt-1 border-t border-slate-100 bg-blue-50/40 rounded-xl">
+                          <div className="p-2 mt-1 border-t border-sky-100 bg-[#f2f9fd]/70 rounded-xl">
                             <button
                               id="dropdown-view-all-services-btn"
                               onClick={() => handleLinkClick('/services')}
-                              className="w-full flex items-center justify-between px-3 py-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                              className="w-full flex items-center justify-between px-3 py-1.5 text-xs font-semibold text-[#046BD2] hover:text-[#15ace6] transition-colors"
                             >
                               <span>Explore All Solutions</span>
                               <ArrowRight className="w-3.5 h-3.5" />
@@ -207,13 +207,13 @@ export const Header: React.FC<HeaderProps> = ({
                   onClick={() => handleLinkClick(item.href)}
                   className={`text-sm font-semibold tracking-wide transition-colors py-2 relative ${
                     isActive 
-                      ? 'text-blue-600 font-bold' 
-                      : 'text-slate-700 hover:text-blue-600'
+                      ? 'text-[#046BD2] font-bold' 
+                      : 'text-[#031b4e] hover:text-[#046BD2]'
                   }`}
                 >
                   {item.label}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 rounded-full" />
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#15ace6] rounded-full" />
                   )}
                 </button>
               );
@@ -227,7 +227,7 @@ export const Header: React.FC<HeaderProps> = ({
               id="header-search-btn"
               onClick={onOpenSearch}
               aria-label="Search website content"
-              className="p-2.5 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+              className="p-2.5 text-[#031b4e]/70 hover:text-[#046BD2] hover:bg-sky-50 rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-[#046BD2]/20"
             >
               <Search className="w-5 h-5" />
             </button>
@@ -236,7 +236,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               id="header-contact-btn"
               onClick={() => onNavigate('/contact')}
-              className="relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-blue-600 rounded-xl hover:bg-blue-700 active:scale-95 transition-all shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-[#046BD2] to-[#15ace6] rounded-xl hover:from-[#0353a4] hover:to-[#0d99d1] active:scale-95 transition-all shadow-md shadow-sky-500/25 hover:shadow-lg hover:shadow-sky-500/35 focus:outline-none focus:ring-2 focus:ring-[#046BD2] focus:ring-offset-2"
             >
               <span>CONTACT US</span>
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -283,10 +283,10 @@ export const Header: React.FC<HeaderProps> = ({
                       </button>
 
                       {isMobileServicesOpen && (
-                        <div className="mt-2 pl-3 space-y-2 border-l-2 border-blue-500">
+                        <div className="mt-2 pl-3 space-y-2 border-l-2 border-[#15ace6]">
                           <button
                             onClick={() => handleLinkClick('/services')}
-                            className="w-full text-left py-1.5 text-sm font-semibold text-blue-600"
+                            className="w-full text-left py-1.5 text-sm font-semibold text-[#046BD2]"
                           >
                             All Services Overview
                           </button>
@@ -294,7 +294,7 @@ export const Header: React.FC<HeaderProps> = ({
                             <button
                               key={subItem.href}
                               onClick={() => handleLinkClick(subItem.href)}
-                              className="w-full text-left py-2 text-sm font-medium text-slate-700 hover:text-blue-600"
+                              className="w-full text-left py-2 text-sm font-medium text-slate-700 hover:text-[#046BD2]"
                             >
                               {subItem.title}
                             </button>
@@ -311,7 +311,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <button
                       onClick={() => handleLinkClick(item.href)}
                       className={`w-full text-left py-2 text-base font-bold ${
-                        isActive ? 'text-blue-600' : 'text-slate-900'
+                        isActive ? 'text-[#046BD2]' : 'text-[#031b4e]'
                       }`}
                     >
                       {item.label}
@@ -329,23 +329,23 @@ export const Header: React.FC<HeaderProps> = ({
                   setIsMobileMenuOpen(false);
                   onNavigate('/contact');
                 }}
-                className="w-full py-3.5 bg-blue-600 text-white font-bold rounded-xl shadow-lg shadow-blue-600/30 flex items-center justify-center space-x-2"
+                className="w-full py-3.5 bg-gradient-to-r from-[#046BD2] to-[#15ace6] text-white font-bold rounded-xl shadow-lg shadow-sky-500/30 flex items-center justify-center space-x-2"
               >
                 <span>CONTACT US</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
-              <div className="bg-slate-50 p-4 rounded-xl space-y-2 text-xs text-slate-600">
-                <div className="flex items-center space-x-2 text-slate-800 font-semibold">
-                  <Phone className="w-4 h-4 text-blue-600" />
+              <div className="bg-[#f2f9fd] p-4 rounded-xl space-y-2 text-xs text-slate-600 border border-sky-100/60">
+                <div className="flex items-center space-x-2 text-[#031b4e] font-semibold">
+                  <Phone className="w-4 h-4 text-[#046BD2]" />
                   <a href={`tel:${siteConfig.phoneRaw}`}>{siteConfig.phoneFormatted}</a>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-blue-600" />
+                  <Mail className="w-4 h-4 text-[#046BD2]" />
                   <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
                 </div>
                 <div className="flex items-start space-x-2 text-slate-500 pt-1">
-                  <MapPin className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#15ace6] shrink-0 mt-0.5" />
                   <span>Office # 5, Brother Plaza, Hall Road, Lahore</span>
                 </div>
               </div>

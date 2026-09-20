@@ -97,7 +97,7 @@ export const FloatingWidgets: React.FC = () => {
         id="scroll-to-top-btn"
         onClick={scrollToTop}
         aria-label="Scroll back to top of page"
-        className={`fixed bottom-6 right-6 z-40 w-12 h-12 bg-blue-600 hover:bg-blue-700 active:scale-90 text-white rounded-xl shadow-xl shadow-blue-600/30 flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+        className={`fixed bottom-6 right-6 z-40 w-12 h-12 bg-gradient-to-r from-[#046BD2] to-[#15ace6] hover:from-[#0353a4] hover:to-[#0d99d1] active:scale-90 text-white rounded-xl shadow-xl shadow-sky-600/30 flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#046BD2] ${
           showScrollTop 
             ? 'opacity-100 translate-y-0 pointer-events-auto' 
             : 'opacity-0 translate-y-6 pointer-events-none'

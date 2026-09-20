@@ -17,7 +17,7 @@ export const PrivacyPolicyPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
         canonicalPath="/privacy-policy"
       />
 
-      <section className="bg-gradient-to-r from-[#0b51da] via-[#155DFC] to-[#0d47a1] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
+      <section className="bg-gradient-to-r from-[#031b4e] via-[#046BD2] to-[#15ace6] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff14_1px,transparent_1px),linear-gradient(to_bottom,#ffffff14_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-4">
@@ -27,28 +27,28 @@ export const PrivacyPolicyPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
             lightMode={true}
           />
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">Privacy Policy</h1>
-          <p className="text-blue-100 text-sm sm:text-base">Last Updated: August 2026</p>
+          <p className="text-sky-100 text-sm sm:text-base">Last Updated: August 2026</p>
         </div>
       </section>
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-left space-y-8 text-slate-700 leading-relaxed text-sm sm:text-base">
           <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">1. Commitment to Privacy</h2>
+            <h2 className="text-xl font-bold text-[#031b4e] mb-2">1. Commitment to Privacy</h2>
             <p className="text-slate-600">
               Webwizia ("we," "our," or "us"), located at Office # 5, Brother Plaza, Hall Road, Lahore, Pakistan, is committed to safeguarding the privacy and confidential intellectual property of our website visitors and clients.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">2. Information We Collect</h2>
+            <h2 className="text-xl font-bold text-[#031b4e] mb-2">2. Information We Collect</h2>
             <p className="text-slate-600">
               When you submit a quote request, contact form inquiry, or initiate a consultation, we may collect your name, email address, phone number, company name, and project specifications. We only collect information strictly required to deliver our web design, SEO, and digital services.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">3. How We Use Information</h2>
+            <h2 className="text-xl font-bold text-[#031b4e] mb-2">3. How We Use Information</h2>
             <ul className="list-disc pl-5 space-y-1 text-slate-600">
               <li>To prepare customized project proposals and technical estimates.</li>
               <li>To communicate project milestones, deliverables, and service updates.</li>
@@ -58,16 +58,16 @@ export const PrivacyPolicyPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">4. Data Security</h2>
+            <h2 className="text-xl font-bold text-[#031b4e] mb-2">4. Data Security</h2>
             <p className="text-slate-600">
               We implement industry-standard SSL encryption, secure access controls, and strict confidentiality agreements to protect your data from unauthorized access or disclosure.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">5. Contact Regarding Privacy</h2>
+            <h2 className="text-xl font-bold text-[#031b4e] mb-2">5. Contact Regarding Privacy</h2>
             <p className="text-slate-600">
-              For questions regarding our privacy practices, contact us at <a href={`mailto:${siteConfig.email}`} className="text-blue-600 font-semibold underline">{siteConfig.email}</a> or call {siteConfig.phoneFormatted}.
+              For questions regarding our privacy practices, contact us at <a href={`mailto:${siteConfig.email}`} className="text-[#046BD2] font-semibold underline">{siteConfig.email}</a> or call {siteConfig.phoneFormatted}.
             </p>
           </div>
         </div>
@@ -85,7 +85,7 @@ export const TermsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
         canonicalPath="/terms"
       />
 
-      <section className="bg-gradient-to-r from-[#0b51da] via-[#155DFC] to-[#0d47a1] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
+      <section className="bg-gradient-to-r from-[#031b4e] via-[#046BD2] to-[#15ace6] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff14_1px,transparent_1px),linear-gradient(to_bottom,#ffffff14_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-4">
@@ -95,35 +95,35 @@ export const TermsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
             lightMode={true}
           />
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">Terms & Conditions</h1>
-          <p className="text-blue-100 text-sm sm:text-base">Last Updated: August 2026</p>
+          <p className="text-sky-100 text-sm sm:text-base">Last Updated: August 2026</p>
         </div>
       </section>
 
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-left space-y-8 text-slate-700 leading-relaxed text-sm sm:text-base">
           <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">1. Acceptance of Terms</h2>
+            <h2 className="text-xl font-bold text-[#031b4e] mb-2">1. Acceptance of Terms</h2>
             <p className="text-slate-600">
               By accessing Webwizia.com or engaging our agency for web design, SEO, e-commerce, or digital marketing services, you agree to comply with these terms.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">2. Scope of Services</h2>
+            <h2 className="text-xl font-bold text-[#031b4e] mb-2">2. Scope of Services</h2>
             <p className="text-slate-600">
               Each web design, e-commerce, or search engine optimization engagement is governed by an agreed project statement of work detailing timeline, deliverables, milestones, and payment structure.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">3. Intellectual Property Ownership</h2>
+            <h2 className="text-xl font-bold text-[#031b4e] mb-2">3. Intellectual Property Ownership</h2>
             <p className="text-slate-600">
               Upon final project sign-off and receipt of settled invoices, full ownership of custom source code, design assets, and digital media created for the client is transferred to the client in full.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">4. Governing Law</h2>
+            <h2 className="text-xl font-bold text-[#031b4e] mb-2">4. Governing Law</h2>
             <p className="text-slate-600">
               These terms are governed by the laws and judicial jurisdiction of the Islamic Republic of Pakistan, with primary legal proceedings subject to Lahore courts.
             </p>

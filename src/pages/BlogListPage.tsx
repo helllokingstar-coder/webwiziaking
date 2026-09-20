@@ -55,8 +55,8 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
         canonicalPath="/blog"
       />
 
-      {/* Page Header Banner (Royal Blue Grid Matching Template) */}
-      <section className="bg-gradient-to-r from-[#0b51da] via-[#155DFC] to-[#0d47a1] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
+      {/* Page Header Banner (Midnight Navy & Cyan Grid Matching Template) */}
+      <section className="bg-gradient-to-r from-[#031b4e] via-[#046BD2] to-[#15ace6] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff14_1px,transparent_1px),linear-gradient(to_bottom,#ffffff14_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
@@ -68,14 +68,14 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
             Web Design & SEO Blog
           </h1>
-          <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
+          <p className="text-sky-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
             Helpful articles, web design tips, WordPress guides, e-commerce strategies, and search engine optimisation insights to help your business succeed online.
           </p>
         </div>
       </section>
 
       {/* Main Blog Area */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-[#f2f9fd]/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             {/* Left Content Area (8 Cols) */}
@@ -91,8 +91,8 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
                         onClick={() => setSelectedCategory(cat)}
                         className={`px-4 py-2 text-xs font-bold rounded-xl transition-all ${
                           selectedCategory === cat
-                            ? 'bg-blue-600 text-white shadow-sm'
-                            : 'bg-white text-[#1e1b4b] hover:bg-slate-200 border border-slate-200'
+                            ? 'bg-gradient-to-r from-[#046BD2] to-[#15ace6] text-white shadow-sm'
+                            : 'bg-white text-[#031b4e] hover:bg-sky-50 border border-sky-100'
                         }`}
                       >
                         {cat}
@@ -107,7 +107,7 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
                       placeholder="Search articles..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full pl-9 pr-4 py-2 text-xs bg-white text-[#1e1b4b] placeholder:text-slate-400 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-xs"
+                      className="w-full pl-9 pr-4 py-2 text-xs bg-white text-[#031b4e] placeholder:text-slate-400 border border-sky-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#046BD2] shadow-xs"
                     />
                     <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                   </div>
@@ -118,7 +118,7 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
               {selectedCategory === 'All' && !searchQuery && (
                 <div 
                   onClick={() => onNavigate(`/blog/${featuredPost.slug}`)}
-                  className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                  className="bg-white rounded-3xl overflow-hidden border border-sky-100 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-12">
                     <div className="md:col-span-6 relative aspect-[16/10] md:aspect-auto">
@@ -128,27 +128,27 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1 bg-blue-600 text-white text-[11px] font-extrabold uppercase rounded-full tracking-wider">
+                        <span className="px-3 py-1 bg-gradient-to-r from-[#046BD2] to-[#15ace6] text-white text-[11px] font-extrabold uppercase rounded-full tracking-wider">
                           Featured Post
                         </span>
                       </div>
                     </div>
                     <div className="md:col-span-6 p-6 sm:p-8 flex flex-col justify-between space-y-4">
                       <div>
-                        <div className="flex items-center space-x-3 text-xs text-[#1e1b4b]/70 mb-2">
+                        <div className="flex items-center space-x-3 text-xs text-slate-500 mb-2">
                           <span>{featuredPost.publishedDate}</span>
                           <span>•</span>
                           <span>{featuredPost.readTime}</span>
                         </div>
-                        <h2 className="text-xl sm:text-2xl font-black text-[#1e1b4b] group-hover:text-blue-600 transition-colors leading-tight mb-3">
+                        <h2 className="text-xl sm:text-2xl font-black text-[#031b4e] group-hover:text-[#046BD2] transition-colors leading-tight mb-3">
                           {featuredPost.title}
                         </h2>
-                        <p className="text-[#1e1b4b] text-xs sm:text-sm line-clamp-3 leading-relaxed font-normal">
+                        <p className="text-slate-600 text-xs sm:text-sm line-clamp-3 leading-relaxed font-normal">
                           {featuredPost.excerpt}
                         </p>
                       </div>
 
-                      <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-blue-600 font-bold text-xs">
+                      <div className="pt-4 border-t border-sky-50 flex items-center justify-between text-[#046BD2] font-bold text-xs">
                         <span>Read Full Guide</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -159,10 +159,10 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
 
               {/* Blog Posts Grid */}
               {filteredPosts.length === 0 ? (
-                <div className="bg-white p-12 rounded-3xl text-center border border-slate-200 space-y-3">
+                <div className="bg-white p-12 rounded-3xl text-center border border-sky-100 space-y-3">
                   <BookOpen className="w-12 h-12 text-slate-300 mx-auto" />
-                  <h3 className="text-lg font-bold text-[#1e1b4b]">No Articles Found</h3>
-                  <p className="text-[#1e1b4b]/80 text-xs">
+                  <h3 className="text-lg font-bold text-[#031b4e]">No Articles Found</h3>
+                  <p className="text-slate-500 text-xs">
                     Try adjusting your search terms or selecting a different category filter.
                   </p>
                 </div>
@@ -171,7 +171,7 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
                   {filteredPosts.map((post) => (
                     <article
                       key={post.id}
-                      className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 group flex flex-col justify-between"
+                      className="bg-white rounded-3xl overflow-hidden border border-sky-100 shadow-sm hover:shadow-xl hover:border-[#046BD2] transition-all duration-300 group flex flex-col justify-between"
                     >
                       <div>
                         <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
@@ -182,24 +182,24 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
                             loading="lazy"
                           />
                           <div className="absolute top-4 left-4">
-                            <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider">
+                            <span className="px-3 py-1 rounded-full bg-gradient-to-r from-[#046BD2] to-[#15ace6] text-white text-[10px] font-bold uppercase tracking-wider">
                               {post.category}
                             </span>
                           </div>
                         </div>
 
                         <div className="p-6">
-                          <div className="flex items-center space-x-3 text-xs text-[#1e1b4b]/70 mb-2">
+                          <div className="flex items-center space-x-3 text-xs text-slate-500 mb-2">
                             <span>{post.publishedDate}</span>
                             <span>•</span>
                             <span>{post.readTime}</span>
                           </div>
 
-                          <h3 className="text-lg font-bold text-[#1e1b4b] group-hover:text-blue-600 transition-colors line-clamp-2 mb-2">
+                          <h3 className="text-lg font-bold text-[#031b4e] group-hover:text-[#046BD2] transition-colors line-clamp-2 mb-2">
                             {post.title}
                           </h3>
 
-                          <p className="text-[#1e1b4b] text-xs sm:text-sm line-clamp-2 leading-relaxed font-normal">
+                          <p className="text-slate-600 text-xs sm:text-sm line-clamp-2 leading-relaxed font-normal">
                             {post.excerpt}
                           </p>
                         </div>
@@ -208,7 +208,7 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
                       <div className="p-6 pt-0">
                         <button
                           onClick={() => onNavigate(`/blog/${post.slug}`)}
-                          className="w-full py-2.5 px-4 bg-slate-50 hover:bg-blue-600 text-[#1e1b4b] hover:text-white font-bold text-xs rounded-xl transition-all flex items-center justify-center space-x-2"
+                          className="w-full py-2.5 px-4 bg-[#f2f9fd] hover:bg-gradient-to-r hover:from-[#046BD2] hover:to-[#15ace6] text-[#031b4e] hover:text-white font-bold text-xs rounded-xl transition-all flex items-center justify-center space-x-2 border border-sky-100 hover:border-transparent"
                         >
                           <span>READ MORE</span>
                           <ArrowRight className="w-3.5 h-3.5" />
@@ -223,10 +223,10 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
             {/* Right Sidebar (4 Cols) */}
             <div className="lg:col-span-4 space-y-8 text-left">
               {/* Recent Articles Widget */}
-              <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-                <h3 className="text-base font-black text-[#1e1b4b] border-b border-slate-100 pb-3 flex items-center justify-between">
+              <div className="bg-white p-6 rounded-3xl border border-sky-100 shadow-sm space-y-4">
+                <h3 className="text-base font-black text-[#031b4e] border-b border-sky-100 pb-3 flex items-center justify-between">
                   <span>Recent Articles</span>
-                  <Sparkles className="w-4 h-4 text-blue-600" />
+                  <Sparkles className="w-4 h-4 text-[#046BD2]" />
                 </h3>
                 <div className="space-y-4">
                   {blogPosts.slice(0, 4).map((item) => (
@@ -241,10 +241,10 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
                         className="w-16 h-14 object-cover rounded-xl shrink-0"
                       />
                       <div>
-                        <h4 className="text-xs font-bold text-[#1e1b4b] group-hover:text-blue-600 transition-colors line-clamp-2">
+                        <h4 className="text-xs font-bold text-[#031b4e] group-hover:text-[#046BD2] transition-colors line-clamp-2">
                           {item.title}
                         </h4>
-                        <span className="text-[11px] text-[#1e1b4b]/70 mt-0.5 block">
+                        <span className="text-[11px] text-slate-500 mt-0.5 block">
                           {item.publishedDate}
                         </span>
                       </div>
@@ -254,8 +254,8 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
               </div>
 
               {/* Categories Widget */}
-              <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
-                <h3 className="text-base font-black text-[#1e1b4b] border-b border-slate-100 pb-3">
+              <div className="bg-white p-6 rounded-3xl border border-sky-100 shadow-sm space-y-3">
+                <h3 className="text-base font-black text-[#031b4e] border-b border-sky-100 pb-3">
                   Categories
                 </h3>
                 <div className="space-y-1.5">
@@ -263,7 +263,7 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
                     <button
                       key={cat}
                       onClick={() => setSelectedCategory(cat)}
-                      className="w-full flex items-center justify-between py-1.5 text-xs font-semibold text-[#1e1b4b] hover:text-blue-600"
+                      className="w-full flex items-center justify-between py-1.5 text-xs font-semibold text-[#031b4e] hover:text-[#046BD2]"
                     >
                       <span>{cat}</span>
                       <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
@@ -273,19 +273,19 @@ export const BlogListPage: React.FC<BlogListPageProps> = ({ onNavigate, onOpenQu
               </div>
 
               {/* Sidebar Quote CTA Box */}
-              <div className="bg-gradient-to-br from-blue-700 to-sky-700 p-6 rounded-3xl text-white space-y-4 shadow-lg">
-                <span className="text-xs font-bold uppercase tracking-wider text-blue-200">
+              <div className="bg-[#031b4e] p-6 rounded-3xl text-white space-y-4 shadow-lg">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#15ace6]">
                   Ready to Grow?
                 </span>
                 <h3 className="text-xl font-bold leading-tight">
                   Transform Your Online Presence Today
                 </h3>
-                <p className="text-xs text-blue-100 leading-relaxed">
+                <p className="text-xs text-sky-100 leading-relaxed">
                   Get a free technical audit and strategy roadmap for your business website.
                 </p>
                 <button
                   onClick={() => onNavigate('/contact')}
-                  className="w-full py-3 bg-white text-blue-700 hover:bg-blue-50 font-bold text-xs rounded-xl shadow-md transition-all uppercase tracking-wider"
+                  className="w-full py-3 bg-gradient-to-r from-[#046BD2] to-[#15ace6] hover:from-[#0353a4] hover:to-[#0d99d1] font-bold text-xs rounded-xl shadow-md transition-all uppercase tracking-wider text-white"
                 >
                   CONTACT US
                 </button>

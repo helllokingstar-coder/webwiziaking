@@ -120,7 +120,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
         aria-modal="true"
       >
         {/* Modal Header */}
-        <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-sky-600 text-white p-6 sm:p-8 relative">
+        <div className="bg-gradient-to-r from-[#031b4e] via-[#046BD2] to-[#15ace6] text-white p-6 sm:p-8 relative">
           <button
             id="close-quote-modal-btn"
             onClick={onClose}
@@ -130,7 +130,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
             <X className="w-5 h-5" />
           </button>
           
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/15 text-xs font-semibold tracking-wide uppercase text-blue-100 mb-2">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/15 text-xs font-semibold tracking-wide uppercase text-sky-100 mb-2">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Fast Turnaround • Free Consultation</span>
           </div>
@@ -138,7 +138,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
           <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-white">
             Request A Custom Project Quote
           </h2>
-          <p className="text-blue-100 text-sm mt-1 max-w-md">
+          <p className="text-sky-100 text-sm mt-1 max-w-md">
             Tell us about your digital goals. Our Lahore engineering and marketing leads will review your specs and send a detailed proposal within 24 hours.
           </p>
         </div>
@@ -154,13 +154,13 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 Thank You, {formData.fullName}!
               </h3>
               <p className="text-slate-600 max-w-md mx-auto text-sm leading-relaxed">
-                Your quote request for <span className="font-semibold text-blue-600">{formData.serviceType}</span> has been received. One of our senior strategists will contact you at <span className="font-semibold text-slate-800">{formData.email}</span> shortly.
+                Your quote request for <span className="font-semibold text-[#046BD2]">{formData.serviceType}</span> has been received. One of our senior strategists will contact you at <span className="font-semibold text-slate-800">{formData.email}</span> shortly.
               </p>
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <button
                   id="quote-success-done-btn"
                   onClick={handleReset}
-                  className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-md"
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#046BD2] to-[#15ace6] hover:from-[#0353a4] hover:to-[#0d99d1] text-white font-bold rounded-xl transition-all shadow-md"
                 >
                   Back to Website
                 </button>
@@ -343,7 +343,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                   id="submit-quote-request-btn"
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-7 py-3 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold text-sm rounded-xl shadow-lg shadow-blue-500/25 transition-all flex items-center space-x-2 disabled:opacity-70"
+                  className="px-7 py-3 bg-gradient-to-r from-[#046BD2] to-[#15ace6] hover:from-[#0353a4] hover:to-[#0d99d1] active:scale-95 text-white font-bold text-sm rounded-xl shadow-lg shadow-sky-500/25 transition-all flex items-center space-x-2 disabled:opacity-70"
                 >
                   {isSubmitting ? (
                     <span>Submitting Request...</span>

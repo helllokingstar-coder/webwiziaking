@@ -121,8 +121,8 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
         ogImage={service.heroImage}
       />
 
-      {/* Top Banner (Royal Blue Grid Matching Template) */}
-      <section className="bg-gradient-to-r from-[#0b51da] via-[#155DFC] to-[#0d47a1] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
+      {/* Top Banner (Midnight Navy & Cyan Grid Matching Template) */}
+      <section className="bg-gradient-to-r from-[#031b4e] via-[#046BD2] to-[#15ace6] text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden text-left">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff14_1px,transparent_1px),linear-gradient(to_bottom,#ffffff14_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
@@ -134,13 +134,13 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             onNavigate={onNavigate}
             lightMode={true}
           />
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/15 text-blue-100 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/15 text-sky-100 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
             <span>Service {service.number}</span>
           </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
             {service.fullTitle}
           </h1>
-          <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
+          <p className="text-sky-100 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
             {service.tagline}
           </p>
         </div>
@@ -151,21 +151,21 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6 text-left">
-              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-[#046BD2] text-xs font-bold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5 text-[#15ace6]" />
                 <span>Service Overview</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-black text-[#031b4e] tracking-tight leading-tight">
                 {service.fullTitle}
               </h2>
-              <p className="text-[#1e1b4b] text-base sm:text-lg leading-relaxed font-normal">
+              <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
                 {service.overview}
               </p>
 
               <div className="pt-2">
                 <button
                   onClick={() => onNavigate('/contact')}
-                  className="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 transition-all inline-flex items-center space-x-2"
+                  className="px-8 py-3.5 bg-gradient-to-r from-[#046BD2] to-[#15ace6] hover:from-[#0353a4] hover:to-[#0d99d1] active:scale-95 text-white font-bold rounded-xl shadow-lg shadow-sky-500/25 transition-all inline-flex items-center space-x-2"
                 >
                   <span>CONTACT US FOR {service.title.toUpperCase()}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -187,16 +187,16 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
       </section>
 
       {/* Key Offerings Grid */}
-      <section className="py-20 bg-slate-50 border-y border-slate-200/60">
+      <section className="py-20 bg-[#f2f9fd]/50 border-y border-sky-100/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-[#046BD2] text-xs font-bold uppercase tracking-wider">
               <span>What We Offer</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#031b4e] tracking-tight">
               Comprehensive Capabilities
             </h2>
-            <p className="text-[#1e1b4b] text-base font-normal">
+            <p className="text-slate-600 text-base font-normal">
               Everything required to deliver an exceptional digital result from strategy to execution.
             </p>
           </div>
@@ -205,15 +205,15 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             {service.keyOfferings.map((offering, idx) => (
               <div
                 key={idx}
-                className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all space-y-4 group"
+                className="bg-white p-8 rounded-3xl border border-sky-100 shadow-sm hover:shadow-md hover:border-[#046BD2] transition-all space-y-4 group"
               >
-                <div className="w-14 h-14 rounded-2xl bg-blue-50 group-hover:bg-blue-600 group-hover:text-white text-blue-600 flex items-center justify-center transition-colors shadow-xs">
+                <div className="w-14 h-14 rounded-2xl bg-sky-50 group-hover:bg-[#046BD2] group-hover:text-white text-[#046BD2] flex items-center justify-center transition-colors shadow-xs">
                   {getOfferingIcon(offering.icon)}
                 </div>
-                <h3 className="text-xl font-bold text-[#1e1b4b] group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-[#031b4e] group-hover:text-[#046BD2] transition-colors">
                   {offering.title}
                 </h3>
-                <p className="text-[#1e1b4b] text-sm leading-relaxed font-normal">
+                <p className="text-slate-600 text-sm leading-relaxed font-normal">
                   {offering.description}
                 </p>
               </div>
@@ -226,18 +226,18 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {service.detailedSections.map((sec, idx) => (
-            <div key={idx} className="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200/80 text-left space-y-6">
-              <h3 className="text-2xl sm:text-3xl font-black text-[#1e1b4b] tracking-tight">
+            <div key={idx} className="bg-[#f2f9fd] rounded-3xl p-8 sm:p-12 border border-sky-100 text-left space-y-6">
+              <h3 className="text-2xl sm:text-3xl font-black text-[#031b4e] tracking-tight">
                 {sec.title}
               </h3>
-              <p className="text-[#1e1b4b] text-base leading-relaxed font-normal">
+              <p className="text-slate-600 text-base leading-relaxed font-normal">
                 {sec.content}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 {sec.points.map((pt, i) => (
                   <div key={i} className="flex items-start space-x-3">
-                    <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span className="text-sm font-semibold text-[#1e1b4b]">{pt}</span>
+                    <CheckCircle2 className="w-5 h-5 text-[#046BD2] shrink-0 mt-0.5" />
+                    <span className="text-sm font-semibold text-[#031b4e]">{pt}</span>
                   </div>
                 ))}
               </div>
@@ -247,25 +247,25 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200/60">
+      <section className="py-20 bg-[#f2f9fd]/50 border-t border-sky-100/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-[#046BD2] text-xs font-bold uppercase tracking-wider">
               <span>Why It Matters</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#031b4e] tracking-tight">
               Tangible Benefits For Your Business
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
             {service.benefits.map((benefit, idx) => (
-              <div key={idx} className="bg-white p-7 rounded-3xl border border-slate-200 space-y-3 shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm">
+              <div key={idx} className="bg-white p-7 rounded-3xl border border-sky-100 space-y-3 shadow-xs">
+                <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#046BD2] flex items-center justify-center font-bold text-sm">
                   0{idx + 1}
                 </div>
-                <h4 className="text-lg font-bold text-[#1e1b4b]">{benefit.title}</h4>
-                <p className="text-[#1e1b4b] text-sm leading-relaxed font-normal">{benefit.description}</p>
+                <h4 className="text-lg font-bold text-[#031b4e]">{benefit.title}</h4>
+                <p className="text-slate-600 text-sm leading-relaxed font-normal">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -276,20 +276,20 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-[#046BD2] text-xs font-bold uppercase tracking-wider">
               <span>Workflow</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#031b4e] tracking-tight">
               Our {service.title} Process
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-left">
             {service.process.map((step) => (
-              <div key={step.step} className="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 space-y-3 relative">
-                <span className="text-3xl font-black text-blue-600">{step.step}</span>
-                <h4 className="text-base font-bold text-[#1e1b4b]">{step.title}</h4>
-                <p className="text-[#1e1b4b] text-xs sm:text-sm leading-relaxed font-normal">{step.description}</p>
+              <div key={step.step} className="bg-[#f2f9fd] p-6 rounded-3xl border border-sky-100 space-y-3 relative">
+                <span className="text-3xl font-black text-[#046BD2]">{step.step}</span>
+                <h4 className="text-base font-bold text-[#031b4e]">{step.title}</h4>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal">{step.description}</p>
               </div>
             ))}
           </div>
@@ -297,7 +297,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
       </section>
 
       {/* Technology Badges */}
-      <section className="py-12 bg-slate-50 border-y border-slate-200/60">
+      <section className="py-12 bg-[#f2f9fd]/50 border-y border-sky-100/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
             Core Technologies & Standards
@@ -306,7 +306,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             {service.techStack.map((tech, idx) => (
               <span
                 key={idx}
-                className="px-4 py-2 bg-white text-[#1e1b4b] font-semibold text-xs rounded-xl border border-slate-200 shadow-xs"
+                className="px-4 py-2 bg-white text-[#031b4e] font-semibold text-xs rounded-xl border border-sky-100 shadow-xs"
               >
                 {tech}
               </span>
@@ -319,11 +319,11 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-left space-y-12">
           <div className="text-center space-y-3">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-50 text-[#046BD2] border border-sky-200/80 text-xs font-bold uppercase tracking-wider">
               <HelpCircle className="w-3.5 h-3.5" />
               <span>Questions & Answers</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b4b] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#031b4e] tracking-tight">
               Frequently Asked Questions
             </h2>
           </div>
@@ -332,22 +332,22 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             {service.faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50"
+                className="border border-sky-100 rounded-2xl overflow-hidden transition-all bg-[#f2f9fd]/30"
               >
                 <button
                   onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between font-bold text-[#1e1b4b] hover:text-blue-600 transition-colors"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between font-bold text-[#031b4e] hover:text-[#046BD2] transition-colors"
                 >
                   <span className="text-base sm:text-lg pr-4">{faq.question}</span>
                   <ChevronDown
                     className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200 ${
-                      openFaqIndex === idx ? 'rotate-180 text-blue-600' : ''
+                      openFaqIndex === idx ? 'rotate-180 text-[#046BD2]' : ''
                     }`}
                   />
                 </button>
 
                 {openFaqIndex === idx && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-[#1e1b4b] text-sm sm:text-base leading-relaxed border-t border-slate-100 bg-white font-normal">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-sky-100 bg-white font-normal">
                     {faq.answer}
                   </div>
                 )}
@@ -358,24 +358,24 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
       </section>
 
       {/* Service Page CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-700 via-blue-600 to-sky-600 text-white text-center">
+      <section className="py-16 bg-[#031b4e] text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white">
             Ready to Start Your {service.title} Project?
           </h2>
-          <p className="text-blue-100 text-base max-w-xl mx-auto">
+          <p className="text-sky-100 text-base max-w-xl mx-auto">
             Get a tailored proposal and timeline from our Lahore team.
           </p>
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={() => onNavigate('/contact')}
-              className="px-8 py-3.5 bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-xl shadow-lg transition-all text-sm uppercase tracking-wider"
+              className="px-8 py-3.5 bg-gradient-to-r from-[#046BD2] to-[#15ace6] hover:from-[#0353a4] hover:to-[#0d99d1] font-bold rounded-xl shadow-lg transition-all text-sm uppercase tracking-wider text-white"
             >
               CONTACT US
             </button>
             <button
               onClick={() => onNavigate('/services')}
-              className="px-8 py-3.5 bg-blue-900/70 hover:bg-blue-900 border border-white/30 text-white font-bold rounded-xl transition-all text-sm uppercase tracking-wider"
+              className="px-8 py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold rounded-xl transition-all text-sm uppercase tracking-wider"
             >
               EXPLORE ALL SERVICES
             </button>
