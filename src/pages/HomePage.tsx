@@ -34,6 +34,7 @@ import { SeoReadySection } from '../components/SeoReadySection';
 import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
 import { PortfolioItem } from '../types';
 import heroSectionImg from '../assets/images/Hero Section image.png';
+import heroBannerImg from '../assets/images/hero_banner.jpg';
 import heroBgImg from '../assets/images/Hero BG.png';
 import aboutWomanDeskImg from '../assets/images/Home page About us Section image.jpg';
 import aboutDirectorImg from '../assets/images/about_director_avatar_1787866909107.jpg';
@@ -189,9 +190,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg flex justify-center items-end">
                 <img
                   id="hero-businesswoman-image"
-                  src={heroSectionImg}
-                  alt="Webwizia Web Design and Digital Marketing Lahore Specialist"
-                  className="relative z-30 w-full h-auto max-h-[460px] sm:max-h-[520px] lg:max-h-[580px] object-contain drop-shadow-[0_20px_40px_rgba(3,27,78,0.22)] select-none"
+                  src={heroBannerImg}
+                  alt="Webwizia Web Design and Digital Marketing Lahore Specialist Team"
+                  className="relative z-30 w-full h-auto max-h-[460px] sm:max-h-[500px] lg:max-h-[540px] object-cover rounded-3xl border-4 border-white shadow-2xl shadow-[#031b4e]/25 select-none"
                   referrerPolicy="no-referrer"
                   loading="eager"
                 />
